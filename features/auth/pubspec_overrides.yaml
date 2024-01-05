@@ -1,0 +1,8 @@
+# melos_managed_dependency_overrides: core,injectable_generator,pagination_view,common
+dependency_overrides:
+  common:
+    path: ../../infrastructure/common
+  core:
+    path: ../../infrastructure/core
+  injectable_generator:
+    path: ../../infrastructure/injectable_generator

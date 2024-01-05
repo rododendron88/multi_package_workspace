@@ -1,0 +1,36 @@
+name: auth
+description: Auth feature
+version: 0.0.1
+publish_to: none
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  common:
+    path: ../../infrastructure/common/
+  core:
+    path: ../../infrastructure/core/
+
+  # UI
+  pagination_view:
+    git:
+      url: https://github.com/vedartm/pagination_view.git
+  ant_icons: ^2.0.0-nullsafety.0
+  cached_network_image: ^3.0.0
+
+  shared_preferences: ^2.2.2
+
+dev_dependencies:
+  freezed: ^2.4.6
+  build_runner: ^2.4.7
+  injectable_generator:
+    path: ../../infrastructure/injectable_generator
+  json_serializable: ^6.7.1
+  auto_route_generator: ^7.3.2
+
+flutter:
+  uses-material-design: true

@@ -1,0 +1,6 @@
+# melos_managed_dependency_overrides: injectable_generator,common
+dependency_overrides:
+  common:
+    path: ../common
+  injectable_generator:
+    path: ../injectable_generator
