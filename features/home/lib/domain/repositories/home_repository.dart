@@ -1,9 +1,9 @@
+import 'package:core/domain/error/failures.dart';
 import 'package:dartz/dartz.dart';
 
-import 'package:core/domain/error/failures.dart';
-import '../entities/character.dart';
-import '../entities/episode.dart';
-import '../entities/location.dart';
+import 'package:home/domain/entities/character.dart';
+import 'package:home/domain/entities/episode.dart';
+import 'package:home/domain/entities/location.dart';
 
 abstract class HomeRepository {
   Future<Either<Failure, List<Character>>> getCharacters(int page);

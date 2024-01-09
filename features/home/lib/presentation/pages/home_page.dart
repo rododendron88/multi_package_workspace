@@ -2,7 +2,7 @@ import 'package:common/dependencies.dart';
 import 'package:core/domain/module/auth_module.dart';
 import 'package:core/domain/scopes.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_drawer_menu/drawer_menu.dart';
+import 'package:flutter_drawer_menu/flutter_drawer_menu.dart';
 import 'package:home/presentation/bloc/home_bloc.dart';
 import 'package:home/presentation/widgets/characters_list.dart';
 import 'package:home/presentation/widgets/episodes_list.dart';
@@ -35,7 +35,7 @@ class _HomePageState extends State<HomePage> {
   Scaffold buildScaffold(HomeState state, BuildContext context) => Scaffold(
         appBar: AppBar(
           title: Text(state.when(
-              empty: () => "",
+              empty: () => '',
               characters: (_, title, __) => title,
               episodes: (_, title, __) => title,
               locations: (_, title, __) => title)),

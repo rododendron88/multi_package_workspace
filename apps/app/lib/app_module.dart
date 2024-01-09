@@ -15,12 +15,8 @@ class AppModuleImpl extends AppModule {
   }
 
   @override
-  ThemeCubit? themeCubit() {
-    return ThemeCubitImpl();
-  }
+  ThemeCubit? themeCubit() => ThemeCubitImpl();
 
   @override
-  Widget entryPoint() {
-    return GetIt.instance.get<AuthModule>().entryPoint();
-  }
+  Widget entryPoint() => GetIt.instance.get<AuthModule>().entryPoint();
 }

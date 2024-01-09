@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:common/dependencies.dart';
 import 'package:core/data/modules_holder.dart';
+import 'package:core/domain/extensions/modules_holder.dart';
 import 'package:core/domain/module/module.dart';
 import 'package:core/domain/modules_holder.dart';
 import 'package:core/presentation/app.dart';

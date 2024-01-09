@@ -42,7 +42,8 @@ class _ScopeAuthBuilderState extends State<_ScopeAuthBuilder> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              '${GetIt.instance<AuthModule>().settings.appName} registration example\n'
+              '${GetIt.instance<AuthModule>().settings.appName} '
+              'registration example\n'
               'What is your name?',
               style: Theme.of(context).textTheme.headlineSmall,
             ),

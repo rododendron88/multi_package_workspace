@@ -1,18 +1,17 @@
-import 'package:dartz/dartz.dart';
-import 'package:injectable/injectable.dart';
-
 import 'package:core/domain/error/exceptions.dart';
 import 'package:core/domain/error/failures.dart';
 import 'package:core/domain/service/network_info.dart';
-import '../../domain/entities/character.dart';
-import '../../domain/entities/episode.dart';
-import '../../domain/entities/location.dart';
-import '../../domain/repositories/home_repository.dart';
-import '../datasources/home_local_datasource.dart';
-import '../datasources/home_remote_datasource.dart';
-import '../models/character_model.dart';
-import '../models/episode_model.dart';
-import '../models/location_model.dart';
+import 'package:dartz/dartz.dart';
+import 'package:home/data/datasources/home_local_datasource.dart';
+import 'package:home/data/datasources/home_remote_datasource.dart';
+import 'package:home/data/models/character_model.dart';
+import 'package:home/data/models/episode_model.dart';
+import 'package:home/data/models/location_model.dart';
+import 'package:home/domain/entities/character.dart';
+import 'package:home/domain/entities/episode.dart';
+import 'package:home/domain/entities/location.dart';
+import 'package:home/domain/repositories/home_repository.dart';
+import 'package:injectable/injectable.dart';
 
 @LazySingleton(as: HomeRepository)
 class HomeRepositoryImpl implements HomeRepository {

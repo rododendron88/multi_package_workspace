@@ -1,4 +1,3 @@
-import 'package:auth/data/auth_module.dart';
 import 'package:common/dependencies.dart';
 import 'package:core/domain/module/auth_module.dart';
 import 'package:core/domain/scopes.dart';

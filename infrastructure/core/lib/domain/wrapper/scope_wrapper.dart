@@ -1,4 +1,3 @@
-import 'package:core/data/modules_holder.dart';
 import 'package:core/domain/scopes.dart';
 import 'package:flutter/material.dart';
 

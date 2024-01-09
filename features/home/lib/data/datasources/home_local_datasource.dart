@@ -33,34 +33,31 @@ class HomeLocalDataSource implements IHomeLocalDataSource {
   final Box _box;
 
   @override
-  Future<void> cacheCharacters(List<CharacterModel> models, int page) {
-    return _isFirstPage(page)
-        ? _box.put(
-            CACHED_CHARACTERS,
-            json.encode(models.map((e) => e.toJson()).toList()),
-          )
-        : Future.value();
-  }
+  Future<void> cacheCharacters(List<CharacterModel> models, int page) =>
+      _isFirstPage(page)
+          ? _box.put(
+              CACHED_CHARACTERS,
+              json.encode(models.map((e) => e.toJson()).toList()),
+            )
+          : Future.value();
 
   @override
-  Future<void> cacheEpisodes(List<EpisodeModel> models, int page) {
-    return _isFirstPage(page)
-        ? _box.put(
-            CACHED_EPISODES,
-            json.encode(models.map((e) => e.toJson()).toList()),
-          )
-        : Future.value();
-  }
+  Future<void> cacheEpisodes(List<EpisodeModel> models, int page) =>
+      _isFirstPage(page)
+          ? _box.put(
+              CACHED_EPISODES,
+              json.encode(models.map((e) => e.toJson()).toList()),
+            )
+          : Future.value();
 
   @override
-  Future<void> cacheLocations(List<LocationModel> models, int page) {
-    return _isFirstPage(page)
-        ? _box.put(
-            CACHED_LOCATIONS,
-            json.encode(models.map((e) => e.toJson()).toList()),
-          )
-        : Future.value();
-  }
+  Future<void> cacheLocations(List<LocationModel> models, int page) =>
+      _isFirstPage(page)
+          ? _box.put(
+              CACHED_LOCATIONS,
+              json.encode(models.map((e) => e.toJson()).toList()),
+            )
+          : Future.value();
 
   @override
   List<CharacterModel> getLastCharacters(int page) {

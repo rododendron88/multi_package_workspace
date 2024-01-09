@@ -1,4 +1,3 @@
-import 'package:auth/data/auth_module.dart';
 import 'package:auth/presentation/bloc/auth_bloc.dart';
 import 'package:auth/presentation/scopes/scope_auth.dart';
 import 'package:auth/presentation/scopes/scope_main.dart';

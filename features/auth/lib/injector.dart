@@ -1,6 +1,6 @@
-import 'package:core/domain/module/auth_module.dart';
 import 'package:get_it/get_it.dart';
 import 'package:injectable/injectable.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import 'injector.config.dart';
 
@@ -10,3 +10,11 @@ import 'injector.config.dart';
   asExtension: false, // default
 )
 Future configureDependencies() async => init(GetIt.instance);
+
+@module
+abstract class AuthInjectorModule {
+  @preResolve
+  @lazySingleton
+  Future<SharedPreferences> get sharedPreferences =>
+      SharedPreferences.getInstance();
+}

@@ -2,7 +2,7 @@ import 'package:common/dependencies.dart';
 import 'package:core/domain/module/app_module.dart';
 import 'package:core/domain/module/auth_module.dart';
 import 'package:core/domain/theme/theme_provider.dart';
-import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter/material.dart';
 import 'package:multi_package_sample2/theme_cubit.dart';
 
 /// Implementation of the [AppModule].
@@ -15,12 +15,8 @@ class AppModuleImpl extends AppModule {
   }
 
   @override
-  ThemeCubit? themeCubit() {
-    return ThemeCubitImpl();
-  }
+  ThemeCubit? themeCubit() => ThemeCubitImpl();
 
   @override
-  Widget entryPoint() {
-    return GetIt.instance.get<AuthModule>().entryPoint();
-  }
+  Widget entryPoint() => GetIt.instance.get<AuthModule>().entryPoint();
 }

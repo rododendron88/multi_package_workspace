@@ -20,10 +20,7 @@ dependencies:
 
   freezed_annotation: ^2.4.1
   # Network
-  graphql_flutter: ^5.1.2
   internet_connection_checker: ^0.0.1+1
-  # Caching
-  hive: ^2.0.4
 
   # Misc
   dartz: ^0.10.0-nullsafety.2

@@ -7,10 +7,12 @@ import 'package:shared_preferences/shared_preferences.dart';
 @injectable
 class AuthLocalDataSource {
   final String userKey = 'USER';
+  final SharedPreferences _sharedPreferences;
+
+  AuthLocalDataSource(this._sharedPreferences);
 
   Future<UserModel?> restoreUser() async {
-    final SharedPreferences prefs = await SharedPreferences.getInstance();
-    final String? userPref = prefs.getString(userKey);
+    final String? userPref = _sharedPreferences.getString(userKey);
     if (userPref == null) {
       return null;
     }
@@ -18,12 +20,10 @@ class AuthLocalDataSource {
   }
 
   Future<void> saveUser(UserModel user) async {
-    final SharedPreferences prefs = await SharedPreferences.getInstance();
-    await prefs.setString(userKey, jsonEncode(user));
+    await _sharedPreferences.setString(userKey, jsonEncode(user));
   }
 
   Future<void> deleteUser() async {
-    final SharedPreferences prefs = await SharedPreferences.getInstance();
-    await prefs.remove(userKey);
+    await _sharedPreferences.remove(userKey);
   }
 }

@@ -2,7 +2,7 @@ import 'package:core/domain/modules_holder.dart';
 import 'package:core/domain/scopes.dart';
 import 'package:flutter/material.dart';
 
-extension ModulesHolderExt on ModulesHolder {
+extension ModulesHolderWrapperExt on ModulesHolder {
   Widget wrapApp({required Widget child}) {
     Widget widget = child;
     modules.map((e) => e.wrapper()).forEach((element) {
@@ -28,5 +28,20 @@ extension ModulesHolderExt on ModulesHolder {
       }
     });
     return routesMap;
+  }
+}
+
+extension ModulesHolderInjectorExt on ModulesHolder {
+  Future<bool> inject() async {
+    for (final module in modules) {
+      await module.inject();
+    }
+    return true;
+  }
+
+  Future<void> injectScope({required AppScope scope}) async {
+    for (final module in modules) {
+      await module.injectScope(scope: scope);
+    }
   }
 }

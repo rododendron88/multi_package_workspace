@@ -6,14 +6,14 @@ analyzer:
     - test/*
   errors:
     missing_required_param: error
-
+    invalid_annotation_target: ignore
 linter:
   rules:
     - always_declare_return_types
     - always_put_control_body_on_new_line
     - always_put_required_named_parameters_first
     - always_require_non_null_named_parameters
-    - always_use_package_imports
+    - always_use_package_imports: false
     - annotate_overrides
     - avoid_bool_literals_in_conditional_expressions
     - avoid_catching_errors

@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 class ThemeCubitImpl extends ThemeCubit {
   ThemeCubitImpl()
       : super(
-            initialTheme: ThemeData.light().copyWith(
+            initialTheme: ThemeData.light(useMaterial3: false).copyWith(
                 colorScheme: ThemeData.light()
                     .colorScheme
                     .copyWith(primary: Colors.blue)));

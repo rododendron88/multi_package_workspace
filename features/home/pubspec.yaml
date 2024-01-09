@@ -14,13 +14,18 @@ dependencies:
   core:
     path: ../../infrastructure/core/
 
+  # Network
+  graphql_flutter: ^5.1.2
+  # Caching
+  hive: ^2.0.4
+
   # UI
   pagination_view:
     git:
       url: https://github.com/vedartm/pagination_view.git
   ant_icons: ^2.0.0-nullsafety.0
   cached_network_image: ^3.0.0
-  flutter_drawer_menu: ^0.1.1
+  flutter_drawer_menu: ^0.1.2
   pinch_to_zoom_scrollable: ^0.1.1
 
 

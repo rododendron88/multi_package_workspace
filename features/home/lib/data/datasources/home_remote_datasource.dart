@@ -66,7 +66,7 @@ class HomeRemoteDataSource implements IHomeRemoteDataSource {
     try {
       final result = await _client.query(QueryOptions(
         document: gql(GqlQuery.locationsQuery),
-        variables: {"page": page},
+        variables: {'page': page},
       ));
       if (result.data == null) {
         return [];

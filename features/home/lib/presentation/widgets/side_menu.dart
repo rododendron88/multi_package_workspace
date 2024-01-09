@@ -3,7 +3,7 @@ import 'package:common/dependencies.dart';
 import 'package:core/domain/module/auth_module.dart';
 import 'package:core/domain/router/routes.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_drawer_menu/drawer_menu.dart';
+import 'package:flutter_drawer_menu/flutter_drawer_menu.dart';
 import 'package:home/presentation/bloc/home_bloc.dart';
 
 class SideMenu extends StatelessWidget {
@@ -12,14 +12,17 @@ class SideMenu extends StatelessWidget {
   const SideMenu({required this.user});
 
   @override
-  Widget build(BuildContext context) => SafeArea(
-        child: BlocBuilder<HomeBloc, HomeState>(
-          builder: (context, state) => Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              buildUserPanel(),
-              ...buildMenu(context, state),
-            ],
+  Widget build(BuildContext context) => Container(
+        color: Colors.white,
+        child: SafeArea(
+          child: BlocBuilder<HomeBloc, HomeState>(
+            builder: (context, state) => Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                buildUserPanel(),
+                ...buildMenu(context, state),
+              ],
+            ),
           ),
         ),
       );

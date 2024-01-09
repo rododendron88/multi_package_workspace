@@ -1,6 +1,8 @@
+// ignore_for_file: invalid_annotation_target
+
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import '../../domain/entities/episode.dart';
+import 'package:home/domain/entities/episode.dart';
 
 part 'episode_model.freezed.dart';
 part 'episode_model.g.dart';

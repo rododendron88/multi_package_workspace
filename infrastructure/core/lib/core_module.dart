@@ -1,6 +1,7 @@
 import 'package:common/dependencies.dart';
-import 'package:core/injector.dart';
 import 'package:core/domain/wrapper/scope_wrapper.dart';
+import 'package:core/injector.dart';
+
 import 'domain/module/core_module.dart';
 
 /// Implementation of [CoreModule]
