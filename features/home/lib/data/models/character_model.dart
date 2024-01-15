@@ -2,11 +2,30 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:home/data/util/mapper.dart';
 import 'package:home/domain/entities/character.dart';
 import 'package:home/domain/entities/gender.dart';
-import 'package:home/domain/entities/vital_status.dart';
 
 part 'character_model.freezed.dart';
 
 part 'character_model.g.dart';
+
+@freezed
+class CharactersRemoteModel with _$CharactersRemoteModel {
+  const factory CharactersRemoteModel({
+    required CharacterResultsRemoteModel characters,
+  }) = _CharactersRemoteModel;
+
+  factory CharactersRemoteModel.fromJson(Map<String, dynamic> json) =>
+      _$CharactersRemoteModelFromJson(json);
+}
+
+@freezed
+class CharacterResultsRemoteModel with _$CharacterResultsRemoteModel {
+  const factory CharacterResultsRemoteModel({
+    required List<CharacterModel> results,
+  }) = _CharacterResultsRemoteModel;
+
+  factory CharacterResultsRemoteModel.fromJson(Map<String, Object> json) =>
+      _$CharacterResultsRemoteModelFromJson(json);
+}
 
 @freezed
 class CharacterModel with _$CharacterModel {
@@ -22,7 +41,7 @@ class CharacterModel with _$CharacterModel {
     required String image,
   }) = _CharacterModel;
 
-  factory CharacterModel.fromJson(Map<String, dynamic> json) =>
+  factory CharacterModel.fromJson(Map<String, Object> json) =>
       _$CharacterModelFromJson(json);
 
   factory CharacterModel.fromEntity(Character character) => CharacterModel(

@@ -1,6 +1,7 @@
-import 'package:home/domain/entities/gender.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:home/domain/entities/vital_status.dart';
+import 'package:home/domain/entities/gender.dart';
+
+import '../../domain/entities/character.dart';
 
 class GenderConverter implements JsonConverter<Gender, String> {
   const GenderConverter();
@@ -9,25 +10,23 @@ class GenderConverter implements JsonConverter<Gender, String> {
   Gender fromJson(String json) {
     switch (json) {
       case 'Female':
-        return Gender.female();
+        return const Gender.female();
       case 'Male':
-        return Gender.male();
+        return const Gender.male();
       case 'Genderless':
-        return Gender.genderless();
+        return const Gender.genderless();
       default:
-        return Gender.unknown();
+        return const Gender.unknown();
     }
   }
 
   @override
-  String toJson(Gender object) {
-    return object.when(
-      female: () => 'Female',
-      genderless: () => 'Genderless',
-      male: () => 'Male',
-      unknown: () => 'unknown',
-    );
-  }
+  String toJson(Gender object) => object.when(
+        female: () => 'Female',
+        genderless: () => 'Genderless',
+        male: () => 'Male',
+        unknown: () => 'unknown',
+      );
 }
 
 class VitalStatusConverter implements JsonConverter<VitalStatus, String> {
@@ -37,20 +36,18 @@ class VitalStatusConverter implements JsonConverter<VitalStatus, String> {
   VitalStatus fromJson(String json) {
     switch (json) {
       case 'Alive':
-        return VitalStatus.alive();
+        return const VitalStatus.alive();
       case 'Dead':
-        return VitalStatus.dead();
+        return const VitalStatus.dead();
       default:
-        return VitalStatus.unknown();
+        return const VitalStatus.unknown();
     }
   }
 
   @override
-  String toJson(VitalStatus object) {
-    return object.when(
-      alive: () => 'Alive',
-      dead: () => 'Dead',
-      unknown: () => 'unknown',
-    );
-  }
+  String toJson(VitalStatus object) => object.when(
+        alive: () => 'Alive',
+        dead: () => 'Dead',
+        unknown: () => 'unknown',
+      );
 }

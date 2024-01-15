@@ -1,9 +1,7 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:json_annotation/json_annotation.dart';
 import 'package:flutter/foundation.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'gender.freezed.dart';
-
 part 'gender.g.dart';
 
 @freezed

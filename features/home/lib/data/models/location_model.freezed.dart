@@ -14,6 +14,317 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
+LocationsRemoteModel _$LocationsRemoteModelFromJson(Map<String, dynamic> json) {
+  return _LocationsRemoteModel.fromJson(json);
+}
+
+/// @nodoc
+mixin _$LocationsRemoteModel {
+  LocationResultsRemoteModel get locations =>
+      throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $LocationsRemoteModelCopyWith<LocationsRemoteModel> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $LocationsRemoteModelCopyWith<$Res> {
+  factory $LocationsRemoteModelCopyWith(LocationsRemoteModel value,
+          $Res Function(LocationsRemoteModel) then) =
+      _$LocationsRemoteModelCopyWithImpl<$Res, LocationsRemoteModel>;
+  @useResult
+  $Res call({LocationResultsRemoteModel locations});
+
+  $LocationResultsRemoteModelCopyWith<$Res> get locations;
+}
+
+/// @nodoc
+class _$LocationsRemoteModelCopyWithImpl<$Res,
+        $Val extends LocationsRemoteModel>
+    implements $LocationsRemoteModelCopyWith<$Res> {
+  _$LocationsRemoteModelCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? locations = null,
+  }) {
+    return _then(_value.copyWith(
+      locations: null == locations
+          ? _value.locations
+          : locations // ignore: cast_nullable_to_non_nullable
+              as LocationResultsRemoteModel,
+    ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $LocationResultsRemoteModelCopyWith<$Res> get locations {
+    return $LocationResultsRemoteModelCopyWith<$Res>(_value.locations, (value) {
+      return _then(_value.copyWith(locations: value) as $Val);
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$LocationsRemoteModelImplCopyWith<$Res>
+    implements $LocationsRemoteModelCopyWith<$Res> {
+  factory _$$LocationsRemoteModelImplCopyWith(_$LocationsRemoteModelImpl value,
+          $Res Function(_$LocationsRemoteModelImpl) then) =
+      __$$LocationsRemoteModelImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({LocationResultsRemoteModel locations});
+
+  @override
+  $LocationResultsRemoteModelCopyWith<$Res> get locations;
+}
+
+/// @nodoc
+class __$$LocationsRemoteModelImplCopyWithImpl<$Res>
+    extends _$LocationsRemoteModelCopyWithImpl<$Res, _$LocationsRemoteModelImpl>
+    implements _$$LocationsRemoteModelImplCopyWith<$Res> {
+  __$$LocationsRemoteModelImplCopyWithImpl(_$LocationsRemoteModelImpl _value,
+      $Res Function(_$LocationsRemoteModelImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? locations = null,
+  }) {
+    return _then(_$LocationsRemoteModelImpl(
+      locations: null == locations
+          ? _value.locations
+          : locations // ignore: cast_nullable_to_non_nullable
+              as LocationResultsRemoteModel,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$LocationsRemoteModelImpl implements _LocationsRemoteModel {
+  const _$LocationsRemoteModelImpl({required this.locations});
+
+  factory _$LocationsRemoteModelImpl.fromJson(Map<String, dynamic> json) =>
+      _$$LocationsRemoteModelImplFromJson(json);
+
+  @override
+  final LocationResultsRemoteModel locations;
+
+  @override
+  String toString() {
+    return 'LocationsRemoteModel(locations: $locations)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$LocationsRemoteModelImpl &&
+            (identical(other.locations, locations) ||
+                other.locations == locations));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(runtimeType, locations);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$LocationsRemoteModelImplCopyWith<_$LocationsRemoteModelImpl>
+      get copyWith =>
+          __$$LocationsRemoteModelImplCopyWithImpl<_$LocationsRemoteModelImpl>(
+              this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$LocationsRemoteModelImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _LocationsRemoteModel implements LocationsRemoteModel {
+  const factory _LocationsRemoteModel(
+          {required final LocationResultsRemoteModel locations}) =
+      _$LocationsRemoteModelImpl;
+
+  factory _LocationsRemoteModel.fromJson(Map<String, dynamic> json) =
+      _$LocationsRemoteModelImpl.fromJson;
+
+  @override
+  LocationResultsRemoteModel get locations;
+  @override
+  @JsonKey(ignore: true)
+  _$$LocationsRemoteModelImplCopyWith<_$LocationsRemoteModelImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+LocationResultsRemoteModel _$LocationResultsRemoteModelFromJson(
+    Map<String, dynamic> json) {
+  return _LocationResultsRemoteModel.fromJson(json);
+}
+
+/// @nodoc
+mixin _$LocationResultsRemoteModel {
+  List<LocationModel> get results => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $LocationResultsRemoteModelCopyWith<LocationResultsRemoteModel>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $LocationResultsRemoteModelCopyWith<$Res> {
+  factory $LocationResultsRemoteModelCopyWith(LocationResultsRemoteModel value,
+          $Res Function(LocationResultsRemoteModel) then) =
+      _$LocationResultsRemoteModelCopyWithImpl<$Res,
+          LocationResultsRemoteModel>;
+  @useResult
+  $Res call({List<LocationModel> results});
+}
+
+/// @nodoc
+class _$LocationResultsRemoteModelCopyWithImpl<$Res,
+        $Val extends LocationResultsRemoteModel>
+    implements $LocationResultsRemoteModelCopyWith<$Res> {
+  _$LocationResultsRemoteModelCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? results = null,
+  }) {
+    return _then(_value.copyWith(
+      results: null == results
+          ? _value.results
+          : results // ignore: cast_nullable_to_non_nullable
+              as List<LocationModel>,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$LocationResultsRemoteModelImplCopyWith<$Res>
+    implements $LocationResultsRemoteModelCopyWith<$Res> {
+  factory _$$LocationResultsRemoteModelImplCopyWith(
+          _$LocationResultsRemoteModelImpl value,
+          $Res Function(_$LocationResultsRemoteModelImpl) then) =
+      __$$LocationResultsRemoteModelImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({List<LocationModel> results});
+}
+
+/// @nodoc
+class __$$LocationResultsRemoteModelImplCopyWithImpl<$Res>
+    extends _$LocationResultsRemoteModelCopyWithImpl<$Res,
+        _$LocationResultsRemoteModelImpl>
+    implements _$$LocationResultsRemoteModelImplCopyWith<$Res> {
+  __$$LocationResultsRemoteModelImplCopyWithImpl(
+      _$LocationResultsRemoteModelImpl _value,
+      $Res Function(_$LocationResultsRemoteModelImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? results = null,
+  }) {
+    return _then(_$LocationResultsRemoteModelImpl(
+      results: null == results
+          ? _value._results
+          : results // ignore: cast_nullable_to_non_nullable
+              as List<LocationModel>,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$LocationResultsRemoteModelImpl implements _LocationResultsRemoteModel {
+  const _$LocationResultsRemoteModelImpl(
+      {required final List<LocationModel> results})
+      : _results = results;
+
+  factory _$LocationResultsRemoteModelImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$LocationResultsRemoteModelImplFromJson(json);
+
+  final List<LocationModel> _results;
+  @override
+  List<LocationModel> get results {
+    if (_results is EqualUnmodifiableListView) return _results;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_results);
+  }
+
+  @override
+  String toString() {
+    return 'LocationResultsRemoteModel(results: $results)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$LocationResultsRemoteModelImpl &&
+            const DeepCollectionEquality().equals(other._results, _results));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_results));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$LocationResultsRemoteModelImplCopyWith<_$LocationResultsRemoteModelImpl>
+      get copyWith => __$$LocationResultsRemoteModelImplCopyWithImpl<
+          _$LocationResultsRemoteModelImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$LocationResultsRemoteModelImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _LocationResultsRemoteModel
+    implements LocationResultsRemoteModel {
+  const factory _LocationResultsRemoteModel(
+          {required final List<LocationModel> results}) =
+      _$LocationResultsRemoteModelImpl;
+
+  factory _LocationResultsRemoteModel.fromJson(Map<String, dynamic> json) =
+      _$LocationResultsRemoteModelImpl.fromJson;
+
+  @override
+  List<LocationModel> get results;
+  @override
+  @JsonKey(ignore: true)
+  _$$LocationResultsRemoteModelImplCopyWith<_$LocationResultsRemoteModelImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
 LocationModel _$LocationModelFromJson(Map<String, dynamic> json) {
   return _LocationModel.fromJson(json);
 }

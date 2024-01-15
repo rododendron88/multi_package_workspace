@@ -6,6 +6,37 @@ part of 'character_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
+_$CharactersRemoteModelImpl _$$CharactersRemoteModelImplFromJson(
+        Map<String, dynamic> json) =>
+    _$CharactersRemoteModelImpl(
+      characters: CharacterResultsRemoteModel.fromJson(
+          (json['characters'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(k, e as Object),
+      )),
+    );
+
+Map<String, dynamic> _$$CharactersRemoteModelImplToJson(
+        _$CharactersRemoteModelImpl instance) =>
+    <String, dynamic>{
+      'characters': instance.characters,
+    };
+
+_$CharacterResultsRemoteModelImpl _$$CharacterResultsRemoteModelImplFromJson(
+        Map<String, dynamic> json) =>
+    _$CharacterResultsRemoteModelImpl(
+      results: (json['results'] as List<dynamic>)
+          .map((e) => CharacterModel.fromJson((e as Map<String, dynamic>).map(
+                (k, e) => MapEntry(k, e as Object),
+              )))
+          .toList(),
+    );
+
+Map<String, dynamic> _$$CharacterResultsRemoteModelImplToJson(
+        _$CharacterResultsRemoteModelImpl instance) =>
+    <String, dynamic>{
+      'results': instance.results,
+    };
+
 _$CharacterModelImpl _$$CharacterModelImplFromJson(Map<String, dynamic> json) =>
     _$CharacterModelImpl(
       id: json['id'] as String,

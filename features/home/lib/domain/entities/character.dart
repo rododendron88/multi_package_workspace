@@ -1,9 +1,20 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-
 import 'package:home/domain/entities/gender.dart';
-import 'package:home/domain/entities/vital_status.dart';
 
 part 'character.freezed.dart';
+part 'character.g.dart';
+
+@freezed
+sealed class VitalStatus with _$VitalStatus {
+  const factory VitalStatus.alive() = Alive;
+
+  const factory VitalStatus.dead() = Dead;
+
+  const factory VitalStatus.unknown() = Unknown;
+
+  factory VitalStatus.fromJson(Map<String, dynamic> json) =>
+      _$VitalStatusFromJson(json);
+}
 
 @freezed
 class Character with _$Character {

@@ -14,6 +14,311 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
+EpisodesRemoteModel _$EpisodesRemoteModelFromJson(Map<String, dynamic> json) {
+  return _EpisodesRemoteModel.fromJson(json);
+}
+
+/// @nodoc
+mixin _$EpisodesRemoteModel {
+  EpisodeResultsRemoteModel get episodes => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $EpisodesRemoteModelCopyWith<EpisodesRemoteModel> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $EpisodesRemoteModelCopyWith<$Res> {
+  factory $EpisodesRemoteModelCopyWith(
+          EpisodesRemoteModel value, $Res Function(EpisodesRemoteModel) then) =
+      _$EpisodesRemoteModelCopyWithImpl<$Res, EpisodesRemoteModel>;
+  @useResult
+  $Res call({EpisodeResultsRemoteModel episodes});
+
+  $EpisodeResultsRemoteModelCopyWith<$Res> get episodes;
+}
+
+/// @nodoc
+class _$EpisodesRemoteModelCopyWithImpl<$Res, $Val extends EpisodesRemoteModel>
+    implements $EpisodesRemoteModelCopyWith<$Res> {
+  _$EpisodesRemoteModelCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? episodes = null,
+  }) {
+    return _then(_value.copyWith(
+      episodes: null == episodes
+          ? _value.episodes
+          : episodes // ignore: cast_nullable_to_non_nullable
+              as EpisodeResultsRemoteModel,
+    ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $EpisodeResultsRemoteModelCopyWith<$Res> get episodes {
+    return $EpisodeResultsRemoteModelCopyWith<$Res>(_value.episodes, (value) {
+      return _then(_value.copyWith(episodes: value) as $Val);
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$EpisodesRemoteModelImplCopyWith<$Res>
+    implements $EpisodesRemoteModelCopyWith<$Res> {
+  factory _$$EpisodesRemoteModelImplCopyWith(_$EpisodesRemoteModelImpl value,
+          $Res Function(_$EpisodesRemoteModelImpl) then) =
+      __$$EpisodesRemoteModelImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({EpisodeResultsRemoteModel episodes});
+
+  @override
+  $EpisodeResultsRemoteModelCopyWith<$Res> get episodes;
+}
+
+/// @nodoc
+class __$$EpisodesRemoteModelImplCopyWithImpl<$Res>
+    extends _$EpisodesRemoteModelCopyWithImpl<$Res, _$EpisodesRemoteModelImpl>
+    implements _$$EpisodesRemoteModelImplCopyWith<$Res> {
+  __$$EpisodesRemoteModelImplCopyWithImpl(_$EpisodesRemoteModelImpl _value,
+      $Res Function(_$EpisodesRemoteModelImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? episodes = null,
+  }) {
+    return _then(_$EpisodesRemoteModelImpl(
+      episodes: null == episodes
+          ? _value.episodes
+          : episodes // ignore: cast_nullable_to_non_nullable
+              as EpisodeResultsRemoteModel,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$EpisodesRemoteModelImpl implements _EpisodesRemoteModel {
+  const _$EpisodesRemoteModelImpl({required this.episodes});
+
+  factory _$EpisodesRemoteModelImpl.fromJson(Map<String, dynamic> json) =>
+      _$$EpisodesRemoteModelImplFromJson(json);
+
+  @override
+  final EpisodeResultsRemoteModel episodes;
+
+  @override
+  String toString() {
+    return 'EpisodesRemoteModel(episodes: $episodes)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$EpisodesRemoteModelImpl &&
+            (identical(other.episodes, episodes) ||
+                other.episodes == episodes));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(runtimeType, episodes);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$EpisodesRemoteModelImplCopyWith<_$EpisodesRemoteModelImpl> get copyWith =>
+      __$$EpisodesRemoteModelImplCopyWithImpl<_$EpisodesRemoteModelImpl>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$EpisodesRemoteModelImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _EpisodesRemoteModel implements EpisodesRemoteModel {
+  const factory _EpisodesRemoteModel(
+          {required final EpisodeResultsRemoteModel episodes}) =
+      _$EpisodesRemoteModelImpl;
+
+  factory _EpisodesRemoteModel.fromJson(Map<String, dynamic> json) =
+      _$EpisodesRemoteModelImpl.fromJson;
+
+  @override
+  EpisodeResultsRemoteModel get episodes;
+  @override
+  @JsonKey(ignore: true)
+  _$$EpisodesRemoteModelImplCopyWith<_$EpisodesRemoteModelImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+EpisodeResultsRemoteModel _$EpisodeResultsRemoteModelFromJson(
+    Map<String, dynamic> json) {
+  return _EpisodeResultsRemoteModel.fromJson(json);
+}
+
+/// @nodoc
+mixin _$EpisodeResultsRemoteModel {
+  List<EpisodeModel> get results => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $EpisodeResultsRemoteModelCopyWith<EpisodeResultsRemoteModel> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $EpisodeResultsRemoteModelCopyWith<$Res> {
+  factory $EpisodeResultsRemoteModelCopyWith(EpisodeResultsRemoteModel value,
+          $Res Function(EpisodeResultsRemoteModel) then) =
+      _$EpisodeResultsRemoteModelCopyWithImpl<$Res, EpisodeResultsRemoteModel>;
+  @useResult
+  $Res call({List<EpisodeModel> results});
+}
+
+/// @nodoc
+class _$EpisodeResultsRemoteModelCopyWithImpl<$Res,
+        $Val extends EpisodeResultsRemoteModel>
+    implements $EpisodeResultsRemoteModelCopyWith<$Res> {
+  _$EpisodeResultsRemoteModelCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? results = null,
+  }) {
+    return _then(_value.copyWith(
+      results: null == results
+          ? _value.results
+          : results // ignore: cast_nullable_to_non_nullable
+              as List<EpisodeModel>,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$EpisodeResultsRemoteModelImplCopyWith<$Res>
+    implements $EpisodeResultsRemoteModelCopyWith<$Res> {
+  factory _$$EpisodeResultsRemoteModelImplCopyWith(
+          _$EpisodeResultsRemoteModelImpl value,
+          $Res Function(_$EpisodeResultsRemoteModelImpl) then) =
+      __$$EpisodeResultsRemoteModelImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({List<EpisodeModel> results});
+}
+
+/// @nodoc
+class __$$EpisodeResultsRemoteModelImplCopyWithImpl<$Res>
+    extends _$EpisodeResultsRemoteModelCopyWithImpl<$Res,
+        _$EpisodeResultsRemoteModelImpl>
+    implements _$$EpisodeResultsRemoteModelImplCopyWith<$Res> {
+  __$$EpisodeResultsRemoteModelImplCopyWithImpl(
+      _$EpisodeResultsRemoteModelImpl _value,
+      $Res Function(_$EpisodeResultsRemoteModelImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? results = null,
+  }) {
+    return _then(_$EpisodeResultsRemoteModelImpl(
+      results: null == results
+          ? _value._results
+          : results // ignore: cast_nullable_to_non_nullable
+              as List<EpisodeModel>,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$EpisodeResultsRemoteModelImpl implements _EpisodeResultsRemoteModel {
+  const _$EpisodeResultsRemoteModelImpl(
+      {required final List<EpisodeModel> results})
+      : _results = results;
+
+  factory _$EpisodeResultsRemoteModelImpl.fromJson(Map<String, dynamic> json) =>
+      _$$EpisodeResultsRemoteModelImplFromJson(json);
+
+  final List<EpisodeModel> _results;
+  @override
+  List<EpisodeModel> get results {
+    if (_results is EqualUnmodifiableListView) return _results;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_results);
+  }
+
+  @override
+  String toString() {
+    return 'EpisodeResultsRemoteModel(results: $results)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$EpisodeResultsRemoteModelImpl &&
+            const DeepCollectionEquality().equals(other._results, _results));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_results));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$EpisodeResultsRemoteModelImplCopyWith<_$EpisodeResultsRemoteModelImpl>
+      get copyWith => __$$EpisodeResultsRemoteModelImplCopyWithImpl<
+          _$EpisodeResultsRemoteModelImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$EpisodeResultsRemoteModelImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _EpisodeResultsRemoteModel implements EpisodeResultsRemoteModel {
+  const factory _EpisodeResultsRemoteModel(
+          {required final List<EpisodeModel> results}) =
+      _$EpisodeResultsRemoteModelImpl;
+
+  factory _EpisodeResultsRemoteModel.fromJson(Map<String, dynamic> json) =
+      _$EpisodeResultsRemoteModelImpl.fromJson;
+
+  @override
+  List<EpisodeModel> get results;
+  @override
+  @JsonKey(ignore: true)
+  _$$EpisodeResultsRemoteModelImplCopyWith<_$EpisodeResultsRemoteModelImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
 EpisodeModel _$EpisodeModelFromJson(Map<String, dynamic> json) {
   return _EpisodeModel.fromJson(json);
 }

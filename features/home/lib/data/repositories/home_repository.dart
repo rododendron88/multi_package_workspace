@@ -1,5 +1,6 @@
 import 'package:core/domain/error/exceptions.dart';
 import 'package:core/domain/error/failures.dart';
+import 'package:core/domain/scopes.dart';
 import 'package:core/domain/service/network_info.dart';
 import 'package:dartz/dartz.dart';
 import 'package:home/data/datasources/home_local_datasource.dart';
@@ -13,7 +14,7 @@ import 'package:home/domain/entities/location.dart';
 import 'package:home/domain/repositories/home_repository.dart';
 import 'package:injectable/injectable.dart';
 
-@LazySingleton(as: HomeRepository)
+@Injectable(scope: ScopeNames.main, as: HomeRepository)
 class HomeRepositoryImpl implements HomeRepository {
   HomeRepositoryImpl(
       this._networkInfo, this._remoteDataSource, this._localDataSource);

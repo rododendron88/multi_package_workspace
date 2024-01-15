@@ -8,6 +8,26 @@ part 'episode_model.freezed.dart';
 part 'episode_model.g.dart';
 
 @freezed
+class EpisodesRemoteModel with _$EpisodesRemoteModel {
+  const factory EpisodesRemoteModel({
+    required EpisodeResultsRemoteModel episodes,
+  }) = _EpisodesRemoteModel;
+
+  factory EpisodesRemoteModel.fromJson(Map<String, dynamic> json) =>
+      _$EpisodesRemoteModelFromJson(json);
+}
+
+@freezed
+class EpisodeResultsRemoteModel with _$EpisodeResultsRemoteModel {
+  const factory EpisodeResultsRemoteModel({
+    required List<EpisodeModel> results,
+  }) = _EpisodeResultsRemoteModel;
+
+  factory EpisodeResultsRemoteModel.fromJson(Map<String, Object> json) =>
+      _$EpisodeResultsRemoteModelFromJson(json);
+}
+
+@freezed
 class EpisodeModel with _$EpisodeModel {
   const factory EpisodeModel({
     required String id,
@@ -16,7 +36,7 @@ class EpisodeModel with _$EpisodeModel {
     required String episode,
   }) = _EpisodeModel;
 
-  factory EpisodeModel.fromJson(Map<String, dynamic> json) =>
+  factory EpisodeModel.fromJson(Map<String, Object> json) =>
       _$EpisodeModelFromJson(json);
 
   factory EpisodeModel.fromEntity(Episode episode) => EpisodeModel(

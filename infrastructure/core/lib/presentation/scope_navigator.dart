@@ -3,6 +3,7 @@ import 'package:core/domain/modules_holder.dart';
 import 'package:core/domain/scopes.dart';
 import 'package:core/presentation/route.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:get_it/get_it.dart';
 
 class ScopeNavigator extends StatefulWidget {
@@ -25,13 +26,14 @@ class _ScopeNavigatorState extends State<ScopeNavigator> {
   @override
   Widget build(BuildContext context) {
     final routes = GetIt.instance<ModulesHolder>().routes(scope: widget.scope);
-    return WillPopScope(
-      onWillPop: () async {
+    return PopScope(
+      canPop: false,
+      onPopInvoked: (_) {
         if (_globalKey.currentState!.canPop()) {
           _globalKey.currentState!.pop();
-          return false;
+        } else {
+          SystemNavigator.pop();
         }
-        return true;
       },
       child: Navigator(
         key: _globalKey,

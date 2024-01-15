@@ -4,10 +4,11 @@ import 'package:core/domain/scopes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_drawer_menu/flutter_drawer_menu.dart';
 import 'package:home/presentation/bloc/home_bloc.dart';
-import 'package:home/presentation/widgets/characters_list.dart';
-import 'package:home/presentation/widgets/episodes_list.dart';
-import 'package:home/presentation/widgets/locations_list.dart';
+import 'package:home/presentation/pages/characters_page.dart';
 import 'package:home/presentation/widgets/side_menu.dart';
+
+import 'episodes_page.dart';
+import 'locations_page.dart';
 
 @Injectable(scope: ScopeNames.main)
 class HomePage extends StatefulWidget {
@@ -36,9 +37,9 @@ class _HomePageState extends State<HomePage> {
         appBar: AppBar(
           title: Text(state.when(
               empty: () => '',
-              characters: (_, title, __) => title,
-              episodes: (_, title, __) => title,
-              locations: (_, title, __) => title)),
+              characters: (title) => title,
+              episodes: (title) => title,
+              locations: (title) => title)),
           leading: IconButton(
             onPressed: _menuController.open,
             icon: const Icon(Icons.menu),
@@ -46,11 +47,8 @@ class _HomePageState extends State<HomePage> {
         ),
         body: state.when(
             empty: SizedBox.new,
-            characters: (_, title, pageFetch) =>
-                CharactersList(pageFetch: pageFetch),
-            episodes: (_, title, pageFetch) =>
-                EpisodesList(pageFetch: pageFetch),
-            locations: (_, title, pageFetch) =>
-                LocationsList(pageFetch: pageFetch)),
+            characters: (_) => const CharacterPage(),
+            episodes: (_) => const EpisodePage(),
+            locations: (_) => const LocationPage()),
       );
 }

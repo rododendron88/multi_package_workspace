@@ -37,8 +37,10 @@ mixin _MaterialRouteTransitionMixin<T> on PageRoute<T> {
   String? get barrierLabel => null;
 
   @override
+  // ignore: prefer_expression_function_bodies
   bool canTransitionTo(TransitionRoute<dynamic> nextRoute) {
-    // Don't perform outgoing animation if the next route is a fullscreen dialog.
+    // Don't perform outgoing animation if the next route
+    // is a fullscreen dialog.
     return (nextRoute is MaterialRouteTransitionMixin &&
             !nextRoute.fullscreenDialog) ||
         (nextRoute is CupertinoRouteTransitionMixin &&

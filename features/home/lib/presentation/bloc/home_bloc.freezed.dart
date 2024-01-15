@@ -408,43 +408,25 @@ mixin _$HomeState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() empty,
-    required TResult Function(int selectedIndex, String title,
-            Future<List<Character>> Function(int) pageFetch)
-        characters,
-    required TResult Function(int selectedIndex, String title,
-            Future<List<Episode>> Function(int) pageFetch)
-        episodes,
-    required TResult Function(int selectedIndex, String title,
-            Future<List<Location>> Function(int) pageFetch)
-        locations,
+    required TResult Function(String title) characters,
+    required TResult Function(String title) episodes,
+    required TResult Function(String title) locations,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? empty,
-    TResult? Function(int selectedIndex, String title,
-            Future<List<Character>> Function(int) pageFetch)?
-        characters,
-    TResult? Function(int selectedIndex, String title,
-            Future<List<Episode>> Function(int) pageFetch)?
-        episodes,
-    TResult? Function(int selectedIndex, String title,
-            Future<List<Location>> Function(int) pageFetch)?
-        locations,
+    TResult? Function(String title)? characters,
+    TResult? Function(String title)? episodes,
+    TResult? Function(String title)? locations,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? empty,
-    TResult Function(int selectedIndex, String title,
-            Future<List<Character>> Function(int) pageFetch)?
-        characters,
-    TResult Function(int selectedIndex, String title,
-            Future<List<Episode>> Function(int) pageFetch)?
-        episodes,
-    TResult Function(int selectedIndex, String title,
-            Future<List<Location>> Function(int) pageFetch)?
-        locations,
+    TResult Function(String title)? characters,
+    TResult Function(String title)? episodes,
+    TResult Function(String title)? locations,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -531,15 +513,9 @@ class _$EmptyStateImpl implements EmptyState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() empty,
-    required TResult Function(int selectedIndex, String title,
-            Future<List<Character>> Function(int) pageFetch)
-        characters,
-    required TResult Function(int selectedIndex, String title,
-            Future<List<Episode>> Function(int) pageFetch)
-        episodes,
-    required TResult Function(int selectedIndex, String title,
-            Future<List<Location>> Function(int) pageFetch)
-        locations,
+    required TResult Function(String title) characters,
+    required TResult Function(String title) episodes,
+    required TResult Function(String title) locations,
   }) {
     return empty();
   }
@@ -548,15 +524,9 @@ class _$EmptyStateImpl implements EmptyState {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? empty,
-    TResult? Function(int selectedIndex, String title,
-            Future<List<Character>> Function(int) pageFetch)?
-        characters,
-    TResult? Function(int selectedIndex, String title,
-            Future<List<Episode>> Function(int) pageFetch)?
-        episodes,
-    TResult? Function(int selectedIndex, String title,
-            Future<List<Location>> Function(int) pageFetch)?
-        locations,
+    TResult? Function(String title)? characters,
+    TResult? Function(String title)? episodes,
+    TResult? Function(String title)? locations,
   }) {
     return empty?.call();
   }
@@ -565,15 +535,9 @@ class _$EmptyStateImpl implements EmptyState {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? empty,
-    TResult Function(int selectedIndex, String title,
-            Future<List<Character>> Function(int) pageFetch)?
-        characters,
-    TResult Function(int selectedIndex, String title,
-            Future<List<Episode>> Function(int) pageFetch)?
-        episodes,
-    TResult Function(int selectedIndex, String title,
-            Future<List<Location>> Function(int) pageFetch)?
-        locations,
+    TResult Function(String title)? characters,
+    TResult Function(String title)? episodes,
+    TResult Function(String title)? locations,
     required TResult orElse(),
   }) {
     if (empty != null) {
@@ -631,10 +595,7 @@ abstract class _$$CharactersSelectedStateImplCopyWith<$Res> {
           $Res Function(_$CharactersSelectedStateImpl) then) =
       __$$CharactersSelectedStateImplCopyWithImpl<$Res>;
   @useResult
-  $Res call(
-      {int selectedIndex,
-      String title,
-      Future<List<Character>> Function(int) pageFetch});
+  $Res call({String title});
 }
 
 /// @nodoc
@@ -649,23 +610,13 @@ class __$$CharactersSelectedStateImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? selectedIndex = null,
     Object? title = null,
-    Object? pageFetch = null,
   }) {
     return _then(_$CharactersSelectedStateImpl(
-      null == selectedIndex
-          ? _value.selectedIndex
-          : selectedIndex // ignore: cast_nullable_to_non_nullable
-              as int,
       null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String,
-      null == pageFetch
-          ? _value.pageFetch
-          : pageFetch // ignore: cast_nullable_to_non_nullable
-              as Future<List<Character>> Function(int),
     ));
   }
 }
@@ -673,19 +624,14 @@ class __$$CharactersSelectedStateImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$CharactersSelectedStateImpl implements CharactersSelectedState {
-  const _$CharactersSelectedStateImpl(
-      this.selectedIndex, this.title, this.pageFetch);
+  const _$CharactersSelectedStateImpl(this.title);
 
   @override
-  final int selectedIndex;
-  @override
   final String title;
-  @override
-  final Future<List<Character>> Function(int) pageFetch;
 
   @override
   String toString() {
-    return 'HomeState.characters(selectedIndex: $selectedIndex, title: $title, pageFetch: $pageFetch)';
+    return 'HomeState.characters(title: $title)';
   }
 
   @override
@@ -693,15 +639,11 @@ class _$CharactersSelectedStateImpl implements CharactersSelectedState {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CharactersSelectedStateImpl &&
-            (identical(other.selectedIndex, selectedIndex) ||
-                other.selectedIndex == selectedIndex) &&
-            (identical(other.title, title) || other.title == title) &&
-            (identical(other.pageFetch, pageFetch) ||
-                other.pageFetch == pageFetch));
+            (identical(other.title, title) || other.title == title));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, selectedIndex, title, pageFetch);
+  int get hashCode => Object.hash(runtimeType, title);
 
   @JsonKey(ignore: true)
   @override
@@ -714,53 +656,35 @@ class _$CharactersSelectedStateImpl implements CharactersSelectedState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() empty,
-    required TResult Function(int selectedIndex, String title,
-            Future<List<Character>> Function(int) pageFetch)
-        characters,
-    required TResult Function(int selectedIndex, String title,
-            Future<List<Episode>> Function(int) pageFetch)
-        episodes,
-    required TResult Function(int selectedIndex, String title,
-            Future<List<Location>> Function(int) pageFetch)
-        locations,
+    required TResult Function(String title) characters,
+    required TResult Function(String title) episodes,
+    required TResult Function(String title) locations,
   }) {
-    return characters(selectedIndex, title, pageFetch);
+    return characters(title);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? empty,
-    TResult? Function(int selectedIndex, String title,
-            Future<List<Character>> Function(int) pageFetch)?
-        characters,
-    TResult? Function(int selectedIndex, String title,
-            Future<List<Episode>> Function(int) pageFetch)?
-        episodes,
-    TResult? Function(int selectedIndex, String title,
-            Future<List<Location>> Function(int) pageFetch)?
-        locations,
+    TResult? Function(String title)? characters,
+    TResult? Function(String title)? episodes,
+    TResult? Function(String title)? locations,
   }) {
-    return characters?.call(selectedIndex, title, pageFetch);
+    return characters?.call(title);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? empty,
-    TResult Function(int selectedIndex, String title,
-            Future<List<Character>> Function(int) pageFetch)?
-        characters,
-    TResult Function(int selectedIndex, String title,
-            Future<List<Episode>> Function(int) pageFetch)?
-        episodes,
-    TResult Function(int selectedIndex, String title,
-            Future<List<Location>> Function(int) pageFetch)?
-        locations,
+    TResult Function(String title)? characters,
+    TResult Function(String title)? episodes,
+    TResult Function(String title)? locations,
     required TResult orElse(),
   }) {
     if (characters != null) {
-      return characters(selectedIndex, title, pageFetch);
+      return characters(title);
     }
     return orElse();
   }
@@ -804,15 +728,10 @@ class _$CharactersSelectedStateImpl implements CharactersSelectedState {
 }
 
 abstract class CharactersSelectedState implements HomeState {
-  const factory CharactersSelectedState(
-          final int selectedIndex,
-          final String title,
-          final Future<List<Character>> Function(int) pageFetch) =
+  const factory CharactersSelectedState(final String title) =
       _$CharactersSelectedStateImpl;
 
-  int get selectedIndex;
   String get title;
-  Future<List<Character>> Function(int) get pageFetch;
   @JsonKey(ignore: true)
   _$$CharactersSelectedStateImplCopyWith<_$CharactersSelectedStateImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -825,10 +744,7 @@ abstract class _$$EpisodesSelectedStateImplCopyWith<$Res> {
           $Res Function(_$EpisodesSelectedStateImpl) then) =
       __$$EpisodesSelectedStateImplCopyWithImpl<$Res>;
   @useResult
-  $Res call(
-      {int selectedIndex,
-      String title,
-      Future<List<Episode>> Function(int) pageFetch});
+  $Res call({String title});
 }
 
 /// @nodoc
@@ -842,23 +758,13 @@ class __$$EpisodesSelectedStateImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? selectedIndex = null,
     Object? title = null,
-    Object? pageFetch = null,
   }) {
     return _then(_$EpisodesSelectedStateImpl(
-      null == selectedIndex
-          ? _value.selectedIndex
-          : selectedIndex // ignore: cast_nullable_to_non_nullable
-              as int,
       null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String,
-      null == pageFetch
-          ? _value.pageFetch
-          : pageFetch // ignore: cast_nullable_to_non_nullable
-              as Future<List<Episode>> Function(int),
     ));
   }
 }
@@ -866,19 +772,14 @@ class __$$EpisodesSelectedStateImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$EpisodesSelectedStateImpl implements EpisodesSelectedState {
-  const _$EpisodesSelectedStateImpl(
-      this.selectedIndex, this.title, this.pageFetch);
+  const _$EpisodesSelectedStateImpl(this.title);
 
   @override
-  final int selectedIndex;
-  @override
   final String title;
-  @override
-  final Future<List<Episode>> Function(int) pageFetch;
 
   @override
   String toString() {
-    return 'HomeState.episodes(selectedIndex: $selectedIndex, title: $title, pageFetch: $pageFetch)';
+    return 'HomeState.episodes(title: $title)';
   }
 
   @override
@@ -886,15 +787,11 @@ class _$EpisodesSelectedStateImpl implements EpisodesSelectedState {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$EpisodesSelectedStateImpl &&
-            (identical(other.selectedIndex, selectedIndex) ||
-                other.selectedIndex == selectedIndex) &&
-            (identical(other.title, title) || other.title == title) &&
-            (identical(other.pageFetch, pageFetch) ||
-                other.pageFetch == pageFetch));
+            (identical(other.title, title) || other.title == title));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, selectedIndex, title, pageFetch);
+  int get hashCode => Object.hash(runtimeType, title);
 
   @JsonKey(ignore: true)
   @override
@@ -907,53 +804,35 @@ class _$EpisodesSelectedStateImpl implements EpisodesSelectedState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() empty,
-    required TResult Function(int selectedIndex, String title,
-            Future<List<Character>> Function(int) pageFetch)
-        characters,
-    required TResult Function(int selectedIndex, String title,
-            Future<List<Episode>> Function(int) pageFetch)
-        episodes,
-    required TResult Function(int selectedIndex, String title,
-            Future<List<Location>> Function(int) pageFetch)
-        locations,
+    required TResult Function(String title) characters,
+    required TResult Function(String title) episodes,
+    required TResult Function(String title) locations,
   }) {
-    return episodes(selectedIndex, title, pageFetch);
+    return episodes(title);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? empty,
-    TResult? Function(int selectedIndex, String title,
-            Future<List<Character>> Function(int) pageFetch)?
-        characters,
-    TResult? Function(int selectedIndex, String title,
-            Future<List<Episode>> Function(int) pageFetch)?
-        episodes,
-    TResult? Function(int selectedIndex, String title,
-            Future<List<Location>> Function(int) pageFetch)?
-        locations,
+    TResult? Function(String title)? characters,
+    TResult? Function(String title)? episodes,
+    TResult? Function(String title)? locations,
   }) {
-    return episodes?.call(selectedIndex, title, pageFetch);
+    return episodes?.call(title);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? empty,
-    TResult Function(int selectedIndex, String title,
-            Future<List<Character>> Function(int) pageFetch)?
-        characters,
-    TResult Function(int selectedIndex, String title,
-            Future<List<Episode>> Function(int) pageFetch)?
-        episodes,
-    TResult Function(int selectedIndex, String title,
-            Future<List<Location>> Function(int) pageFetch)?
-        locations,
+    TResult Function(String title)? characters,
+    TResult Function(String title)? episodes,
+    TResult Function(String title)? locations,
     required TResult orElse(),
   }) {
     if (episodes != null) {
-      return episodes(selectedIndex, title, pageFetch);
+      return episodes(title);
     }
     return orElse();
   }
@@ -997,15 +876,10 @@ class _$EpisodesSelectedStateImpl implements EpisodesSelectedState {
 }
 
 abstract class EpisodesSelectedState implements HomeState {
-  const factory EpisodesSelectedState(
-          final int selectedIndex,
-          final String title,
-          final Future<List<Episode>> Function(int) pageFetch) =
+  const factory EpisodesSelectedState(final String title) =
       _$EpisodesSelectedStateImpl;
 
-  int get selectedIndex;
   String get title;
-  Future<List<Episode>> Function(int) get pageFetch;
   @JsonKey(ignore: true)
   _$$EpisodesSelectedStateImplCopyWith<_$EpisodesSelectedStateImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -1018,10 +892,7 @@ abstract class _$$LocationsSelectedStateImplCopyWith<$Res> {
           $Res Function(_$LocationsSelectedStateImpl) then) =
       __$$LocationsSelectedStateImplCopyWithImpl<$Res>;
   @useResult
-  $Res call(
-      {int selectedIndex,
-      String title,
-      Future<List<Location>> Function(int) pageFetch});
+  $Res call({String title});
 }
 
 /// @nodoc
@@ -1036,23 +907,13 @@ class __$$LocationsSelectedStateImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? selectedIndex = null,
     Object? title = null,
-    Object? pageFetch = null,
   }) {
     return _then(_$LocationsSelectedStateImpl(
-      null == selectedIndex
-          ? _value.selectedIndex
-          : selectedIndex // ignore: cast_nullable_to_non_nullable
-              as int,
       null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String,
-      null == pageFetch
-          ? _value.pageFetch
-          : pageFetch // ignore: cast_nullable_to_non_nullable
-              as Future<List<Location>> Function(int),
     ));
   }
 }
@@ -1060,19 +921,14 @@ class __$$LocationsSelectedStateImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$LocationsSelectedStateImpl implements LocationsSelectedState {
-  const _$LocationsSelectedStateImpl(
-      this.selectedIndex, this.title, this.pageFetch);
+  const _$LocationsSelectedStateImpl(this.title);
 
   @override
-  final int selectedIndex;
-  @override
   final String title;
-  @override
-  final Future<List<Location>> Function(int) pageFetch;
 
   @override
   String toString() {
-    return 'HomeState.locations(selectedIndex: $selectedIndex, title: $title, pageFetch: $pageFetch)';
+    return 'HomeState.locations(title: $title)';
   }
 
   @override
@@ -1080,15 +936,11 @@ class _$LocationsSelectedStateImpl implements LocationsSelectedState {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$LocationsSelectedStateImpl &&
-            (identical(other.selectedIndex, selectedIndex) ||
-                other.selectedIndex == selectedIndex) &&
-            (identical(other.title, title) || other.title == title) &&
-            (identical(other.pageFetch, pageFetch) ||
-                other.pageFetch == pageFetch));
+            (identical(other.title, title) || other.title == title));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, selectedIndex, title, pageFetch);
+  int get hashCode => Object.hash(runtimeType, title);
 
   @JsonKey(ignore: true)
   @override
@@ -1101,53 +953,35 @@ class _$LocationsSelectedStateImpl implements LocationsSelectedState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() empty,
-    required TResult Function(int selectedIndex, String title,
-            Future<List<Character>> Function(int) pageFetch)
-        characters,
-    required TResult Function(int selectedIndex, String title,
-            Future<List<Episode>> Function(int) pageFetch)
-        episodes,
-    required TResult Function(int selectedIndex, String title,
-            Future<List<Location>> Function(int) pageFetch)
-        locations,
+    required TResult Function(String title) characters,
+    required TResult Function(String title) episodes,
+    required TResult Function(String title) locations,
   }) {
-    return locations(selectedIndex, title, pageFetch);
+    return locations(title);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? empty,
-    TResult? Function(int selectedIndex, String title,
-            Future<List<Character>> Function(int) pageFetch)?
-        characters,
-    TResult? Function(int selectedIndex, String title,
-            Future<List<Episode>> Function(int) pageFetch)?
-        episodes,
-    TResult? Function(int selectedIndex, String title,
-            Future<List<Location>> Function(int) pageFetch)?
-        locations,
+    TResult? Function(String title)? characters,
+    TResult? Function(String title)? episodes,
+    TResult? Function(String title)? locations,
   }) {
-    return locations?.call(selectedIndex, title, pageFetch);
+    return locations?.call(title);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? empty,
-    TResult Function(int selectedIndex, String title,
-            Future<List<Character>> Function(int) pageFetch)?
-        characters,
-    TResult Function(int selectedIndex, String title,
-            Future<List<Episode>> Function(int) pageFetch)?
-        episodes,
-    TResult Function(int selectedIndex, String title,
-            Future<List<Location>> Function(int) pageFetch)?
-        locations,
+    TResult Function(String title)? characters,
+    TResult Function(String title)? episodes,
+    TResult Function(String title)? locations,
     required TResult orElse(),
   }) {
     if (locations != null) {
-      return locations(selectedIndex, title, pageFetch);
+      return locations(title);
     }
     return orElse();
   }
@@ -1191,15 +1025,10 @@ class _$LocationsSelectedStateImpl implements LocationsSelectedState {
 }
 
 abstract class LocationsSelectedState implements HomeState {
-  const factory LocationsSelectedState(
-          final int selectedIndex,
-          final String title,
-          final Future<List<Location>> Function(int) pageFetch) =
+  const factory LocationsSelectedState(final String title) =
       _$LocationsSelectedStateImpl;
 
-  int get selectedIndex;
   String get title;
-  Future<List<Location>> Function(int) get pageFetch;
   @JsonKey(ignore: true)
   _$$LocationsSelectedStateImplCopyWith<_$LocationsSelectedStateImpl>
       get copyWith => throw _privateConstructorUsedError;

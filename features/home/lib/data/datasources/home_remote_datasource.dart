@@ -1,8 +1,10 @@
+import 'package:core/data/util/gql_query.dart';
+import 'package:core/domain/error/exceptions.dart' as excptn;
+import 'package:core/domain/scopes.dart';
+import 'package:flutter/foundation.dart';
 import 'package:graphql_flutter/graphql_flutter.dart';
 import 'package:injectable/injectable.dart';
 
-import 'package:core/domain/error/exceptions.dart' as excptn;
-import 'package:core/data/util/gql_query.dart';
 import '../models/character_model.dart';
 import '../models/episode_model.dart';
 import '../models/location_model.dart';
@@ -15,7 +17,7 @@ abstract class IHomeRemoteDataSource {
   Future<List<EpisodeModel>> getEpisodes(int page);
 }
 
-@LazySingleton(as: IHomeRemoteDataSource)
+@Injectable(scope: ScopeNames.main, as: IHomeRemoteDataSource)
 class HomeRemoteDataSource implements IHomeRemoteDataSource {
   HomeRemoteDataSource(this._client);
 
@@ -26,17 +28,16 @@ class HomeRemoteDataSource implements IHomeRemoteDataSource {
     try {
       final result = await _client.query(QueryOptions(
         document: gql(GqlQuery.charactersQuery),
-        variables: {"page": page},
+        variables: {'page': page},
       ));
       if (result.data == null) {
         return [];
       }
-      return result.data?['characters']['results']
-          .map((e) => CharacterModel.fromJson(e))
-          .cast<CharacterModel>()
-          .toList();
+      return CharactersRemoteModel.fromJson(result.data!).characters.results;
     } on Exception catch (exception) {
-      print(exception);
+      if (kDebugMode) {
+        print(exception);
+      }
       throw excptn.ServerException();
     }
   }
@@ -46,17 +47,16 @@ class HomeRemoteDataSource implements IHomeRemoteDataSource {
     try {
       final result = await _client.query(QueryOptions(
         document: gql(GqlQuery.episodesQuery),
-        variables: {"page": page},
+        variables: {'page': page},
       ));
       if (result.data == null) {
         return [];
       }
-      return result.data?['episodes']['results']
-          .map((e) => EpisodeModel.fromJson(e))
-          .cast<EpisodeModel>()
-          .toList();
+      return EpisodesRemoteModel.fromJson(result.data!).episodes.results;
     } on Exception catch (exception) {
-      print(exception);
+      if (kDebugMode) {
+        print(exception);
+      }
       throw excptn.ServerException();
     }
   }
@@ -71,12 +71,11 @@ class HomeRemoteDataSource implements IHomeRemoteDataSource {
       if (result.data == null) {
         return [];
       }
-      return result.data?['locations']['results']
-          .map((e) => LocationModel.fromJson(e))
-          .cast<LocationModel>()
-          .toList();
+      return LocationsRemoteModel.fromJson(result.data!).locations.results;
     } on Exception catch (exception) {
-      print(exception);
+      if (kDebugMode) {
+        print(exception);
+      }
       throw excptn.ServerException();
     }
   }

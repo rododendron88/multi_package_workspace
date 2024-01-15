@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:core/domain/error/exceptions.dart';
+import 'package:core/domain/scopes.dart';
 import 'package:hive/hive.dart';
 import 'package:injectable/injectable.dart';
 
@@ -26,7 +27,7 @@ abstract class IHomeLocalDataSource {
   Future<void> cacheEpisodes(List<EpisodeModel> models, int page);
 }
 
-@LazySingleton(as: IHomeLocalDataSource)
+@Injectable(scope: ScopeNames.main, as: IHomeLocalDataSource)
 class HomeLocalDataSource implements IHomeLocalDataSource {
   HomeLocalDataSource(this._box);
 
@@ -65,10 +66,10 @@ class HomeLocalDataSource implements IHomeLocalDataSource {
     if (modelsString == null) {
       throw CacheException();
     }
+
     return _isFirstPage(page)
-        ? json
-            .decode(modelsString)
-            .map<CharacterModel>((e) => CharacterModel.fromJson(e))
+        ? (json.decode(modelsString) as List<Map<String, Object>>)
+            .map<CharacterModel>(CharacterModel.fromJson)
             .toList()
         : [];
   }
@@ -80,9 +81,8 @@ class HomeLocalDataSource implements IHomeLocalDataSource {
       throw CacheException();
     }
     return _isFirstPage(page)
-        ? json
-            .decode(modelsString)
-            .map<EpisodeModel>((e) => EpisodeModel.fromJson(e))
+        ? (json.decode(modelsString) as List<Map<String, Object>>)
+            .map<EpisodeModel>(EpisodeModel.fromJson)
             .toList()
         : [];
   }
@@ -94,9 +94,8 @@ class HomeLocalDataSource implements IHomeLocalDataSource {
       throw CacheException();
     }
     return _isFirstPage(page)
-        ? json
-            .decode(modelsString)
-            .map<LocationModel>((e) => LocationModel.fromJson(e))
+        ? (json.decode(modelsString) as List<Map<String, Object>>)
+            .map<LocationModel>(LocationModel.fromJson)
             .toList()
         : [];
   }

@@ -5,6 +5,26 @@ part 'location_model.freezed.dart';
 part 'location_model.g.dart';
 
 @freezed
+class LocationsRemoteModel with _$LocationsRemoteModel {
+  const factory LocationsRemoteModel({
+    required LocationResultsRemoteModel locations,
+  }) = _LocationsRemoteModel;
+
+  factory LocationsRemoteModel.fromJson(Map<String, dynamic> json) =>
+      _$LocationsRemoteModelFromJson(json);
+}
+
+@freezed
+class LocationResultsRemoteModel with _$LocationResultsRemoteModel {
+  const factory LocationResultsRemoteModel({
+    required List<LocationModel> results,
+  }) = _LocationResultsRemoteModel;
+
+  factory LocationResultsRemoteModel.fromJson(Map<String, Object> json) =>
+      _$LocationResultsRemoteModelFromJson(json);
+}
+
+@freezed
 class LocationModel with _$LocationModel {
   const factory LocationModel({
     required String id,
@@ -13,7 +33,7 @@ class LocationModel with _$LocationModel {
     required String dimension,
   }) = _LocationModel;
 
-  factory LocationModel.fromJson(Map<String, dynamic> json) =>
+  factory LocationModel.fromJson(Map<String, Object> json) =>
       _$LocationModelFromJson(json);
 
   factory LocationModel.fromEntity(Location location) => LocationModel(
