@@ -12,7 +12,7 @@ part of 'home_bloc.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$HomeEvent {
@@ -77,6 +77,9 @@ class _$HomeEventCopyWithImpl<$Res, $Val extends HomeEvent>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of HomeEvent
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -93,6 +96,9 @@ class __$$CharactersSelectedImplCopyWithImpl<$Res>
   __$$CharactersSelectedImplCopyWithImpl(_$CharactersSelectedImpl _value,
       $Res Function(_$CharactersSelectedImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of HomeEvent
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -201,6 +207,9 @@ class __$$EpisodesSelectedImplCopyWithImpl<$Res>
   __$$EpisodesSelectedImplCopyWithImpl(_$EpisodesSelectedImpl _value,
       $Res Function(_$EpisodesSelectedImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of HomeEvent
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -309,6 +318,9 @@ class __$$LocationsSelectedImplCopyWithImpl<$Res>
   __$$LocationsSelectedImplCopyWithImpl(_$LocationsSelectedImpl _value,
       $Res Function(_$LocationsSelectedImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of HomeEvent
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -472,6 +484,9 @@ class _$HomeStateCopyWithImpl<$Res, $Val extends HomeState>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -488,6 +503,9 @@ class __$$EmptyStateImplCopyWithImpl<$Res>
   __$$EmptyStateImplCopyWithImpl(
       _$EmptyStateImpl _value, $Res Function(_$EmptyStateImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -607,6 +625,8 @@ class __$$CharactersSelectedStateImplCopyWithImpl<$Res>
       $Res Function(_$CharactersSelectedStateImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -645,7 +665,9 @@ class _$CharactersSelectedStateImpl implements CharactersSelectedState {
   @override
   int get hashCode => Object.hash(runtimeType, title);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$CharactersSelectedStateImplCopyWith<_$CharactersSelectedStateImpl>
@@ -732,7 +754,10 @@ abstract class CharactersSelectedState implements HomeState {
       _$CharactersSelectedStateImpl;
 
   String get title;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CharactersSelectedStateImplCopyWith<_$CharactersSelectedStateImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -755,6 +780,8 @@ class __$$EpisodesSelectedStateImplCopyWithImpl<$Res>
       $Res Function(_$EpisodesSelectedStateImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -793,7 +820,9 @@ class _$EpisodesSelectedStateImpl implements EpisodesSelectedState {
   @override
   int get hashCode => Object.hash(runtimeType, title);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$EpisodesSelectedStateImplCopyWith<_$EpisodesSelectedStateImpl>
@@ -880,7 +909,10 @@ abstract class EpisodesSelectedState implements HomeState {
       _$EpisodesSelectedStateImpl;
 
   String get title;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$EpisodesSelectedStateImplCopyWith<_$EpisodesSelectedStateImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -904,6 +936,8 @@ class __$$LocationsSelectedStateImplCopyWithImpl<$Res>
       $Res Function(_$LocationsSelectedStateImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -942,7 +976,9 @@ class _$LocationsSelectedStateImpl implements LocationsSelectedState {
   @override
   int get hashCode => Object.hash(runtimeType, title);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$LocationsSelectedStateImplCopyWith<_$LocationsSelectedStateImpl>
@@ -1029,7 +1065,10 @@ abstract class LocationsSelectedState implements HomeState {
       _$LocationsSelectedStateImpl;
 
   String get title;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LocationsSelectedStateImplCopyWith<_$LocationsSelectedStateImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

@@ -13,10 +13,11 @@ command:
   bootstrap:
     hooks:
       pre: dart run scripts/deps_fixer.dart
-      post:
-        melos exec -c 1 --depends-on="build_runner" -- flutter pub run build_runner build --delete-conflicting-outputs;
 
 scripts:
+  br:
+    run: melos exec -c 1 --depends-on="build_runner" -- flutter pub run build_runner build --delete-conflicting-outputs;
+    description: Run build_runner
   fix:
     run: dart run deps_fixer.dart
     description: Fix dependencies according common_deps.yaml

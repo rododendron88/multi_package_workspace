@@ -12,7 +12,7 @@ part of 'character.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 VitalStatus _$VitalStatusFromJson(Map<String, dynamic> json) {
   switch (json['runtimeType']) {
@@ -75,6 +75,8 @@ mixin _$VitalStatus {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+
+  /// Serializes this VitalStatus to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
@@ -94,6 +96,9 @@ class _$VitalStatusCopyWithImpl<$Res, $Val extends VitalStatus>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of VitalStatus
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -110,6 +115,9 @@ class __$$AliveImplCopyWithImpl<$Res>
   __$$AliveImplCopyWithImpl(
       _$AliveImpl _value, $Res Function(_$AliveImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of VitalStatus
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -134,7 +142,7 @@ class _$AliveImpl implements Alive {
         (other.runtimeType == runtimeType && other is _$AliveImpl);
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -233,6 +241,9 @@ class __$$DeadImplCopyWithImpl<$Res>
     implements _$$DeadImplCopyWith<$Res> {
   __$$DeadImplCopyWithImpl(_$DeadImpl _value, $Res Function(_$DeadImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of VitalStatus
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -257,7 +268,7 @@ class _$DeadImpl implements Dead {
         (other.runtimeType == runtimeType && other is _$DeadImpl);
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -357,6 +368,9 @@ class __$$UnknownImplCopyWithImpl<$Res>
   __$$UnknownImplCopyWithImpl(
       _$UnknownImpl _value, $Res Function(_$UnknownImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of VitalStatus
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -381,7 +395,7 @@ class _$UnknownImpl implements Unknown {
         (other.runtimeType == runtimeType && other is _$UnknownImpl);
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -477,7 +491,9 @@ mixin _$Character {
   String get species => throw _privateConstructorUsedError;
   String get image => throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Character
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $CharacterCopyWith<Character> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -510,6 +526,8 @@ class _$CharacterCopyWithImpl<$Res, $Val extends Character>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Character
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -553,6 +571,8 @@ class _$CharacterCopyWithImpl<$Res, $Val extends Character>
     ) as $Val);
   }
 
+  /// Create a copy of Character
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $VitalStatusCopyWith<$Res> get vitalStatus {
@@ -561,6 +581,8 @@ class _$CharacterCopyWithImpl<$Res, $Val extends Character>
     });
   }
 
+  /// Create a copy of Character
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $GenderCopyWith<$Res> get gender {
@@ -601,6 +623,8 @@ class __$$CharacterImplCopyWithImpl<$Res>
       _$CharacterImpl _value, $Res Function(_$CharacterImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Character
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -696,7 +720,9 @@ class _$CharacterImpl implements _Character {
   int get hashCode => Object.hash(
       runtimeType, id, name, vitalStatus, gender, type, species, image);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Character
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$CharacterImplCopyWith<_$CharacterImpl> get copyWith =>
@@ -727,8 +753,11 @@ abstract class _Character implements Character {
   String get species;
   @override
   String get image;
+
+  /// Create a copy of Character
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CharacterImplCopyWith<_$CharacterImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

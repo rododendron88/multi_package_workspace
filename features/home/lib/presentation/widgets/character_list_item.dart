@@ -25,25 +25,25 @@ class CharacterListItem extends StatelessWidget {
     );
 
     final description = Padding(
-        padding: const EdgeInsets.fromLTRB(16, 16, 16, 16),
+        padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
         child: Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Expanded(
-                child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: [
-                Text(
-                  item.name,
-                  style: const TextStyle(fontSize: 18),
-                ),
-                const SizedBox(
-                  height: 8,
-                ),
-                Text(
-                  item.species,
-                  style: const TextStyle(fontSize: 16, color: Colors.grey),
-                ),
-              ],
+                child: Text.rich(
+              TextSpan(
+                children: [
+                  TextSpan(
+                    text: '${item.name}\n',
+                    style: const TextStyle(fontSize: 18),
+                  ),
+                  TextSpan(
+                    text: item.species,
+                    style: const TextStyle(fontSize: 16, color: Colors.grey),
+                  ),
+                ],
+              ),
+              maxLines: 3,
             )),
             item.vitalStatus.when(
               alive: () => const Icon(Icons.tag_faces),
@@ -54,12 +54,13 @@ class CharacterListItem extends StatelessWidget {
         ));
 
     return Card(
-      margin: const EdgeInsets.fromLTRB(16, 16, 16, 0),
+      margin: const EdgeInsets.fromLTRB(14, 14, 14, 0),
+      clipBehavior: Clip.antiAlias,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           image,
-          description,
+          Expanded(child: description),
         ],
       ),
     );

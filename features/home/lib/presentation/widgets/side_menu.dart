@@ -3,6 +3,7 @@ import 'package:common/dependencies.dart';
 import 'package:core/domain/module/auth_module.dart';
 import 'package:core/domain/router/routes.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_drawer_menu/flutter_drawer_menu.dart';
 import 'package:home/presentation/bloc/home_bloc.dart';
 
@@ -12,16 +13,19 @@ class SideMenu extends StatelessWidget {
   const SideMenu({required this.user});
 
   @override
-  Widget build(BuildContext context) => Container(
-        color: Colors.white,
-        child: SafeArea(
-          child: BlocBuilder<HomeBloc, HomeState>(
-            builder: (context, state) => Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: [
-                buildUserPanel(),
-                ...buildMenu(context, state),
-              ],
+  Widget build(BuildContext context) => _wrapWithSystemUiOverlayStyle(
+        Material(
+          color: Colors.transparent,
+          child: SafeArea(
+            bottom: false,
+            child: BlocBuilder<HomeBloc, HomeState>(
+              builder: (context, state) => Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  buildUserPanel(),
+                  ...buildMenu(context, state),
+                ],
+              ),
             ),
           ),
         ),
@@ -80,6 +84,22 @@ class SideMenu extends StatelessWidget {
           onTap: () => Navigator.pushNamed(context, Routes.routerExample)),
     ];
   }
+
+  Widget _wrapWithSystemUiOverlayStyle(Widget child) =>
+      AnnotatedRegion<SystemUiOverlayStyle>(
+        value: const SystemUiOverlayStyle(
+          // Android part.
+          statusBarColor: Colors.transparent,
+          statusBarIconBrightness: Brightness.dark,
+          systemNavigationBarColor: Colors.transparent,
+          systemNavigationBarContrastEnforced: false,
+          systemNavigationBarIconBrightness: Brightness.dark,
+          // iOS part.
+          // When Android setup dark iOS light one. Hmm.
+          statusBarBrightness: Brightness.light,
+        ),
+        child: child,
+      );
 }
 
 class _ItemSideMenu extends StatelessWidget {

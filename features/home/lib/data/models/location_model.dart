@@ -20,14 +20,14 @@ class LocationResultsRemoteModel with _$LocationResultsRemoteModel {
     required List<LocationModel> results,
   }) = _LocationResultsRemoteModel;
 
-  factory LocationResultsRemoteModel.fromJson(Map<String, Object> json) =>
+  factory LocationResultsRemoteModel.fromJson(Map<String, dynamic> json) =>
       _$LocationResultsRemoteModelFromJson(json);
 }
 
 @freezed
 class LocationModel with _$LocationModel {
   const factory LocationModel({
-    required String id,
+    required int id,
     required String name,
     required String type,
     required String dimension,

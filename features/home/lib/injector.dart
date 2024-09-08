@@ -1,8 +1,7 @@
 import 'package:get_it/get_it.dart';
 import 'package:graphql_flutter/graphql_flutter.dart';
-import 'package:hive/hive.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 import 'package:injectable/injectable.dart';
-import 'package:path_provider/path_provider.dart';
 
 import 'injector.config.dart';
 
@@ -26,8 +25,7 @@ abstract class HomeInjectorModule {
   @preResolve
   @lazySingleton
   Future<Box> get openBox async {
-    final appDocumentDir = await getApplicationDocumentsDirectory();
-    Hive.init(appDocumentDir.path);
+    await Hive.initFlutter();
     return Hive.openBox<String>('rick-and-morty-info');
   }
 }

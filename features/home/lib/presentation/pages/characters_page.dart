@@ -64,8 +64,11 @@ class __ContentState extends State<_Content> {
     final hasEnded =
         ctx.select<CharacterPageBloc, bool>((b) => b.state.hasReachedEnd);
 
-    return ListView.builder(
-      key: const ValueKey('character_page_list_key'),
+    final isTablet = MediaQuery.of(context).size.width > 600;
+    final columns = (MediaQuery.of(context).size.width ~/ 300).clamp(1, 4);
+
+    return GridView.builder(
+      key: const ValueKey('character_page_grid_key'),
       controller: _scrollController,
       itemCount: hasEnded ? list.length : list.length + 1,
       itemBuilder: (context, index) {
@@ -75,6 +78,12 @@ class __ContentState extends State<_Content> {
         final item = list[index];
         return CharacterListItem(item: item);
       },
+      padding: EdgeInsets.fromLTRB(isTablet ? 16 : 0, 0, 0, 0),
+      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: columns,
+          childAspectRatio: 1,
+          crossAxisSpacing: 0,
+          mainAxisSpacing: 0),
     );
   }
 

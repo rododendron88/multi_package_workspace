@@ -12,7 +12,7 @@ part of 'auth_bloc.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$AuthState {
@@ -83,6 +83,9 @@ class _$AuthStateCopyWithImpl<$Res, $Val extends AuthState>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of AuthState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -99,6 +102,9 @@ class __$$SplashStateImplCopyWithImpl<$Res>
   __$$SplashStateImplCopyWithImpl(
       _$SplashStateImpl _value, $Res Function(_$SplashStateImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of AuthState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -214,6 +220,9 @@ class __$$ProgressStateImplCopyWithImpl<$Res>
   __$$ProgressStateImplCopyWithImpl(
       _$ProgressStateImpl _value, $Res Function(_$ProgressStateImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of AuthState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -329,6 +338,9 @@ class __$$AuthorizationStateImplCopyWithImpl<$Res>
   __$$AuthorizationStateImplCopyWithImpl(_$AuthorizationStateImpl _value,
       $Res Function(_$AuthorizationStateImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of AuthState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -447,6 +459,8 @@ class __$$AuthorizedStateImplCopyWithImpl<$Res>
       _$AuthorizedStateImpl _value, $Res Function(_$AuthorizedStateImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AuthState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -485,7 +499,9 @@ class _$AuthorizedStateImpl extends AuthorizedState {
   @override
   int get hashCode => Object.hash(runtimeType, user);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AuthState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AuthorizedStateImplCopyWith<_$AuthorizedStateImpl> get copyWith =>
@@ -572,7 +588,10 @@ abstract class AuthorizedState extends AuthState {
   const AuthorizedState._() : super._();
 
   User get user;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AuthState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AuthorizedStateImplCopyWith<_$AuthorizedStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -640,6 +659,9 @@ class _$AuthEventCopyWithImpl<$Res, $Val extends AuthEvent>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of AuthEvent
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -656,6 +678,9 @@ class __$$InitEventImplCopyWithImpl<$Res>
   __$$InitEventImplCopyWithImpl(
       _$InitEventImpl _value, $Res Function(_$InitEventImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of AuthEvent
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -768,6 +793,8 @@ class __$$AuthorizeEventImplCopyWithImpl<$Res>
       _$AuthorizeEventImpl _value, $Res Function(_$AuthorizeEventImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AuthEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -807,7 +834,9 @@ class _$AuthorizeEventImpl extends AuthorizeEvent {
   @override
   int get hashCode => Object.hash(runtimeType, userName);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AuthEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AuthorizeEventImplCopyWith<_$AuthorizeEventImpl> get copyWith =>
@@ -888,7 +917,10 @@ abstract class AuthorizeEvent extends AuthEvent {
   const AuthorizeEvent._() : super._();
 
   String get userName;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AuthEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AuthorizeEventImplCopyWith<_$AuthorizeEventImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -907,6 +939,9 @@ class __$$LogoutEventImplCopyWithImpl<$Res>
   __$$LogoutEventImplCopyWithImpl(
       _$LogoutEventImpl _value, $Res Function(_$LogoutEventImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of AuthEvent
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc

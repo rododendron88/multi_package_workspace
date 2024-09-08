@@ -10,3 +10,6 @@ export 'package:intl/intl.dart';
 export 'package:json_annotation/json_annotation.dart';
 export 'package:auto_route/auto_route.dart';
 export 'package:bloc_concurrency/bloc_concurrency.dart';
+export 'package:logger/logger.dart';
+export 'package:dio/dio.dart' hide Headers;
+export 'package:retrofit/retrofit.dart';

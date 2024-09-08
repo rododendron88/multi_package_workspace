@@ -12,7 +12,7 @@ part of 'gender.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 Gender _$GenderFromJson(Map<String, dynamic> json) {
   switch (json['runtimeType']) {
@@ -83,6 +83,8 @@ mixin _$Gender {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+
+  /// Serializes this Gender to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
@@ -101,6 +103,9 @@ class _$GenderCopyWithImpl<$Res, $Val extends Gender>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of Gender
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -117,6 +122,9 @@ class __$$FemaleImplCopyWithImpl<$Res>
   __$$FemaleImplCopyWithImpl(
       _$FemaleImpl _value, $Res Function(_$FemaleImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of Gender
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -147,7 +155,7 @@ class _$FemaleImpl with DiagnosticableTreeMixin implements Female {
         (other.runtimeType == runtimeType && other is _$FemaleImpl);
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -253,6 +261,9 @@ class __$$GenderlessImplCopyWithImpl<$Res>
   __$$GenderlessImplCopyWithImpl(
       _$GenderlessImpl _value, $Res Function(_$GenderlessImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of Gender
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -283,7 +294,7 @@ class _$GenderlessImpl with DiagnosticableTreeMixin implements Genderless {
         (other.runtimeType == runtimeType && other is _$GenderlessImpl);
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -389,6 +400,9 @@ class __$$MaleImplCopyWithImpl<$Res>
     implements _$$MaleImplCopyWith<$Res> {
   __$$MaleImplCopyWithImpl(_$MaleImpl _value, $Res Function(_$MaleImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of Gender
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -419,7 +433,7 @@ class _$MaleImpl with DiagnosticableTreeMixin implements Male {
         (other.runtimeType == runtimeType && other is _$MaleImpl);
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -525,6 +539,9 @@ class __$$UnknownImplCopyWithImpl<$Res>
   __$$UnknownImplCopyWithImpl(
       _$UnknownImpl _value, $Res Function(_$UnknownImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of Gender
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -555,7 +572,7 @@ class _$UnknownImpl with DiagnosticableTreeMixin implements Unknown {
         (other.runtimeType == runtimeType && other is _$UnknownImpl);
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => runtimeType.hashCode;
 

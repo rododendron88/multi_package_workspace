@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:common/dependencies.dart';
 import 'package:core/data/modules_holder.dart';
+import 'package:core/data/util/globals.dart';
 import 'package:core/domain/extensions/modules_holder.dart';
 import 'package:core/domain/module/module.dart';
 import 'package:core/domain/modules_holder.dart';
@@ -29,6 +30,7 @@ Future<void> run({required RunnerSettings settings}) async {
     ));
   }, (error, stack) {
     /// Global error handler
+    logger.e(error.toString(), error: error, stackTrace: stack);
   });
 }
 

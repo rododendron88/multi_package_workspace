@@ -12,7 +12,7 @@ part of 'location_model.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 LocationsRemoteModel _$LocationsRemoteModelFromJson(Map<String, dynamic> json) {
   return _LocationsRemoteModel.fromJson(json);
@@ -23,8 +23,12 @@ mixin _$LocationsRemoteModel {
   LocationResultsRemoteModel get locations =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this LocationsRemoteModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of LocationsRemoteModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $LocationsRemoteModelCopyWith<LocationsRemoteModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -51,6 +55,8 @@ class _$LocationsRemoteModelCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of LocationsRemoteModel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -64,6 +70,8 @@ class _$LocationsRemoteModelCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of LocationsRemoteModel
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $LocationResultsRemoteModelCopyWith<$Res> get locations {
@@ -95,6 +103,8 @@ class __$$LocationsRemoteModelImplCopyWithImpl<$Res>
       $Res Function(_$LocationsRemoteModelImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of LocationsRemoteModel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -134,11 +144,13 @@ class _$LocationsRemoteModelImpl implements _LocationsRemoteModel {
                 other.locations == locations));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, locations);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of LocationsRemoteModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$LocationsRemoteModelImplCopyWith<_$LocationsRemoteModelImpl>
@@ -164,8 +176,11 @@ abstract class _LocationsRemoteModel implements LocationsRemoteModel {
 
   @override
   LocationResultsRemoteModel get locations;
+
+  /// Create a copy of LocationsRemoteModel
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LocationsRemoteModelImplCopyWith<_$LocationsRemoteModelImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -179,8 +194,12 @@ LocationResultsRemoteModel _$LocationResultsRemoteModelFromJson(
 mixin _$LocationResultsRemoteModel {
   List<LocationModel> get results => throw _privateConstructorUsedError;
 
+  /// Serializes this LocationResultsRemoteModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of LocationResultsRemoteModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $LocationResultsRemoteModelCopyWith<LocationResultsRemoteModel>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -206,6 +225,8 @@ class _$LocationResultsRemoteModelCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of LocationResultsRemoteModel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -242,6 +263,8 @@ class __$$LocationResultsRemoteModelImplCopyWithImpl<$Res>
       $Res Function(_$LocationResultsRemoteModelImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of LocationResultsRemoteModel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -288,12 +311,14 @@ class _$LocationResultsRemoteModelImpl implements _LocationResultsRemoteModel {
             const DeepCollectionEquality().equals(other._results, _results));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(_results));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of LocationResultsRemoteModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$LocationResultsRemoteModelImplCopyWith<_$LocationResultsRemoteModelImpl>
@@ -319,8 +344,11 @@ abstract class _LocationResultsRemoteModel
 
   @override
   List<LocationModel> get results;
+
+  /// Create a copy of LocationResultsRemoteModel
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LocationResultsRemoteModelImplCopyWith<_$LocationResultsRemoteModelImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -331,13 +359,17 @@ LocationModel _$LocationModelFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$LocationModel {
-  String get id => throw _privateConstructorUsedError;
+  int get id => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
   String get type => throw _privateConstructorUsedError;
   String get dimension => throw _privateConstructorUsedError;
 
+  /// Serializes this LocationModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of LocationModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $LocationModelCopyWith<LocationModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -348,7 +380,7 @@ abstract class $LocationModelCopyWith<$Res> {
           LocationModel value, $Res Function(LocationModel) then) =
       _$LocationModelCopyWithImpl<$Res, LocationModel>;
   @useResult
-  $Res call({String id, String name, String type, String dimension});
+  $Res call({int id, String name, String type, String dimension});
 }
 
 /// @nodoc
@@ -361,6 +393,8 @@ class _$LocationModelCopyWithImpl<$Res, $Val extends LocationModel>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of LocationModel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -373,7 +407,7 @@ class _$LocationModelCopyWithImpl<$Res, $Val extends LocationModel>
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
+              as int,
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -398,7 +432,7 @@ abstract class _$$LocationModelImplCopyWith<$Res>
       __$$LocationModelImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String id, String name, String type, String dimension});
+  $Res call({int id, String name, String type, String dimension});
 }
 
 /// @nodoc
@@ -409,6 +443,8 @@ class __$$LocationModelImplCopyWithImpl<$Res>
       _$LocationModelImpl _value, $Res Function(_$LocationModelImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of LocationModel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -421,7 +457,7 @@ class __$$LocationModelImplCopyWithImpl<$Res>
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
+              as int,
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -451,7 +487,7 @@ class _$LocationModelImpl implements _LocationModel {
       _$$LocationModelImplFromJson(json);
 
   @override
-  final String id;
+  final int id;
   @override
   final String name;
   @override
@@ -476,11 +512,13 @@ class _$LocationModelImpl implements _LocationModel {
                 other.dimension == dimension));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, name, type, dimension);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of LocationModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$LocationModelImplCopyWith<_$LocationModelImpl> get copyWith =>
@@ -496,7 +534,7 @@ class _$LocationModelImpl implements _LocationModel {
 
 abstract class _LocationModel implements LocationModel {
   const factory _LocationModel(
-      {required final String id,
+      {required final int id,
       required final String name,
       required final String type,
       required final String dimension}) = _$LocationModelImpl;
@@ -505,15 +543,18 @@ abstract class _LocationModel implements LocationModel {
       _$LocationModelImpl.fromJson;
 
   @override
-  String get id;
+  int get id;
   @override
   String get name;
   @override
   String get type;
   @override
   String get dimension;
+
+  /// Create a copy of LocationModel
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LocationModelImplCopyWith<_$LocationModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

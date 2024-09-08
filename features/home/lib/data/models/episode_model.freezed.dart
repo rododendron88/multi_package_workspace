@@ -12,7 +12,7 @@ part of 'episode_model.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 EpisodesRemoteModel _$EpisodesRemoteModelFromJson(Map<String, dynamic> json) {
   return _EpisodesRemoteModel.fromJson(json);
@@ -22,8 +22,12 @@ EpisodesRemoteModel _$EpisodesRemoteModelFromJson(Map<String, dynamic> json) {
 mixin _$EpisodesRemoteModel {
   EpisodeResultsRemoteModel get episodes => throw _privateConstructorUsedError;
 
+  /// Serializes this EpisodesRemoteModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of EpisodesRemoteModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $EpisodesRemoteModelCopyWith<EpisodesRemoteModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -49,6 +53,8 @@ class _$EpisodesRemoteModelCopyWithImpl<$Res, $Val extends EpisodesRemoteModel>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of EpisodesRemoteModel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -62,6 +68,8 @@ class _$EpisodesRemoteModelCopyWithImpl<$Res, $Val extends EpisodesRemoteModel>
     ) as $Val);
   }
 
+  /// Create a copy of EpisodesRemoteModel
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $EpisodeResultsRemoteModelCopyWith<$Res> get episodes {
@@ -93,6 +101,8 @@ class __$$EpisodesRemoteModelImplCopyWithImpl<$Res>
       $Res Function(_$EpisodesRemoteModelImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of EpisodesRemoteModel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -132,11 +142,13 @@ class _$EpisodesRemoteModelImpl implements _EpisodesRemoteModel {
                 other.episodes == episodes));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, episodes);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of EpisodesRemoteModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$EpisodesRemoteModelImplCopyWith<_$EpisodesRemoteModelImpl> get copyWith =>
@@ -161,8 +173,11 @@ abstract class _EpisodesRemoteModel implements EpisodesRemoteModel {
 
   @override
   EpisodeResultsRemoteModel get episodes;
+
+  /// Create a copy of EpisodesRemoteModel
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$EpisodesRemoteModelImplCopyWith<_$EpisodesRemoteModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -176,8 +191,12 @@ EpisodeResultsRemoteModel _$EpisodeResultsRemoteModelFromJson(
 mixin _$EpisodeResultsRemoteModel {
   List<EpisodeModel> get results => throw _privateConstructorUsedError;
 
+  /// Serializes this EpisodeResultsRemoteModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of EpisodeResultsRemoteModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $EpisodeResultsRemoteModelCopyWith<EpisodeResultsRemoteModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -202,6 +221,8 @@ class _$EpisodeResultsRemoteModelCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of EpisodeResultsRemoteModel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -238,6 +259,8 @@ class __$$EpisodeResultsRemoteModelImplCopyWithImpl<$Res>
       $Res Function(_$EpisodeResultsRemoteModelImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of EpisodeResultsRemoteModel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -283,12 +306,14 @@ class _$EpisodeResultsRemoteModelImpl implements _EpisodeResultsRemoteModel {
             const DeepCollectionEquality().equals(other._results, _results));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(_results));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of EpisodeResultsRemoteModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$EpisodeResultsRemoteModelImplCopyWith<_$EpisodeResultsRemoteModelImpl>
@@ -313,8 +338,11 @@ abstract class _EpisodeResultsRemoteModel implements EpisodeResultsRemoteModel {
 
   @override
   List<EpisodeModel> get results;
+
+  /// Create a copy of EpisodeResultsRemoteModel
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$EpisodeResultsRemoteModelImplCopyWith<_$EpisodeResultsRemoteModelImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -331,8 +359,12 @@ mixin _$EpisodeModel {
   String get airDate => throw _privateConstructorUsedError;
   String get episode => throw _privateConstructorUsedError;
 
+  /// Serializes this EpisodeModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of EpisodeModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $EpisodeModelCopyWith<EpisodeModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -360,6 +392,8 @@ class _$EpisodeModelCopyWithImpl<$Res, $Val extends EpisodeModel>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of EpisodeModel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -412,6 +446,8 @@ class __$$EpisodeModelImplCopyWithImpl<$Res>
       _$EpisodeModelImpl _value, $Res Function(_$EpisodeModelImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of EpisodeModel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -479,11 +515,13 @@ class _$EpisodeModelImpl implements _EpisodeModel {
             (identical(other.episode, episode) || other.episode == episode));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, name, airDate, episode);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of EpisodeModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$EpisodeModelImplCopyWith<_$EpisodeModelImpl> get copyWith =>
@@ -516,8 +554,11 @@ abstract class _EpisodeModel implements EpisodeModel {
   String get airDate;
   @override
   String get episode;
+
+  /// Create a copy of EpisodeModel
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$EpisodeModelImplCopyWith<_$EpisodeModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

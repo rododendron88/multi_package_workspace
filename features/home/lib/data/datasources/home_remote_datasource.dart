@@ -3,6 +3,7 @@ import 'package:core/domain/error/exceptions.dart' as excptn;
 import 'package:core/domain/scopes.dart';
 import 'package:flutter/foundation.dart';
 import 'package:graphql_flutter/graphql_flutter.dart';
+import 'package:home/data/datasources/locations_api.dart';
 import 'package:injectable/injectable.dart';
 
 import '../models/character_model.dart';
@@ -19,9 +20,10 @@ abstract class IHomeRemoteDataSource {
 
 @Injectable(scope: ScopeNames.main, as: IHomeRemoteDataSource)
 class HomeRemoteDataSource implements IHomeRemoteDataSource {
-  HomeRemoteDataSource(this._client);
+  HomeRemoteDataSource(this._client, this._locationsApi);
 
   final GraphQLClient _client;
+  final LocationsApi _locationsApi;
 
   @override
   Future<List<CharacterModel>> getCharacters(int page) async {
@@ -64,14 +66,7 @@ class HomeRemoteDataSource implements IHomeRemoteDataSource {
   @override
   Future<List<LocationModel>> getLocations(int page) async {
     try {
-      final result = await _client.query(QueryOptions(
-        document: gql(GqlQuery.locationsQuery),
-        variables: {'page': page},
-      ));
-      if (result.data == null) {
-        return [];
-      }
-      return LocationsRemoteModel.fromJson(result.data!).locations.results;
+      return (await _locationsApi.locations(page)).results;
     } on Exception catch (exception) {
       if (kDebugMode) {
         print(exception);

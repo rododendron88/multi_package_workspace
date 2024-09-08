@@ -10,9 +10,7 @@ _$LocationsRemoteModelImpl _$$LocationsRemoteModelImplFromJson(
         Map<String, dynamic> json) =>
     _$LocationsRemoteModelImpl(
       locations: LocationResultsRemoteModel.fromJson(
-          (json['locations'] as Map<String, dynamic>).map(
-        (k, e) => MapEntry(k, e as Object),
-      )),
+          json['locations'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$LocationsRemoteModelImplToJson(
@@ -39,7 +37,7 @@ Map<String, dynamic> _$$LocationResultsRemoteModelImplToJson(
 
 _$LocationModelImpl _$$LocationModelImplFromJson(Map<String, dynamic> json) =>
     _$LocationModelImpl(
-      id: json['id'] as String,
+      id: (json['id'] as num).toInt(),
       name: json['name'] as String,
       type: json['type'] as String,
       dimension: json['dimension'] as String,

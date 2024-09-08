@@ -12,7 +12,7 @@ part of 'character_model.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 CharactersRemoteModel _$CharactersRemoteModelFromJson(
     Map<String, dynamic> json) {
@@ -24,8 +24,12 @@ mixin _$CharactersRemoteModel {
   CharacterResultsRemoteModel get characters =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this CharactersRemoteModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of CharactersRemoteModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $CharactersRemoteModelCopyWith<CharactersRemoteModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -52,6 +56,8 @@ class _$CharactersRemoteModelCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of CharactersRemoteModel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -65,6 +71,8 @@ class _$CharactersRemoteModelCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of CharactersRemoteModel
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CharacterResultsRemoteModelCopyWith<$Res> get characters {
@@ -99,6 +107,8 @@ class __$$CharactersRemoteModelImplCopyWithImpl<$Res>
       $Res Function(_$CharactersRemoteModelImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of CharactersRemoteModel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -138,11 +148,13 @@ class _$CharactersRemoteModelImpl implements _CharactersRemoteModel {
                 other.characters == characters));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, characters);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of CharactersRemoteModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$CharactersRemoteModelImplCopyWith<_$CharactersRemoteModelImpl>
@@ -167,8 +179,11 @@ abstract class _CharactersRemoteModel implements CharactersRemoteModel {
 
   @override
   CharacterResultsRemoteModel get characters;
+
+  /// Create a copy of CharactersRemoteModel
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CharactersRemoteModelImplCopyWith<_$CharactersRemoteModelImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -182,8 +197,12 @@ CharacterResultsRemoteModel _$CharacterResultsRemoteModelFromJson(
 mixin _$CharacterResultsRemoteModel {
   List<CharacterModel> get results => throw _privateConstructorUsedError;
 
+  /// Serializes this CharacterResultsRemoteModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of CharacterResultsRemoteModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $CharacterResultsRemoteModelCopyWith<CharacterResultsRemoteModel>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -210,6 +229,8 @@ class _$CharacterResultsRemoteModelCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of CharacterResultsRemoteModel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -246,6 +267,8 @@ class __$$CharacterResultsRemoteModelImplCopyWithImpl<$Res>
       $Res Function(_$CharacterResultsRemoteModelImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of CharacterResultsRemoteModel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -293,12 +316,14 @@ class _$CharacterResultsRemoteModelImpl
             const DeepCollectionEquality().equals(other._results, _results));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(_results));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of CharacterResultsRemoteModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$CharacterResultsRemoteModelImplCopyWith<_$CharacterResultsRemoteModelImpl>
@@ -324,8 +349,11 @@ abstract class _CharacterResultsRemoteModel
 
   @override
   List<CharacterModel> get results;
+
+  /// Create a copy of CharacterResultsRemoteModel
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CharacterResultsRemoteModelImplCopyWith<_$CharacterResultsRemoteModelImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -347,8 +375,12 @@ mixin _$CharacterModel {
   String get species => throw _privateConstructorUsedError;
   String get image => throw _privateConstructorUsedError;
 
+  /// Serializes this CharacterModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of CharacterModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $CharacterModelCopyWith<CharacterModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -382,6 +414,8 @@ class _$CharacterModelCopyWithImpl<$Res, $Val extends CharacterModel>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of CharacterModel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -425,6 +459,8 @@ class _$CharacterModelCopyWithImpl<$Res, $Val extends CharacterModel>
     ) as $Val);
   }
 
+  /// Create a copy of CharacterModel
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $VitalStatusCopyWith<$Res> get vitalStatus {
@@ -433,6 +469,8 @@ class _$CharacterModelCopyWithImpl<$Res, $Val extends CharacterModel>
     });
   }
 
+  /// Create a copy of CharacterModel
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $GenderCopyWith<$Res> get gender {
@@ -473,6 +511,8 @@ class __$$CharacterModelImplCopyWithImpl<$Res>
       _$CharacterModelImpl _value, $Res Function(_$CharacterModelImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of CharacterModel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -572,12 +612,14 @@ class _$CharacterModelImpl implements _CharacterModel {
             (identical(other.image, image) || other.image == image));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, id, name, vitalStatus, gender, type, species, image);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of CharacterModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$CharacterModelImplCopyWith<_$CharacterModelImpl> get copyWith =>
@@ -624,8 +666,11 @@ abstract class _CharacterModel implements CharacterModel {
   String get species;
   @override
   String get image;
+
+  /// Create a copy of CharacterModel
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CharacterModelImplCopyWith<_$CharacterModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

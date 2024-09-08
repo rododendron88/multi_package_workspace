@@ -4,6 +4,7 @@
 .melos_tool/*
 !.vscode/tasks.json
 !.vscode/settings.json
+.history
 
 # Local scripts
 checkout.sh
@@ -43,4 +44,5 @@ build/
 .settings
 .last_build_id
 
-.fvm/flutter_sdk
+# FVM Version Cache
+.fvm/
