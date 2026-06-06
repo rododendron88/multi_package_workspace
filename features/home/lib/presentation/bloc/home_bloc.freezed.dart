@@ -1,5 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,1066 +9,670 @@ part of 'home_bloc.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
-
 /// @nodoc
 mixin _$HomeEvent {
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() charactersSelected,
-    required TResult Function() episodesSelected,
-    required TResult Function() locationsSelected,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? charactersSelected,
-    TResult? Function()? episodesSelected,
-    TResult? Function()? locationsSelected,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? charactersSelected,
-    TResult Function()? episodesSelected,
-    TResult Function()? locationsSelected,
-    required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(CharactersSelected value) charactersSelected,
-    required TResult Function(EpisodesSelected value) episodesSelected,
-    required TResult Function(LocationsSelected value) locationsSelected,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(CharactersSelected value)? charactersSelected,
-    TResult? Function(EpisodesSelected value)? episodesSelected,
-    TResult? Function(LocationsSelected value)? locationsSelected,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(CharactersSelected value)? charactersSelected,
-    TResult Function(EpisodesSelected value)? episodesSelected,
-    TResult Function(LocationsSelected value)? locationsSelected,
-    required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
+
+
+
+
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is HomeEvent);
+}
+
+
+@override
+int get hashCode => runtimeType.hashCode;
+
+@override
+String toString() {
+  return 'HomeEvent()';
+}
+
+
 }
 
 /// @nodoc
-abstract class $HomeEventCopyWith<$Res> {
-  factory $HomeEventCopyWith(HomeEvent value, $Res Function(HomeEvent) then) =
-      _$HomeEventCopyWithImpl<$Res, HomeEvent>;
+class $HomeEventCopyWith<$Res>  {
+$HomeEventCopyWith(HomeEvent _, $Res Function(HomeEvent) __);
 }
 
-/// @nodoc
-class _$HomeEventCopyWithImpl<$Res, $Val extends HomeEvent>
-    implements $HomeEventCopyWith<$Res> {
-  _$HomeEventCopyWithImpl(this._value, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+/// Adds pattern-matching-related methods to [HomeEvent].
+extension HomeEventPatterns on HomeEvent {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
 
-  /// Create a copy of HomeEvent
-  /// with the given fields replaced by the non-null parameter values.
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({TResult Function( CharactersSelected value)?  charactersSelected,TResult Function( EpisodesSelected value)?  episodesSelected,TResult Function( LocationsSelected value)?  locationsSelected,required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case CharactersSelected() when charactersSelected != null:
+return charactersSelected(_that);case EpisodesSelected() when episodesSelected != null:
+return episodesSelected(_that);case LocationsSelected() when locationsSelected != null:
+return locationsSelected(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>({required TResult Function( CharactersSelected value)  charactersSelected,required TResult Function( EpisodesSelected value)  episodesSelected,required TResult Function( LocationsSelected value)  locationsSelected,}){
+final _that = this;
+switch (_that) {
+case CharactersSelected():
+return charactersSelected(_that);case EpisodesSelected():
+return episodesSelected(_that);case LocationsSelected():
+return locationsSelected(_that);}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>({TResult? Function( CharactersSelected value)?  charactersSelected,TResult? Function( EpisodesSelected value)?  episodesSelected,TResult? Function( LocationsSelected value)?  locationsSelected,}){
+final _that = this;
+switch (_that) {
+case CharactersSelected() when charactersSelected != null:
+return charactersSelected(_that);case EpisodesSelected() when episodesSelected != null:
+return episodesSelected(_that);case LocationsSelected() when locationsSelected != null:
+return locationsSelected(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({TResult Function()?  charactersSelected,TResult Function()?  episodesSelected,TResult Function()?  locationsSelected,required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case CharactersSelected() when charactersSelected != null:
+return charactersSelected();case EpisodesSelected() when episodesSelected != null:
+return episodesSelected();case LocationsSelected() when locationsSelected != null:
+return locationsSelected();case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>({required TResult Function()  charactersSelected,required TResult Function()  episodesSelected,required TResult Function()  locationsSelected,}) {final _that = this;
+switch (_that) {
+case CharactersSelected():
+return charactersSelected();case EpisodesSelected():
+return episodesSelected();case LocationsSelected():
+return locationsSelected();}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>({TResult? Function()?  charactersSelected,TResult? Function()?  episodesSelected,TResult? Function()?  locationsSelected,}) {final _that = this;
+switch (_that) {
+case CharactersSelected() when charactersSelected != null:
+return charactersSelected();case EpisodesSelected() when episodesSelected != null:
+return episodesSelected();case LocationsSelected() when locationsSelected != null:
+return locationsSelected();case _:
+  return null;
+
+}
 }
 
-/// @nodoc
-abstract class _$$CharactersSelectedImplCopyWith<$Res> {
-  factory _$$CharactersSelectedImplCopyWith(_$CharactersSelectedImpl value,
-          $Res Function(_$CharactersSelectedImpl) then) =
-      __$$CharactersSelectedImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$CharactersSelectedImplCopyWithImpl<$Res>
-    extends _$HomeEventCopyWithImpl<$Res, _$CharactersSelectedImpl>
-    implements _$$CharactersSelectedImplCopyWith<$Res> {
-  __$$CharactersSelectedImplCopyWithImpl(_$CharactersSelectedImpl _value,
-      $Res Function(_$CharactersSelectedImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of HomeEvent
-  /// with the given fields replaced by the non-null parameter values.
-}
-
-/// @nodoc
-
-class _$CharactersSelectedImpl implements CharactersSelected {
-  const _$CharactersSelectedImpl();
-
-  @override
-  String toString() {
-    return 'HomeEvent.charactersSelected()';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$CharactersSelectedImpl);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() charactersSelected,
-    required TResult Function() episodesSelected,
-    required TResult Function() locationsSelected,
-  }) {
-    return charactersSelected();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? charactersSelected,
-    TResult? Function()? episodesSelected,
-    TResult? Function()? locationsSelected,
-  }) {
-    return charactersSelected?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? charactersSelected,
-    TResult Function()? episodesSelected,
-    TResult Function()? locationsSelected,
-    required TResult orElse(),
-  }) {
-    if (charactersSelected != null) {
-      return charactersSelected();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(CharactersSelected value) charactersSelected,
-    required TResult Function(EpisodesSelected value) episodesSelected,
-    required TResult Function(LocationsSelected value) locationsSelected,
-  }) {
-    return charactersSelected(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(CharactersSelected value)? charactersSelected,
-    TResult? Function(EpisodesSelected value)? episodesSelected,
-    TResult? Function(LocationsSelected value)? locationsSelected,
-  }) {
-    return charactersSelected?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(CharactersSelected value)? charactersSelected,
-    TResult Function(EpisodesSelected value)? episodesSelected,
-    TResult Function(LocationsSelected value)? locationsSelected,
-    required TResult orElse(),
-  }) {
-    if (charactersSelected != null) {
-      return charactersSelected(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class CharactersSelected implements HomeEvent {
-  const factory CharactersSelected() = _$CharactersSelectedImpl;
-}
-
-/// @nodoc
-abstract class _$$EpisodesSelectedImplCopyWith<$Res> {
-  factory _$$EpisodesSelectedImplCopyWith(_$EpisodesSelectedImpl value,
-          $Res Function(_$EpisodesSelectedImpl) then) =
-      __$$EpisodesSelectedImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$EpisodesSelectedImplCopyWithImpl<$Res>
-    extends _$HomeEventCopyWithImpl<$Res, _$EpisodesSelectedImpl>
-    implements _$$EpisodesSelectedImplCopyWith<$Res> {
-  __$$EpisodesSelectedImplCopyWithImpl(_$EpisodesSelectedImpl _value,
-      $Res Function(_$EpisodesSelectedImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of HomeEvent
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
 
-class _$EpisodesSelectedImpl implements EpisodesSelected {
-  const _$EpisodesSelectedImpl();
 
-  @override
-  String toString() {
-    return 'HomeEvent.episodesSelected()';
-  }
+class CharactersSelected implements HomeEvent {
+  const CharactersSelected();
+  
 
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$EpisodesSelectedImpl);
-  }
 
-  @override
-  int get hashCode => runtimeType.hashCode;
 
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() charactersSelected,
-    required TResult Function() episodesSelected,
-    required TResult Function() locationsSelected,
-  }) {
-    return episodesSelected();
-  }
 
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? charactersSelected,
-    TResult? Function()? episodesSelected,
-    TResult? Function()? locationsSelected,
-  }) {
-    return episodesSelected?.call();
-  }
 
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? charactersSelected,
-    TResult Function()? episodesSelected,
-    TResult Function()? locationsSelected,
-    required TResult orElse(),
-  }) {
-    if (episodesSelected != null) {
-      return episodesSelected();
-    }
-    return orElse();
-  }
 
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(CharactersSelected value) charactersSelected,
-    required TResult Function(EpisodesSelected value) episodesSelected,
-    required TResult Function(LocationsSelected value) locationsSelected,
-  }) {
-    return episodesSelected(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(CharactersSelected value)? charactersSelected,
-    TResult? Function(EpisodesSelected value)? episodesSelected,
-    TResult? Function(LocationsSelected value)? locationsSelected,
-  }) {
-    return episodesSelected?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(CharactersSelected value)? charactersSelected,
-    TResult Function(EpisodesSelected value)? episodesSelected,
-    TResult Function(LocationsSelected value)? locationsSelected,
-    required TResult orElse(),
-  }) {
-    if (episodesSelected != null) {
-      return episodesSelected(this);
-    }
-    return orElse();
-  }
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is CharactersSelected);
 }
 
-abstract class EpisodesSelected implements HomeEvent {
-  const factory EpisodesSelected() = _$EpisodesSelectedImpl;
+
+@override
+int get hashCode => runtimeType.hashCode;
+
+@override
+String toString() {
+  return 'HomeEvent.charactersSelected()';
 }
 
-/// @nodoc
-abstract class _$$LocationsSelectedImplCopyWith<$Res> {
-  factory _$$LocationsSelectedImplCopyWith(_$LocationsSelectedImpl value,
-          $Res Function(_$LocationsSelectedImpl) then) =
-      __$$LocationsSelectedImplCopyWithImpl<$Res>;
+
 }
 
-/// @nodoc
-class __$$LocationsSelectedImplCopyWithImpl<$Res>
-    extends _$HomeEventCopyWithImpl<$Res, _$LocationsSelectedImpl>
-    implements _$$LocationsSelectedImplCopyWith<$Res> {
-  __$$LocationsSelectedImplCopyWithImpl(_$LocationsSelectedImpl _value,
-      $Res Function(_$LocationsSelectedImpl) _then)
-      : super(_value, _then);
 
-  /// Create a copy of HomeEvent
-  /// with the given fields replaced by the non-null parameter values.
-}
+
 
 /// @nodoc
 
-class _$LocationsSelectedImpl implements LocationsSelected {
-  const _$LocationsSelectedImpl();
 
-  @override
-  String toString() {
-    return 'HomeEvent.locationsSelected()';
-  }
+class EpisodesSelected implements HomeEvent {
+  const EpisodesSelected();
+  
 
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$LocationsSelectedImpl);
-  }
 
-  @override
-  int get hashCode => runtimeType.hashCode;
 
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() charactersSelected,
-    required TResult Function() episodesSelected,
-    required TResult Function() locationsSelected,
-  }) {
-    return locationsSelected();
-  }
 
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? charactersSelected,
-    TResult? Function()? episodesSelected,
-    TResult? Function()? locationsSelected,
-  }) {
-    return locationsSelected?.call();
-  }
 
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? charactersSelected,
-    TResult Function()? episodesSelected,
-    TResult Function()? locationsSelected,
-    required TResult orElse(),
-  }) {
-    if (locationsSelected != null) {
-      return locationsSelected();
-    }
-    return orElse();
-  }
 
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(CharactersSelected value) charactersSelected,
-    required TResult Function(EpisodesSelected value) episodesSelected,
-    required TResult Function(LocationsSelected value) locationsSelected,
-  }) {
-    return locationsSelected(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(CharactersSelected value)? charactersSelected,
-    TResult? Function(EpisodesSelected value)? episodesSelected,
-    TResult? Function(LocationsSelected value)? locationsSelected,
-  }) {
-    return locationsSelected?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(CharactersSelected value)? charactersSelected,
-    TResult Function(EpisodesSelected value)? episodesSelected,
-    TResult Function(LocationsSelected value)? locationsSelected,
-    required TResult orElse(),
-  }) {
-    if (locationsSelected != null) {
-      return locationsSelected(this);
-    }
-    return orElse();
-  }
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is EpisodesSelected);
 }
 
-abstract class LocationsSelected implements HomeEvent {
-  const factory LocationsSelected() = _$LocationsSelectedImpl;
+
+@override
+int get hashCode => runtimeType.hashCode;
+
+@override
+String toString() {
+  return 'HomeEvent.episodesSelected()';
 }
+
+
+}
+
+
+
+
+/// @nodoc
+
+
+class LocationsSelected implements HomeEvent {
+  const LocationsSelected();
+  
+
+
+
+
+
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is LocationsSelected);
+}
+
+
+@override
+int get hashCode => runtimeType.hashCode;
+
+@override
+String toString() {
+  return 'HomeEvent.locationsSelected()';
+}
+
+
+}
+
+
+
 
 /// @nodoc
 mixin _$HomeState {
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() empty,
-    required TResult Function(String title) characters,
-    required TResult Function(String title) episodes,
-    required TResult Function(String title) locations,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? empty,
-    TResult? Function(String title)? characters,
-    TResult? Function(String title)? episodes,
-    TResult? Function(String title)? locations,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? empty,
-    TResult Function(String title)? characters,
-    TResult Function(String title)? episodes,
-    TResult Function(String title)? locations,
-    required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(EmptyState value) empty,
-    required TResult Function(CharactersSelectedState value) characters,
-    required TResult Function(EpisodesSelectedState value) episodes,
-    required TResult Function(LocationsSelectedState value) locations,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(EmptyState value)? empty,
-    TResult? Function(CharactersSelectedState value)? characters,
-    TResult? Function(EpisodesSelectedState value)? episodes,
-    TResult? Function(LocationsSelectedState value)? locations,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(EmptyState value)? empty,
-    TResult Function(CharactersSelectedState value)? characters,
-    TResult Function(EpisodesSelectedState value)? episodes,
-    TResult Function(LocationsSelectedState value)? locations,
-    required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
+
+
+
+
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is HomeState);
+}
+
+
+@override
+int get hashCode => runtimeType.hashCode;
+
+@override
+String toString() {
+  return 'HomeState()';
+}
+
+
 }
 
 /// @nodoc
-abstract class $HomeStateCopyWith<$Res> {
-  factory $HomeStateCopyWith(HomeState value, $Res Function(HomeState) then) =
-      _$HomeStateCopyWithImpl<$Res, HomeState>;
+class $HomeStateCopyWith<$Res>  {
+$HomeStateCopyWith(HomeState _, $Res Function(HomeState) __);
 }
 
-/// @nodoc
-class _$HomeStateCopyWithImpl<$Res, $Val extends HomeState>
-    implements $HomeStateCopyWith<$Res> {
-  _$HomeStateCopyWithImpl(this._value, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+/// Adds pattern-matching-related methods to [HomeState].
+extension HomeStatePatterns on HomeState {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
 
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({TResult Function( EmptyState value)?  empty,TResult Function( CharactersSelectedState value)?  characters,TResult Function( EpisodesSelectedState value)?  episodes,TResult Function( LocationsSelectedState value)?  locations,required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case EmptyState() when empty != null:
+return empty(_that);case CharactersSelectedState() when characters != null:
+return characters(_that);case EpisodesSelectedState() when episodes != null:
+return episodes(_that);case LocationsSelectedState() when locations != null:
+return locations(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>({required TResult Function( EmptyState value)  empty,required TResult Function( CharactersSelectedState value)  characters,required TResult Function( EpisodesSelectedState value)  episodes,required TResult Function( LocationsSelectedState value)  locations,}){
+final _that = this;
+switch (_that) {
+case EmptyState():
+return empty(_that);case CharactersSelectedState():
+return characters(_that);case EpisodesSelectedState():
+return episodes(_that);case LocationsSelectedState():
+return locations(_that);}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>({TResult? Function( EmptyState value)?  empty,TResult? Function( CharactersSelectedState value)?  characters,TResult? Function( EpisodesSelectedState value)?  episodes,TResult? Function( LocationsSelectedState value)?  locations,}){
+final _that = this;
+switch (_that) {
+case EmptyState() when empty != null:
+return empty(_that);case CharactersSelectedState() when characters != null:
+return characters(_that);case EpisodesSelectedState() when episodes != null:
+return episodes(_that);case LocationsSelectedState() when locations != null:
+return locations(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({TResult Function()?  empty,TResult Function( String title)?  characters,TResult Function( String title)?  episodes,TResult Function( String title)?  locations,required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case EmptyState() when empty != null:
+return empty();case CharactersSelectedState() when characters != null:
+return characters(_that.title);case EpisodesSelectedState() when episodes != null:
+return episodes(_that.title);case LocationsSelectedState() when locations != null:
+return locations(_that.title);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>({required TResult Function()  empty,required TResult Function( String title)  characters,required TResult Function( String title)  episodes,required TResult Function( String title)  locations,}) {final _that = this;
+switch (_that) {
+case EmptyState():
+return empty();case CharactersSelectedState():
+return characters(_that.title);case EpisodesSelectedState():
+return episodes(_that.title);case LocationsSelectedState():
+return locations(_that.title);}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>({TResult? Function()?  empty,TResult? Function( String title)?  characters,TResult? Function( String title)?  episodes,TResult? Function( String title)?  locations,}) {final _that = this;
+switch (_that) {
+case EmptyState() when empty != null:
+return empty();case CharactersSelectedState() when characters != null:
+return characters(_that.title);case EpisodesSelectedState() when episodes != null:
+return episodes(_that.title);case LocationsSelectedState() when locations != null:
+return locations(_that.title);case _:
+  return null;
+
+}
 }
 
-/// @nodoc
-abstract class _$$EmptyStateImplCopyWith<$Res> {
-  factory _$$EmptyStateImplCopyWith(
-          _$EmptyStateImpl value, $Res Function(_$EmptyStateImpl) then) =
-      __$$EmptyStateImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$EmptyStateImplCopyWithImpl<$Res>
-    extends _$HomeStateCopyWithImpl<$Res, _$EmptyStateImpl>
-    implements _$$EmptyStateImplCopyWith<$Res> {
-  __$$EmptyStateImplCopyWithImpl(
-      _$EmptyStateImpl _value, $Res Function(_$EmptyStateImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
-}
-
-/// @nodoc
-
-class _$EmptyStateImpl implements EmptyState {
-  const _$EmptyStateImpl();
-
-  @override
-  String toString() {
-    return 'HomeState.empty()';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$EmptyStateImpl);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() empty,
-    required TResult Function(String title) characters,
-    required TResult Function(String title) episodes,
-    required TResult Function(String title) locations,
-  }) {
-    return empty();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? empty,
-    TResult? Function(String title)? characters,
-    TResult? Function(String title)? episodes,
-    TResult? Function(String title)? locations,
-  }) {
-    return empty?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? empty,
-    TResult Function(String title)? characters,
-    TResult Function(String title)? episodes,
-    TResult Function(String title)? locations,
-    required TResult orElse(),
-  }) {
-    if (empty != null) {
-      return empty();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(EmptyState value) empty,
-    required TResult Function(CharactersSelectedState value) characters,
-    required TResult Function(EpisodesSelectedState value) episodes,
-    required TResult Function(LocationsSelectedState value) locations,
-  }) {
-    return empty(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(EmptyState value)? empty,
-    TResult? Function(CharactersSelectedState value)? characters,
-    TResult? Function(EpisodesSelectedState value)? episodes,
-    TResult? Function(LocationsSelectedState value)? locations,
-  }) {
-    return empty?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(EmptyState value)? empty,
-    TResult Function(CharactersSelectedState value)? characters,
-    TResult Function(EpisodesSelectedState value)? episodes,
-    TResult Function(LocationsSelectedState value)? locations,
-    required TResult orElse(),
-  }) {
-    if (empty != null) {
-      return empty(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class EmptyState implements HomeState {
-  const factory EmptyState() = _$EmptyStateImpl;
-}
-
-/// @nodoc
-abstract class _$$CharactersSelectedStateImplCopyWith<$Res> {
-  factory _$$CharactersSelectedStateImplCopyWith(
-          _$CharactersSelectedStateImpl value,
-          $Res Function(_$CharactersSelectedStateImpl) then) =
-      __$$CharactersSelectedStateImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({String title});
-}
-
-/// @nodoc
-class __$$CharactersSelectedStateImplCopyWithImpl<$Res>
-    extends _$HomeStateCopyWithImpl<$Res, _$CharactersSelectedStateImpl>
-    implements _$$CharactersSelectedStateImplCopyWith<$Res> {
-  __$$CharactersSelectedStateImplCopyWithImpl(
-      _$CharactersSelectedStateImpl _value,
-      $Res Function(_$CharactersSelectedStateImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? title = null,
-  }) {
-    return _then(_$CharactersSelectedStateImpl(
-      null == title
-          ? _value.title
-          : title // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
-  }
 }
 
 /// @nodoc
 
-class _$CharactersSelectedStateImpl implements CharactersSelectedState {
-  const _$CharactersSelectedStateImpl(this.title);
 
-  @override
-  final String title;
+class EmptyState implements HomeState {
+  const EmptyState();
+  
 
-  @override
-  String toString() {
-    return 'HomeState.characters(title: $title)';
-  }
 
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$CharactersSelectedStateImpl &&
-            (identical(other.title, title) || other.title == title));
-  }
 
-  @override
-  int get hashCode => Object.hash(runtimeType, title);
 
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$CharactersSelectedStateImplCopyWith<_$CharactersSelectedStateImpl>
-      get copyWith => __$$CharactersSelectedStateImplCopyWithImpl<
-          _$CharactersSelectedStateImpl>(this, _$identity);
 
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() empty,
-    required TResult Function(String title) characters,
-    required TResult Function(String title) episodes,
-    required TResult Function(String title) locations,
-  }) {
-    return characters(title);
-  }
 
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? empty,
-    TResult? Function(String title)? characters,
-    TResult? Function(String title)? episodes,
-    TResult? Function(String title)? locations,
-  }) {
-    return characters?.call(title);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? empty,
-    TResult Function(String title)? characters,
-    TResult Function(String title)? episodes,
-    TResult Function(String title)? locations,
-    required TResult orElse(),
-  }) {
-    if (characters != null) {
-      return characters(title);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(EmptyState value) empty,
-    required TResult Function(CharactersSelectedState value) characters,
-    required TResult Function(EpisodesSelectedState value) episodes,
-    required TResult Function(LocationsSelectedState value) locations,
-  }) {
-    return characters(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(EmptyState value)? empty,
-    TResult? Function(CharactersSelectedState value)? characters,
-    TResult? Function(EpisodesSelectedState value)? episodes,
-    TResult? Function(LocationsSelectedState value)? locations,
-  }) {
-    return characters?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(EmptyState value)? empty,
-    TResult Function(CharactersSelectedState value)? characters,
-    TResult Function(EpisodesSelectedState value)? episodes,
-    TResult Function(LocationsSelectedState value)? locations,
-    required TResult orElse(),
-  }) {
-    if (characters != null) {
-      return characters(this);
-    }
-    return orElse();
-  }
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is EmptyState);
 }
 
-abstract class CharactersSelectedState implements HomeState {
-  const factory CharactersSelectedState(final String title) =
-      _$CharactersSelectedStateImpl;
 
-  String get title;
+@override
+int get hashCode => runtimeType.hashCode;
 
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$CharactersSelectedStateImplCopyWith<_$CharactersSelectedStateImpl>
-      get copyWith => throw _privateConstructorUsedError;
+@override
+String toString() {
+  return 'HomeState.empty()';
+}
+
+
+}
+
+
+
+
+/// @nodoc
+
+
+class CharactersSelectedState implements HomeState {
+  const CharactersSelectedState(this.title);
+  
+
+ final  String title;
+
+/// Create a copy of HomeState
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$CharactersSelectedStateCopyWith<CharactersSelectedState> get copyWith => _$CharactersSelectedStateCopyWithImpl<CharactersSelectedState>(this, _$identity);
+
+
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is CharactersSelectedState&&(identical(other.title, title) || other.title == title));
+}
+
+
+@override
+int get hashCode => Object.hash(runtimeType,title);
+
+@override
+String toString() {
+  return 'HomeState.characters(title: $title)';
+}
+
+
 }
 
 /// @nodoc
-abstract class _$$EpisodesSelectedStateImplCopyWith<$Res> {
-  factory _$$EpisodesSelectedStateImplCopyWith(
-          _$EpisodesSelectedStateImpl value,
-          $Res Function(_$EpisodesSelectedStateImpl) then) =
-      __$$EpisodesSelectedStateImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({String title});
+abstract mixin class $CharactersSelectedStateCopyWith<$Res> implements $HomeStateCopyWith<$Res> {
+  factory $CharactersSelectedStateCopyWith(CharactersSelectedState value, $Res Function(CharactersSelectedState) _then) = _$CharactersSelectedStateCopyWithImpl;
+@useResult
+$Res call({
+ String title
+});
+
+
+
+
+}
+/// @nodoc
+class _$CharactersSelectedStateCopyWithImpl<$Res>
+    implements $CharactersSelectedStateCopyWith<$Res> {
+  _$CharactersSelectedStateCopyWithImpl(this._self, this._then);
+
+  final CharactersSelectedState _self;
+  final $Res Function(CharactersSelectedState) _then;
+
+/// Create a copy of HomeState
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') $Res call({Object? title = null,}) {
+  return _then(CharactersSelectedState(
+null == title ? _self.title : title // ignore: cast_nullable_to_non_nullable
+as String,
+  ));
 }
 
-/// @nodoc
-class __$$EpisodesSelectedStateImplCopyWithImpl<$Res>
-    extends _$HomeStateCopyWithImpl<$Res, _$EpisodesSelectedStateImpl>
-    implements _$$EpisodesSelectedStateImplCopyWith<$Res> {
-  __$$EpisodesSelectedStateImplCopyWithImpl(_$EpisodesSelectedStateImpl _value,
-      $Res Function(_$EpisodesSelectedStateImpl) _then)
-      : super(_value, _then);
 
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? title = null,
-  }) {
-    return _then(_$EpisodesSelectedStateImpl(
-      null == title
-          ? _value.title
-          : title // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
-  }
 }
 
 /// @nodoc
 
-class _$EpisodesSelectedStateImpl implements EpisodesSelectedState {
-  const _$EpisodesSelectedStateImpl(this.title);
 
-  @override
-  final String title;
+class EpisodesSelectedState implements HomeState {
+  const EpisodesSelectedState(this.title);
+  
 
-  @override
-  String toString() {
-    return 'HomeState.episodes(title: $title)';
-  }
+ final  String title;
 
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$EpisodesSelectedStateImpl &&
-            (identical(other.title, title) || other.title == title));
-  }
+/// Create a copy of HomeState
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$EpisodesSelectedStateCopyWith<EpisodesSelectedState> get copyWith => _$EpisodesSelectedStateCopyWithImpl<EpisodesSelectedState>(this, _$identity);
 
-  @override
-  int get hashCode => Object.hash(runtimeType, title);
 
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$EpisodesSelectedStateImplCopyWith<_$EpisodesSelectedStateImpl>
-      get copyWith => __$$EpisodesSelectedStateImplCopyWithImpl<
-          _$EpisodesSelectedStateImpl>(this, _$identity);
 
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() empty,
-    required TResult Function(String title) characters,
-    required TResult Function(String title) episodes,
-    required TResult Function(String title) locations,
-  }) {
-    return episodes(title);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? empty,
-    TResult? Function(String title)? characters,
-    TResult? Function(String title)? episodes,
-    TResult? Function(String title)? locations,
-  }) {
-    return episodes?.call(title);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? empty,
-    TResult Function(String title)? characters,
-    TResult Function(String title)? episodes,
-    TResult Function(String title)? locations,
-    required TResult orElse(),
-  }) {
-    if (episodes != null) {
-      return episodes(title);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(EmptyState value) empty,
-    required TResult Function(CharactersSelectedState value) characters,
-    required TResult Function(EpisodesSelectedState value) episodes,
-    required TResult Function(LocationsSelectedState value) locations,
-  }) {
-    return episodes(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(EmptyState value)? empty,
-    TResult? Function(CharactersSelectedState value)? characters,
-    TResult? Function(EpisodesSelectedState value)? episodes,
-    TResult? Function(LocationsSelectedState value)? locations,
-  }) {
-    return episodes?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(EmptyState value)? empty,
-    TResult Function(CharactersSelectedState value)? characters,
-    TResult Function(EpisodesSelectedState value)? episodes,
-    TResult Function(LocationsSelectedState value)? locations,
-    required TResult orElse(),
-  }) {
-    if (episodes != null) {
-      return episodes(this);
-    }
-    return orElse();
-  }
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is EpisodesSelectedState&&(identical(other.title, title) || other.title == title));
 }
 
-abstract class EpisodesSelectedState implements HomeState {
-  const factory EpisodesSelectedState(final String title) =
-      _$EpisodesSelectedStateImpl;
 
-  String get title;
+@override
+int get hashCode => Object.hash(runtimeType,title);
 
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$EpisodesSelectedStateImplCopyWith<_$EpisodesSelectedStateImpl>
-      get copyWith => throw _privateConstructorUsedError;
+@override
+String toString() {
+  return 'HomeState.episodes(title: $title)';
+}
+
+
 }
 
 /// @nodoc
-abstract class _$$LocationsSelectedStateImplCopyWith<$Res> {
-  factory _$$LocationsSelectedStateImplCopyWith(
-          _$LocationsSelectedStateImpl value,
-          $Res Function(_$LocationsSelectedStateImpl) then) =
-      __$$LocationsSelectedStateImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({String title});
+abstract mixin class $EpisodesSelectedStateCopyWith<$Res> implements $HomeStateCopyWith<$Res> {
+  factory $EpisodesSelectedStateCopyWith(EpisodesSelectedState value, $Res Function(EpisodesSelectedState) _then) = _$EpisodesSelectedStateCopyWithImpl;
+@useResult
+$Res call({
+ String title
+});
+
+
+
+
+}
+/// @nodoc
+class _$EpisodesSelectedStateCopyWithImpl<$Res>
+    implements $EpisodesSelectedStateCopyWith<$Res> {
+  _$EpisodesSelectedStateCopyWithImpl(this._self, this._then);
+
+  final EpisodesSelectedState _self;
+  final $Res Function(EpisodesSelectedState) _then;
+
+/// Create a copy of HomeState
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') $Res call({Object? title = null,}) {
+  return _then(EpisodesSelectedState(
+null == title ? _self.title : title // ignore: cast_nullable_to_non_nullable
+as String,
+  ));
 }
 
-/// @nodoc
-class __$$LocationsSelectedStateImplCopyWithImpl<$Res>
-    extends _$HomeStateCopyWithImpl<$Res, _$LocationsSelectedStateImpl>
-    implements _$$LocationsSelectedStateImplCopyWith<$Res> {
-  __$$LocationsSelectedStateImplCopyWithImpl(
-      _$LocationsSelectedStateImpl _value,
-      $Res Function(_$LocationsSelectedStateImpl) _then)
-      : super(_value, _then);
 
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? title = null,
-  }) {
-    return _then(_$LocationsSelectedStateImpl(
-      null == title
-          ? _value.title
-          : title // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
-  }
 }
 
 /// @nodoc
 
-class _$LocationsSelectedStateImpl implements LocationsSelectedState {
-  const _$LocationsSelectedStateImpl(this.title);
 
-  @override
-  final String title;
+class LocationsSelectedState implements HomeState {
+  const LocationsSelectedState(this.title);
+  
 
-  @override
-  String toString() {
-    return 'HomeState.locations(title: $title)';
-  }
+ final  String title;
 
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$LocationsSelectedStateImpl &&
-            (identical(other.title, title) || other.title == title));
-  }
+/// Create a copy of HomeState
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$LocationsSelectedStateCopyWith<LocationsSelectedState> get copyWith => _$LocationsSelectedStateCopyWithImpl<LocationsSelectedState>(this, _$identity);
 
-  @override
-  int get hashCode => Object.hash(runtimeType, title);
 
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$LocationsSelectedStateImplCopyWith<_$LocationsSelectedStateImpl>
-      get copyWith => __$$LocationsSelectedStateImplCopyWithImpl<
-          _$LocationsSelectedStateImpl>(this, _$identity);
 
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() empty,
-    required TResult Function(String title) characters,
-    required TResult Function(String title) episodes,
-    required TResult Function(String title) locations,
-  }) {
-    return locations(title);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? empty,
-    TResult? Function(String title)? characters,
-    TResult? Function(String title)? episodes,
-    TResult? Function(String title)? locations,
-  }) {
-    return locations?.call(title);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? empty,
-    TResult Function(String title)? characters,
-    TResult Function(String title)? episodes,
-    TResult Function(String title)? locations,
-    required TResult orElse(),
-  }) {
-    if (locations != null) {
-      return locations(title);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(EmptyState value) empty,
-    required TResult Function(CharactersSelectedState value) characters,
-    required TResult Function(EpisodesSelectedState value) episodes,
-    required TResult Function(LocationsSelectedState value) locations,
-  }) {
-    return locations(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(EmptyState value)? empty,
-    TResult? Function(CharactersSelectedState value)? characters,
-    TResult? Function(EpisodesSelectedState value)? episodes,
-    TResult? Function(LocationsSelectedState value)? locations,
-  }) {
-    return locations?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(EmptyState value)? empty,
-    TResult Function(CharactersSelectedState value)? characters,
-    TResult Function(EpisodesSelectedState value)? episodes,
-    TResult Function(LocationsSelectedState value)? locations,
-    required TResult orElse(),
-  }) {
-    if (locations != null) {
-      return locations(this);
-    }
-    return orElse();
-  }
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is LocationsSelectedState&&(identical(other.title, title) || other.title == title));
 }
 
-abstract class LocationsSelectedState implements HomeState {
-  const factory LocationsSelectedState(final String title) =
-      _$LocationsSelectedStateImpl;
 
-  String get title;
+@override
+int get hashCode => Object.hash(runtimeType,title);
 
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$LocationsSelectedStateImplCopyWith<_$LocationsSelectedStateImpl>
-      get copyWith => throw _privateConstructorUsedError;
+@override
+String toString() {
+  return 'HomeState.locations(title: $title)';
 }
+
+
+}
+
+/// @nodoc
+abstract mixin class $LocationsSelectedStateCopyWith<$Res> implements $HomeStateCopyWith<$Res> {
+  factory $LocationsSelectedStateCopyWith(LocationsSelectedState value, $Res Function(LocationsSelectedState) _then) = _$LocationsSelectedStateCopyWithImpl;
+@useResult
+$Res call({
+ String title
+});
+
+
+
+
+}
+/// @nodoc
+class _$LocationsSelectedStateCopyWithImpl<$Res>
+    implements $LocationsSelectedStateCopyWith<$Res> {
+  _$LocationsSelectedStateCopyWithImpl(this._self, this._then);
+
+  final LocationsSelectedState _self;
+  final $Res Function(LocationsSelectedState) _then;
+
+/// Create a copy of HomeState
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') $Res call({Object? title = null,}) {
+  return _then(LocationsSelectedState(
+null == title ? _self.title : title // ignore: cast_nullable_to_non_nullable
+as String,
+  ));
+}
+
+
+}
+
+// dart format on

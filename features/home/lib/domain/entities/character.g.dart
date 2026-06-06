@@ -6,30 +6,23 @@ part of 'character.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$AliveImpl _$$AliveImplFromJson(Map<String, dynamic> json) => _$AliveImpl(
-      $type: json['runtimeType'] as String?,
-    );
+Alive _$AliveFromJson(Map<String, dynamic> json) =>
+    Alive($type: json['runtimeType'] as String?);
 
-Map<String, dynamic> _$$AliveImplToJson(_$AliveImpl instance) =>
-    <String, dynamic>{
-      'runtimeType': instance.$type,
-    };
+Map<String, dynamic> _$AliveToJson(Alive instance) => <String, dynamic>{
+  'runtimeType': instance.$type,
+};
 
-_$DeadImpl _$$DeadImplFromJson(Map<String, dynamic> json) => _$DeadImpl(
-      $type: json['runtimeType'] as String?,
-    );
+Dead _$DeadFromJson(Map<String, dynamic> json) =>
+    Dead($type: json['runtimeType'] as String?);
 
-Map<String, dynamic> _$$DeadImplToJson(_$DeadImpl instance) =>
-    <String, dynamic>{
-      'runtimeType': instance.$type,
-    };
+Map<String, dynamic> _$DeadToJson(Dead instance) => <String, dynamic>{
+  'runtimeType': instance.$type,
+};
 
-_$UnknownImpl _$$UnknownImplFromJson(Map<String, dynamic> json) =>
-    _$UnknownImpl(
-      $type: json['runtimeType'] as String?,
-    );
+Unknown _$UnknownFromJson(Map<String, dynamic> json) =>
+    Unknown($type: json['runtimeType'] as String?);
 
-Map<String, dynamic> _$$UnknownImplToJson(_$UnknownImpl instance) =>
-    <String, dynamic>{
-      'runtimeType': instance.$type,
-    };
+Map<String, dynamic> _$UnknownToJson(Unknown instance) => <String, dynamic>{
+  'runtimeType': instance.$type,
+};

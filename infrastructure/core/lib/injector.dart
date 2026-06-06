@@ -15,5 +15,5 @@ Future configureDependencies() async => init(GetIt.instance);
 abstract class CoreInjectorModule {
   @lazySingleton
   InternetConnectionChecker get connectionChecker =>
-      InternetConnectionChecker();
+      InternetConnectionChecker.createInstance();
 }

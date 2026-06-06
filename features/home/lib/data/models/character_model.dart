@@ -8,7 +8,7 @@ part 'character_model.freezed.dart';
 part 'character_model.g.dart';
 
 @freezed
-class CharactersRemoteModel with _$CharactersRemoteModel {
+abstract class CharactersRemoteModel with _$CharactersRemoteModel {
   const factory CharactersRemoteModel({
     required CharacterResultsRemoteModel characters,
   }) = _CharactersRemoteModel;
@@ -18,7 +18,7 @@ class CharactersRemoteModel with _$CharactersRemoteModel {
 }
 
 @freezed
-class CharacterResultsRemoteModel with _$CharacterResultsRemoteModel {
+abstract class CharacterResultsRemoteModel with _$CharacterResultsRemoteModel {
   const factory CharacterResultsRemoteModel({
     required List<CharacterModel> results,
   }) = _CharacterResultsRemoteModel;
@@ -28,7 +28,7 @@ class CharacterResultsRemoteModel with _$CharacterResultsRemoteModel {
 }
 
 @freezed
-class CharacterModel with _$CharacterModel {
+abstract class CharacterModel with _$CharacterModel {
   const factory CharacterModel({
     required String id,
     required String name,

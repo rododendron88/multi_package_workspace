@@ -5,7 +5,7 @@ part 'location_model.freezed.dart';
 part 'location_model.g.dart';
 
 @freezed
-class LocationsRemoteModel with _$LocationsRemoteModel {
+abstract class LocationsRemoteModel with _$LocationsRemoteModel {
   const factory LocationsRemoteModel({
     required LocationResultsRemoteModel locations,
   }) = _LocationsRemoteModel;
@@ -15,7 +15,7 @@ class LocationsRemoteModel with _$LocationsRemoteModel {
 }
 
 @freezed
-class LocationResultsRemoteModel with _$LocationResultsRemoteModel {
+abstract class LocationResultsRemoteModel with _$LocationResultsRemoteModel {
   const factory LocationResultsRemoteModel({
     required List<LocationModel> results,
   }) = _LocationResultsRemoteModel;
@@ -25,7 +25,7 @@ class LocationResultsRemoteModel with _$LocationResultsRemoteModel {
 }
 
 @freezed
-class LocationModel with _$LocationModel {
+abstract class LocationModel with _$LocationModel {
   const factory LocationModel({
     required int id,
     required String name,

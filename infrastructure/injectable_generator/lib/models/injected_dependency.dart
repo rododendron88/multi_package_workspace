@@ -6,6 +6,7 @@ class InjectedDependency {
   String paramName;
   bool isFactoryParam;
   bool isPositional;
+  bool isRequired;
 
   InjectedDependency({
     required this.type,
@@ -13,11 +14,12 @@ class InjectedDependency {
     this.instanceName,
     this.isFactoryParam = false,
     this.isPositional = true,
+    this.isRequired = true,
   });
 
   @override
   String toString() {
-    return 'InjectedDependency{type: $type, instanceName: $instanceName, paramName: $paramName, isFactoryParam: $isFactoryParam, isPositional: $isPositional}';
+    return 'InjectedDependency{type: $type, instanceName: $instanceName, paramName: $paramName, isFactoryParam: $isFactoryParam, isPositional: $isPositional}, isRequired: $isRequired';
   }
 
   @override
@@ -29,6 +31,7 @@ class InjectedDependency {
           instanceName == other.instanceName &&
           paramName == other.paramName &&
           isFactoryParam == other.isFactoryParam &&
+          isRequired == other.isRequired &&
           isPositional == other.isPositional);
 
   @override
@@ -36,6 +39,7 @@ class InjectedDependency {
       type.hashCode ^
       instanceName.hashCode ^
       paramName.hashCode ^
+      isRequired.hashCode ^
       isFactoryParam.hashCode ^
       isPositional.hashCode;
 
@@ -46,17 +50,18 @@ class InjectedDependency {
       paramName: json['paramName'],
       isFactoryParam: json['isFactoryParam'],
       isPositional: json['isPositional'],
+      isRequired: json['isRequired'] ?? false,
     );
   }
 
   Map<String, dynamic> toJson() {
-    // ignore: unnecessary_cast
-    return {
-      'type': type,
+    return <String, dynamic>{
+      'type': type.toJson(),
       'instanceName': instanceName,
       'paramName': paramName,
       'isFactoryParam': isFactoryParam,
       'isPositional': isPositional,
-    } as Map<String, dynamic>;
+      'isRequired': isRequired,
+    };
   }
 }

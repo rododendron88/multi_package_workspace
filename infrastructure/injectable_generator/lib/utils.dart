@@ -1,6 +1,4 @@
 // general utils
-import 'package:analyzer/dart/element/element.dart';
-import 'package:source_gen/source_gen.dart';
 
 String capitalize(String s) {
   if (s.length < 2) {
@@ -26,30 +24,16 @@ void throwSourceError(String message) {
   throw ("\n${pre.padRight(72, '-')}\n$message\n${''.padRight(72, '-')} \n");
 }
 
-void throwError(String message, {Element? element}) {
-  throw InvalidGenerationSourceError(
-    message,
-    element: element,
-  );
-}
-
-void throwIf(bool condition, String message, {Element? element}) {
-  if (condition) {
-    throw InvalidGenerationSourceError(
-      message,
-      element: element,
-    );
-  }
-}
-
-void printBoxed(String message,
-    {String header = '--------------------------'}) {
+void printBoxed(
+  String message, {
+  String header = '--------------------------',
+}) {
   final pre = header;
   print("$pre\n$message\n${''.padRight(72, '-')} \n");
 }
 
 extension IterableExtenstion<E> on Iterable<E> {
-  E? firstOrNull(bool Function(E element) test) {
+  E? firstWhereOrNull(bool Function(E element) test) {
     for (var e in this) {
       if (test(e)) {
         return e;

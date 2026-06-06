@@ -6,40 +6,29 @@ part of 'gender.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$FemaleImpl _$$FemaleImplFromJson(Map<String, dynamic> json) => _$FemaleImpl(
-      $type: json['runtimeType'] as String?,
-    );
+Female _$FemaleFromJson(Map<String, dynamic> json) =>
+    Female($type: json['runtimeType'] as String?);
 
-Map<String, dynamic> _$$FemaleImplToJson(_$FemaleImpl instance) =>
-    <String, dynamic>{
-      'runtimeType': instance.$type,
-    };
+Map<String, dynamic> _$FemaleToJson(Female instance) => <String, dynamic>{
+  'runtimeType': instance.$type,
+};
 
-_$GenderlessImpl _$$GenderlessImplFromJson(Map<String, dynamic> json) =>
-    _$GenderlessImpl(
-      $type: json['runtimeType'] as String?,
-    );
+Genderless _$GenderlessFromJson(Map<String, dynamic> json) =>
+    Genderless($type: json['runtimeType'] as String?);
 
-Map<String, dynamic> _$$GenderlessImplToJson(_$GenderlessImpl instance) =>
-    <String, dynamic>{
-      'runtimeType': instance.$type,
-    };
+Map<String, dynamic> _$GenderlessToJson(Genderless instance) =>
+    <String, dynamic>{'runtimeType': instance.$type};
 
-_$MaleImpl _$$MaleImplFromJson(Map<String, dynamic> json) => _$MaleImpl(
-      $type: json['runtimeType'] as String?,
-    );
+Male _$MaleFromJson(Map<String, dynamic> json) =>
+    Male($type: json['runtimeType'] as String?);
 
-Map<String, dynamic> _$$MaleImplToJson(_$MaleImpl instance) =>
-    <String, dynamic>{
-      'runtimeType': instance.$type,
-    };
+Map<String, dynamic> _$MaleToJson(Male instance) => <String, dynamic>{
+  'runtimeType': instance.$type,
+};
 
-_$UnknownImpl _$$UnknownImplFromJson(Map<String, dynamic> json) =>
-    _$UnknownImpl(
-      $type: json['runtimeType'] as String?,
-    );
+Unknown _$UnknownFromJson(Map<String, dynamic> json) =>
+    Unknown($type: json['runtimeType'] as String?);
 
-Map<String, dynamic> _$$UnknownImplToJson(_$UnknownImpl instance) =>
-    <String, dynamic>{
-      'runtimeType': instance.$type,
-    };
+Map<String, dynamic> _$UnknownToJson(Unknown instance) => <String, dynamic>{
+  'runtimeType': instance.$type,
+};

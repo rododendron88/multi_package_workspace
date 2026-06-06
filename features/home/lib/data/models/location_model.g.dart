@@ -6,44 +6,43 @@ part of 'location_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$LocationsRemoteModelImpl _$$LocationsRemoteModelImplFromJson(
-        Map<String, dynamic> json) =>
-    _$LocationsRemoteModelImpl(
-      locations: LocationResultsRemoteModel.fromJson(
-          json['locations'] as Map<String, dynamic>),
-    );
+_LocationsRemoteModel _$LocationsRemoteModelFromJson(
+  Map<String, dynamic> json,
+) => _LocationsRemoteModel(
+  locations: LocationResultsRemoteModel.fromJson(
+    json['locations'] as Map<String, dynamic>,
+  ),
+);
 
-Map<String, dynamic> _$$LocationsRemoteModelImplToJson(
-        _$LocationsRemoteModelImpl instance) =>
-    <String, dynamic>{
-      'locations': instance.locations,
-    };
+Map<String, dynamic> _$LocationsRemoteModelToJson(
+  _LocationsRemoteModel instance,
+) => <String, dynamic>{'locations': instance.locations};
 
-_$LocationResultsRemoteModelImpl _$$LocationResultsRemoteModelImplFromJson(
-        Map<String, dynamic> json) =>
-    _$LocationResultsRemoteModelImpl(
-      results: (json['results'] as List<dynamic>)
-          .map((e) => LocationModel.fromJson((e as Map<String, dynamic>).map(
-                (k, e) => MapEntry(k, e as Object),
-              )))
-          .toList(),
-    );
+_LocationResultsRemoteModel _$LocationResultsRemoteModelFromJson(
+  Map<String, dynamic> json,
+) => _LocationResultsRemoteModel(
+  results: (json['results'] as List<dynamic>)
+      .map(
+        (e) => LocationModel.fromJson(
+          (e as Map<String, dynamic>).map((k, e) => MapEntry(k, e as Object)),
+        ),
+      )
+      .toList(),
+);
 
-Map<String, dynamic> _$$LocationResultsRemoteModelImplToJson(
-        _$LocationResultsRemoteModelImpl instance) =>
-    <String, dynamic>{
-      'results': instance.results,
-    };
+Map<String, dynamic> _$LocationResultsRemoteModelToJson(
+  _LocationResultsRemoteModel instance,
+) => <String, dynamic>{'results': instance.results};
 
-_$LocationModelImpl _$$LocationModelImplFromJson(Map<String, dynamic> json) =>
-    _$LocationModelImpl(
+_LocationModel _$LocationModelFromJson(Map<String, dynamic> json) =>
+    _LocationModel(
       id: (json['id'] as num).toInt(),
       name: json['name'] as String,
       type: json['type'] as String,
       dimension: json['dimension'] as String,
     );
 
-Map<String, dynamic> _$$LocationModelImplToJson(_$LocationModelImpl instance) =>
+Map<String, dynamic> _$LocationModelToJson(_LocationModel instance) =>
     <String, dynamic>{
       'id': instance.id,
       'name': instance.name,

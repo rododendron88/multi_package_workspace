@@ -28,7 +28,7 @@ class _ScopeNavigatorState extends State<ScopeNavigator> {
     final routes = GetIt.instance<ModulesHolder>().routes(scope: widget.scope);
     return PopScope(
       canPop: false,
-      onPopInvoked: (_) {
+      onPopInvokedWithResult: (didPop, result) {
         if (_globalKey.currentState!.canPop()) {
           _globalKey.currentState!.pop();
         } else {

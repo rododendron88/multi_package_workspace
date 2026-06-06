@@ -17,7 +17,7 @@ sealed class VitalStatus with _$VitalStatus {
 }
 
 @freezed
-class Character with _$Character {
+abstract class Character with _$Character {
   const factory Character({
     required String id,
     required String name,

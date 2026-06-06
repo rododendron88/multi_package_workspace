@@ -1,5 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,556 +9,828 @@ part of 'episode_model.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
-
-EpisodesRemoteModel _$EpisodesRemoteModelFromJson(Map<String, dynamic> json) {
-  return _EpisodesRemoteModel.fromJson(json);
-}
 
 /// @nodoc
 mixin _$EpisodesRemoteModel {
-  EpisodeResultsRemoteModel get episodes => throw _privateConstructorUsedError;
+
+ EpisodeResultsRemoteModel get episodes;
+/// Create a copy of EpisodesRemoteModel
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$EpisodesRemoteModelCopyWith<EpisodesRemoteModel> get copyWith => _$EpisodesRemoteModelCopyWithImpl<EpisodesRemoteModel>(this as EpisodesRemoteModel, _$identity);
 
   /// Serializes this EpisodesRemoteModel to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of EpisodesRemoteModel
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $EpisodesRemoteModelCopyWith<EpisodesRemoteModel> get copyWith =>
-      throw _privateConstructorUsedError;
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is EpisodesRemoteModel&&(identical(other.episodes, episodes) || other.episodes == episodes));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,episodes);
+
+@override
+String toString() {
+  return 'EpisodesRemoteModel(episodes: $episodes)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $EpisodesRemoteModelCopyWith<$Res> {
-  factory $EpisodesRemoteModelCopyWith(
-          EpisodesRemoteModel value, $Res Function(EpisodesRemoteModel) then) =
-      _$EpisodesRemoteModelCopyWithImpl<$Res, EpisodesRemoteModel>;
-  @useResult
-  $Res call({EpisodeResultsRemoteModel episodes});
+abstract mixin class $EpisodesRemoteModelCopyWith<$Res>  {
+  factory $EpisodesRemoteModelCopyWith(EpisodesRemoteModel value, $Res Function(EpisodesRemoteModel) _then) = _$EpisodesRemoteModelCopyWithImpl;
+@useResult
+$Res call({
+ EpisodeResultsRemoteModel episodes
+});
 
-  $EpisodeResultsRemoteModelCopyWith<$Res> get episodes;
+
+$EpisodeResultsRemoteModelCopyWith<$Res> get episodes;
+
 }
-
 /// @nodoc
-class _$EpisodesRemoteModelCopyWithImpl<$Res, $Val extends EpisodesRemoteModel>
+class _$EpisodesRemoteModelCopyWithImpl<$Res>
     implements $EpisodesRemoteModelCopyWith<$Res> {
-  _$EpisodesRemoteModelCopyWithImpl(this._value, this._then);
+  _$EpisodesRemoteModelCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final EpisodesRemoteModel _self;
+  final $Res Function(EpisodesRemoteModel) _then;
 
-  /// Create a copy of EpisodesRemoteModel
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? episodes = null,
-  }) {
-    return _then(_value.copyWith(
-      episodes: null == episodes
-          ? _value.episodes
-          : episodes // ignore: cast_nullable_to_non_nullable
-              as EpisodeResultsRemoteModel,
-    ) as $Val);
-  }
-
-  /// Create a copy of EpisodesRemoteModel
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @pragma('vm:prefer-inline')
-  $EpisodeResultsRemoteModelCopyWith<$Res> get episodes {
-    return $EpisodeResultsRemoteModelCopyWith<$Res>(_value.episodes, (value) {
-      return _then(_value.copyWith(episodes: value) as $Val);
-    });
-  }
+/// Create a copy of EpisodesRemoteModel
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? episodes = null,}) {
+  return _then(_self.copyWith(
+episodes: null == episodes ? _self.episodes : episodes // ignore: cast_nullable_to_non_nullable
+as EpisodeResultsRemoteModel,
+  ));
+}
+/// Create a copy of EpisodesRemoteModel
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$EpisodeResultsRemoteModelCopyWith<$Res> get episodes {
+  
+  return $EpisodeResultsRemoteModelCopyWith<$Res>(_self.episodes, (value) {
+    return _then(_self.copyWith(episodes: value));
+  });
+}
 }
 
-/// @nodoc
-abstract class _$$EpisodesRemoteModelImplCopyWith<$Res>
-    implements $EpisodesRemoteModelCopyWith<$Res> {
-  factory _$$EpisodesRemoteModelImplCopyWith(_$EpisodesRemoteModelImpl value,
-          $Res Function(_$EpisodesRemoteModelImpl) then) =
-      __$$EpisodesRemoteModelImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({EpisodeResultsRemoteModel episodes});
 
-  @override
-  $EpisodeResultsRemoteModelCopyWith<$Res> get episodes;
+/// Adds pattern-matching-related methods to [EpisodesRemoteModel].
+extension EpisodesRemoteModelPatterns on EpisodesRemoteModel {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _EpisodesRemoteModel value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _EpisodesRemoteModel() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _EpisodesRemoteModel value)  $default,){
+final _that = this;
+switch (_that) {
+case _EpisodesRemoteModel():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _EpisodesRemoteModel value)?  $default,){
+final _that = this;
+switch (_that) {
+case _EpisodesRemoteModel() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( EpisodeResultsRemoteModel episodes)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _EpisodesRemoteModel() when $default != null:
+return $default(_that.episodes);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( EpisodeResultsRemoteModel episodes)  $default,) {final _that = this;
+switch (_that) {
+case _EpisodesRemoteModel():
+return $default(_that.episodes);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( EpisodeResultsRemoteModel episodes)?  $default,) {final _that = this;
+switch (_that) {
+case _EpisodesRemoteModel() when $default != null:
+return $default(_that.episodes);case _:
+  return null;
+
+}
 }
 
-/// @nodoc
-class __$$EpisodesRemoteModelImplCopyWithImpl<$Res>
-    extends _$EpisodesRemoteModelCopyWithImpl<$Res, _$EpisodesRemoteModelImpl>
-    implements _$$EpisodesRemoteModelImplCopyWith<$Res> {
-  __$$EpisodesRemoteModelImplCopyWithImpl(_$EpisodesRemoteModelImpl _value,
-      $Res Function(_$EpisodesRemoteModelImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of EpisodesRemoteModel
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? episodes = null,
-  }) {
-    return _then(_$EpisodesRemoteModelImpl(
-      episodes: null == episodes
-          ? _value.episodes
-          : episodes // ignore: cast_nullable_to_non_nullable
-              as EpisodeResultsRemoteModel,
-    ));
-  }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$EpisodesRemoteModelImpl implements _EpisodesRemoteModel {
-  const _$EpisodesRemoteModelImpl({required this.episodes});
 
-  factory _$EpisodesRemoteModelImpl.fromJson(Map<String, dynamic> json) =>
-      _$$EpisodesRemoteModelImplFromJson(json);
+class _EpisodesRemoteModel implements EpisodesRemoteModel {
+  const _EpisodesRemoteModel({required this.episodes});
+  factory _EpisodesRemoteModel.fromJson(Map<String, dynamic> json) => _$EpisodesRemoteModelFromJson(json);
 
-  @override
-  final EpisodeResultsRemoteModel episodes;
+@override final  EpisodeResultsRemoteModel episodes;
 
-  @override
-  String toString() {
-    return 'EpisodesRemoteModel(episodes: $episodes)';
-  }
+/// Create a copy of EpisodesRemoteModel
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$EpisodesRemoteModelCopyWith<_EpisodesRemoteModel> get copyWith => __$EpisodesRemoteModelCopyWithImpl<_EpisodesRemoteModel>(this, _$identity);
 
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$EpisodesRemoteModelImpl &&
-            (identical(other.episodes, episodes) ||
-                other.episodes == episodes));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(runtimeType, episodes);
-
-  /// Create a copy of EpisodesRemoteModel
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$EpisodesRemoteModelImplCopyWith<_$EpisodesRemoteModelImpl> get copyWith =>
-      __$$EpisodesRemoteModelImplCopyWithImpl<_$EpisodesRemoteModelImpl>(
-          this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$EpisodesRemoteModelImplToJson(
-      this,
-    );
-  }
+@override
+Map<String, dynamic> toJson() {
+  return _$EpisodesRemoteModelToJson(this, );
 }
 
-abstract class _EpisodesRemoteModel implements EpisodesRemoteModel {
-  const factory _EpisodesRemoteModel(
-          {required final EpisodeResultsRemoteModel episodes}) =
-      _$EpisodesRemoteModelImpl;
-
-  factory _EpisodesRemoteModel.fromJson(Map<String, dynamic> json) =
-      _$EpisodesRemoteModelImpl.fromJson;
-
-  @override
-  EpisodeResultsRemoteModel get episodes;
-
-  /// Create a copy of EpisodesRemoteModel
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$EpisodesRemoteModelImplCopyWith<_$EpisodesRemoteModelImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _EpisodesRemoteModel&&(identical(other.episodes, episodes) || other.episodes == episodes));
 }
 
-EpisodeResultsRemoteModel _$EpisodeResultsRemoteModelFromJson(
-    Map<String, dynamic> json) {
-  return _EpisodeResultsRemoteModel.fromJson(json);
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,episodes);
+
+@override
+String toString() {
+  return 'EpisodesRemoteModel(episodes: $episodes)';
 }
+
+
+}
+
+/// @nodoc
+abstract mixin class _$EpisodesRemoteModelCopyWith<$Res> implements $EpisodesRemoteModelCopyWith<$Res> {
+  factory _$EpisodesRemoteModelCopyWith(_EpisodesRemoteModel value, $Res Function(_EpisodesRemoteModel) _then) = __$EpisodesRemoteModelCopyWithImpl;
+@override @useResult
+$Res call({
+ EpisodeResultsRemoteModel episodes
+});
+
+
+@override $EpisodeResultsRemoteModelCopyWith<$Res> get episodes;
+
+}
+/// @nodoc
+class __$EpisodesRemoteModelCopyWithImpl<$Res>
+    implements _$EpisodesRemoteModelCopyWith<$Res> {
+  __$EpisodesRemoteModelCopyWithImpl(this._self, this._then);
+
+  final _EpisodesRemoteModel _self;
+  final $Res Function(_EpisodesRemoteModel) _then;
+
+/// Create a copy of EpisodesRemoteModel
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? episodes = null,}) {
+  return _then(_EpisodesRemoteModel(
+episodes: null == episodes ? _self.episodes : episodes // ignore: cast_nullable_to_non_nullable
+as EpisodeResultsRemoteModel,
+  ));
+}
+
+/// Create a copy of EpisodesRemoteModel
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$EpisodeResultsRemoteModelCopyWith<$Res> get episodes {
+  
+  return $EpisodeResultsRemoteModelCopyWith<$Res>(_self.episodes, (value) {
+    return _then(_self.copyWith(episodes: value));
+  });
+}
+}
+
 
 /// @nodoc
 mixin _$EpisodeResultsRemoteModel {
-  List<EpisodeModel> get results => throw _privateConstructorUsedError;
+
+ List<EpisodeModel> get results;
+/// Create a copy of EpisodeResultsRemoteModel
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$EpisodeResultsRemoteModelCopyWith<EpisodeResultsRemoteModel> get copyWith => _$EpisodeResultsRemoteModelCopyWithImpl<EpisodeResultsRemoteModel>(this as EpisodeResultsRemoteModel, _$identity);
 
   /// Serializes this EpisodeResultsRemoteModel to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of EpisodeResultsRemoteModel
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $EpisodeResultsRemoteModelCopyWith<EpisodeResultsRemoteModel> get copyWith =>
-      throw _privateConstructorUsedError;
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is EpisodeResultsRemoteModel&&const DeepCollectionEquality().equals(other.results, results));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(results));
+
+@override
+String toString() {
+  return 'EpisodeResultsRemoteModel(results: $results)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $EpisodeResultsRemoteModelCopyWith<$Res> {
-  factory $EpisodeResultsRemoteModelCopyWith(EpisodeResultsRemoteModel value,
-          $Res Function(EpisodeResultsRemoteModel) then) =
-      _$EpisodeResultsRemoteModelCopyWithImpl<$Res, EpisodeResultsRemoteModel>;
-  @useResult
-  $Res call({List<EpisodeModel> results});
-}
+abstract mixin class $EpisodeResultsRemoteModelCopyWith<$Res>  {
+  factory $EpisodeResultsRemoteModelCopyWith(EpisodeResultsRemoteModel value, $Res Function(EpisodeResultsRemoteModel) _then) = _$EpisodeResultsRemoteModelCopyWithImpl;
+@useResult
+$Res call({
+ List<EpisodeModel> results
+});
 
+
+
+
+}
 /// @nodoc
-class _$EpisodeResultsRemoteModelCopyWithImpl<$Res,
-        $Val extends EpisodeResultsRemoteModel>
+class _$EpisodeResultsRemoteModelCopyWithImpl<$Res>
     implements $EpisodeResultsRemoteModelCopyWith<$Res> {
-  _$EpisodeResultsRemoteModelCopyWithImpl(this._value, this._then);
+  _$EpisodeResultsRemoteModelCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final EpisodeResultsRemoteModel _self;
+  final $Res Function(EpisodeResultsRemoteModel) _then;
 
-  /// Create a copy of EpisodeResultsRemoteModel
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? results = null,
-  }) {
-    return _then(_value.copyWith(
-      results: null == results
-          ? _value.results
-          : results // ignore: cast_nullable_to_non_nullable
-              as List<EpisodeModel>,
-    ) as $Val);
-  }
+/// Create a copy of EpisodeResultsRemoteModel
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? results = null,}) {
+  return _then(_self.copyWith(
+results: null == results ? _self.results : results // ignore: cast_nullable_to_non_nullable
+as List<EpisodeModel>,
+  ));
 }
 
-/// @nodoc
-abstract class _$$EpisodeResultsRemoteModelImplCopyWith<$Res>
-    implements $EpisodeResultsRemoteModelCopyWith<$Res> {
-  factory _$$EpisodeResultsRemoteModelImplCopyWith(
-          _$EpisodeResultsRemoteModelImpl value,
-          $Res Function(_$EpisodeResultsRemoteModelImpl) then) =
-      __$$EpisodeResultsRemoteModelImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({List<EpisodeModel> results});
 }
 
-/// @nodoc
-class __$$EpisodeResultsRemoteModelImplCopyWithImpl<$Res>
-    extends _$EpisodeResultsRemoteModelCopyWithImpl<$Res,
-        _$EpisodeResultsRemoteModelImpl>
-    implements _$$EpisodeResultsRemoteModelImplCopyWith<$Res> {
-  __$$EpisodeResultsRemoteModelImplCopyWithImpl(
-      _$EpisodeResultsRemoteModelImpl _value,
-      $Res Function(_$EpisodeResultsRemoteModelImpl) _then)
-      : super(_value, _then);
 
-  /// Create a copy of EpisodeResultsRemoteModel
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? results = null,
-  }) {
-    return _then(_$EpisodeResultsRemoteModelImpl(
-      results: null == results
-          ? _value._results
-          : results // ignore: cast_nullable_to_non_nullable
-              as List<EpisodeModel>,
-    ));
-  }
+/// Adds pattern-matching-related methods to [EpisodeResultsRemoteModel].
+extension EpisodeResultsRemoteModelPatterns on EpisodeResultsRemoteModel {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _EpisodeResultsRemoteModel value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _EpisodeResultsRemoteModel() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _EpisodeResultsRemoteModel value)  $default,){
+final _that = this;
+switch (_that) {
+case _EpisodeResultsRemoteModel():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _EpisodeResultsRemoteModel value)?  $default,){
+final _that = this;
+switch (_that) {
+case _EpisodeResultsRemoteModel() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( List<EpisodeModel> results)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _EpisodeResultsRemoteModel() when $default != null:
+return $default(_that.results);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( List<EpisodeModel> results)  $default,) {final _that = this;
+switch (_that) {
+case _EpisodeResultsRemoteModel():
+return $default(_that.results);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( List<EpisodeModel> results)?  $default,) {final _that = this;
+switch (_that) {
+case _EpisodeResultsRemoteModel() when $default != null:
+return $default(_that.results);case _:
+  return null;
+
+}
+}
+
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$EpisodeResultsRemoteModelImpl implements _EpisodeResultsRemoteModel {
-  const _$EpisodeResultsRemoteModelImpl(
-      {required final List<EpisodeModel> results})
-      : _results = results;
 
-  factory _$EpisodeResultsRemoteModelImpl.fromJson(Map<String, dynamic> json) =>
-      _$$EpisodeResultsRemoteModelImplFromJson(json);
+class _EpisodeResultsRemoteModel implements EpisodeResultsRemoteModel {
+  const _EpisodeResultsRemoteModel({required final  List<EpisodeModel> results}): _results = results;
+  factory _EpisodeResultsRemoteModel.fromJson(Map<String, dynamic> json) => _$EpisodeResultsRemoteModelFromJson(json);
 
-  final List<EpisodeModel> _results;
-  @override
-  List<EpisodeModel> get results {
-    if (_results is EqualUnmodifiableListView) return _results;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_results);
-  }
-
-  @override
-  String toString() {
-    return 'EpisodeResultsRemoteModel(results: $results)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$EpisodeResultsRemoteModelImpl &&
-            const DeepCollectionEquality().equals(other._results, _results));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(_results));
-
-  /// Create a copy of EpisodeResultsRemoteModel
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$EpisodeResultsRemoteModelImplCopyWith<_$EpisodeResultsRemoteModelImpl>
-      get copyWith => __$$EpisodeResultsRemoteModelImplCopyWithImpl<
-          _$EpisodeResultsRemoteModelImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$EpisodeResultsRemoteModelImplToJson(
-      this,
-    );
-  }
+ final  List<EpisodeModel> _results;
+@override List<EpisodeModel> get results {
+  if (_results is EqualUnmodifiableListView) return _results;
+  // ignore: implicit_dynamic_type
+  return EqualUnmodifiableListView(_results);
 }
 
-abstract class _EpisodeResultsRemoteModel implements EpisodeResultsRemoteModel {
-  const factory _EpisodeResultsRemoteModel(
-          {required final List<EpisodeModel> results}) =
-      _$EpisodeResultsRemoteModelImpl;
 
-  factory _EpisodeResultsRemoteModel.fromJson(Map<String, dynamic> json) =
-      _$EpisodeResultsRemoteModelImpl.fromJson;
+/// Create a copy of EpisodeResultsRemoteModel
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$EpisodeResultsRemoteModelCopyWith<_EpisodeResultsRemoteModel> get copyWith => __$EpisodeResultsRemoteModelCopyWithImpl<_EpisodeResultsRemoteModel>(this, _$identity);
 
-  @override
-  List<EpisodeModel> get results;
-
-  /// Create a copy of EpisodeResultsRemoteModel
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$EpisodeResultsRemoteModelImplCopyWith<_$EpisodeResultsRemoteModelImpl>
-      get copyWith => throw _privateConstructorUsedError;
+@override
+Map<String, dynamic> toJson() {
+  return _$EpisodeResultsRemoteModelToJson(this, );
 }
 
-EpisodeModel _$EpisodeModelFromJson(Map<String, dynamic> json) {
-  return _EpisodeModel.fromJson(json);
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _EpisodeResultsRemoteModel&&const DeepCollectionEquality().equals(other._results, _results));
 }
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(_results));
+
+@override
+String toString() {
+  return 'EpisodeResultsRemoteModel(results: $results)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$EpisodeResultsRemoteModelCopyWith<$Res> implements $EpisodeResultsRemoteModelCopyWith<$Res> {
+  factory _$EpisodeResultsRemoteModelCopyWith(_EpisodeResultsRemoteModel value, $Res Function(_EpisodeResultsRemoteModel) _then) = __$EpisodeResultsRemoteModelCopyWithImpl;
+@override @useResult
+$Res call({
+ List<EpisodeModel> results
+});
+
+
+
+
+}
+/// @nodoc
+class __$EpisodeResultsRemoteModelCopyWithImpl<$Res>
+    implements _$EpisodeResultsRemoteModelCopyWith<$Res> {
+  __$EpisodeResultsRemoteModelCopyWithImpl(this._self, this._then);
+
+  final _EpisodeResultsRemoteModel _self;
+  final $Res Function(_EpisodeResultsRemoteModel) _then;
+
+/// Create a copy of EpisodeResultsRemoteModel
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? results = null,}) {
+  return _then(_EpisodeResultsRemoteModel(
+results: null == results ? _self._results : results // ignore: cast_nullable_to_non_nullable
+as List<EpisodeModel>,
+  ));
+}
+
+
+}
+
 
 /// @nodoc
 mixin _$EpisodeModel {
-  String get id => throw _privateConstructorUsedError;
-  String get name => throw _privateConstructorUsedError;
-  @JsonKey(name: 'air_date')
-  String get airDate => throw _privateConstructorUsedError;
-  String get episode => throw _privateConstructorUsedError;
+
+ String get id; String get name;@JsonKey(name: 'air_date') String get airDate; String get episode;
+/// Create a copy of EpisodeModel
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$EpisodeModelCopyWith<EpisodeModel> get copyWith => _$EpisodeModelCopyWithImpl<EpisodeModel>(this as EpisodeModel, _$identity);
 
   /// Serializes this EpisodeModel to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of EpisodeModel
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $EpisodeModelCopyWith<EpisodeModel> get copyWith =>
-      throw _privateConstructorUsedError;
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is EpisodeModel&&(identical(other.id, id) || other.id == id)&&(identical(other.name, name) || other.name == name)&&(identical(other.airDate, airDate) || other.airDate == airDate)&&(identical(other.episode, episode) || other.episode == episode));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,id,name,airDate,episode);
+
+@override
+String toString() {
+  return 'EpisodeModel(id: $id, name: $name, airDate: $airDate, episode: $episode)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $EpisodeModelCopyWith<$Res> {
-  factory $EpisodeModelCopyWith(
-          EpisodeModel value, $Res Function(EpisodeModel) then) =
-      _$EpisodeModelCopyWithImpl<$Res, EpisodeModel>;
-  @useResult
-  $Res call(
-      {String id,
-      String name,
-      @JsonKey(name: 'air_date') String airDate,
-      String episode});
-}
+abstract mixin class $EpisodeModelCopyWith<$Res>  {
+  factory $EpisodeModelCopyWith(EpisodeModel value, $Res Function(EpisodeModel) _then) = _$EpisodeModelCopyWithImpl;
+@useResult
+$Res call({
+ String id, String name,@JsonKey(name: 'air_date') String airDate, String episode
+});
 
+
+
+
+}
 /// @nodoc
-class _$EpisodeModelCopyWithImpl<$Res, $Val extends EpisodeModel>
+class _$EpisodeModelCopyWithImpl<$Res>
     implements $EpisodeModelCopyWith<$Res> {
-  _$EpisodeModelCopyWithImpl(this._value, this._then);
+  _$EpisodeModelCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final EpisodeModel _self;
+  final $Res Function(EpisodeModel) _then;
 
-  /// Create a copy of EpisodeModel
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = null,
-    Object? name = null,
-    Object? airDate = null,
-    Object? episode = null,
-  }) {
-    return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      airDate: null == airDate
-          ? _value.airDate
-          : airDate // ignore: cast_nullable_to_non_nullable
-              as String,
-      episode: null == episode
-          ? _value.episode
-          : episode // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
-  }
+/// Create a copy of EpisodeModel
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? name = null,Object? airDate = null,Object? episode = null,}) {
+  return _then(_self.copyWith(
+id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
+as String,name: null == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
+as String,airDate: null == airDate ? _self.airDate : airDate // ignore: cast_nullable_to_non_nullable
+as String,episode: null == episode ? _self.episode : episode // ignore: cast_nullable_to_non_nullable
+as String,
+  ));
 }
 
-/// @nodoc
-abstract class _$$EpisodeModelImplCopyWith<$Res>
-    implements $EpisodeModelCopyWith<$Res> {
-  factory _$$EpisodeModelImplCopyWith(
-          _$EpisodeModelImpl value, $Res Function(_$EpisodeModelImpl) then) =
-      __$$EpisodeModelImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call(
-      {String id,
-      String name,
-      @JsonKey(name: 'air_date') String airDate,
-      String episode});
 }
 
-/// @nodoc
-class __$$EpisodeModelImplCopyWithImpl<$Res>
-    extends _$EpisodeModelCopyWithImpl<$Res, _$EpisodeModelImpl>
-    implements _$$EpisodeModelImplCopyWith<$Res> {
-  __$$EpisodeModelImplCopyWithImpl(
-      _$EpisodeModelImpl _value, $Res Function(_$EpisodeModelImpl) _then)
-      : super(_value, _then);
 
-  /// Create a copy of EpisodeModel
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = null,
-    Object? name = null,
-    Object? airDate = null,
-    Object? episode = null,
-  }) {
-    return _then(_$EpisodeModelImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      airDate: null == airDate
-          ? _value.airDate
-          : airDate // ignore: cast_nullable_to_non_nullable
-              as String,
-      episode: null == episode
-          ? _value.episode
-          : episode // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
-  }
+/// Adds pattern-matching-related methods to [EpisodeModel].
+extension EpisodeModelPatterns on EpisodeModel {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _EpisodeModel value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _EpisodeModel() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _EpisodeModel value)  $default,){
+final _that = this;
+switch (_that) {
+case _EpisodeModel():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _EpisodeModel value)?  $default,){
+final _that = this;
+switch (_that) {
+case _EpisodeModel() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String id,  String name, @JsonKey(name: 'air_date')  String airDate,  String episode)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _EpisodeModel() when $default != null:
+return $default(_that.id,_that.name,_that.airDate,_that.episode);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String id,  String name, @JsonKey(name: 'air_date')  String airDate,  String episode)  $default,) {final _that = this;
+switch (_that) {
+case _EpisodeModel():
+return $default(_that.id,_that.name,_that.airDate,_that.episode);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String id,  String name, @JsonKey(name: 'air_date')  String airDate,  String episode)?  $default,) {final _that = this;
+switch (_that) {
+case _EpisodeModel() when $default != null:
+return $default(_that.id,_that.name,_that.airDate,_that.episode);case _:
+  return null;
+
+}
+}
+
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$EpisodeModelImpl implements _EpisodeModel {
-  const _$EpisodeModelImpl(
-      {required this.id,
-      required this.name,
-      @JsonKey(name: 'air_date') required this.airDate,
-      required this.episode});
 
-  factory _$EpisodeModelImpl.fromJson(Map<String, dynamic> json) =>
-      _$$EpisodeModelImplFromJson(json);
+class _EpisodeModel implements EpisodeModel {
+  const _EpisodeModel({required this.id, required this.name, @JsonKey(name: 'air_date') required this.airDate, required this.episode});
+  factory _EpisodeModel.fromJson(Map<String, dynamic> json) => _$EpisodeModelFromJson(json);
 
-  @override
-  final String id;
-  @override
-  final String name;
-  @override
-  @JsonKey(name: 'air_date')
-  final String airDate;
-  @override
-  final String episode;
+@override final  String id;
+@override final  String name;
+@override@JsonKey(name: 'air_date') final  String airDate;
+@override final  String episode;
 
-  @override
-  String toString() {
-    return 'EpisodeModel(id: $id, name: $name, airDate: $airDate, episode: $episode)';
-  }
+/// Create a copy of EpisodeModel
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$EpisodeModelCopyWith<_EpisodeModel> get copyWith => __$EpisodeModelCopyWithImpl<_EpisodeModel>(this, _$identity);
 
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$EpisodeModelImpl &&
-            (identical(other.id, id) || other.id == id) &&
-            (identical(other.name, name) || other.name == name) &&
-            (identical(other.airDate, airDate) || other.airDate == airDate) &&
-            (identical(other.episode, episode) || other.episode == episode));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(runtimeType, id, name, airDate, episode);
-
-  /// Create a copy of EpisodeModel
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$EpisodeModelImplCopyWith<_$EpisodeModelImpl> get copyWith =>
-      __$$EpisodeModelImplCopyWithImpl<_$EpisodeModelImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$EpisodeModelImplToJson(
-      this,
-    );
-  }
+@override
+Map<String, dynamic> toJson() {
+  return _$EpisodeModelToJson(this, );
 }
 
-abstract class _EpisodeModel implements EpisodeModel {
-  const factory _EpisodeModel(
-      {required final String id,
-      required final String name,
-      @JsonKey(name: 'air_date') required final String airDate,
-      required final String episode}) = _$EpisodeModelImpl;
-
-  factory _EpisodeModel.fromJson(Map<String, dynamic> json) =
-      _$EpisodeModelImpl.fromJson;
-
-  @override
-  String get id;
-  @override
-  String get name;
-  @override
-  @JsonKey(name: 'air_date')
-  String get airDate;
-  @override
-  String get episode;
-
-  /// Create a copy of EpisodeModel
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$EpisodeModelImplCopyWith<_$EpisodeModelImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _EpisodeModel&&(identical(other.id, id) || other.id == id)&&(identical(other.name, name) || other.name == name)&&(identical(other.airDate, airDate) || other.airDate == airDate)&&(identical(other.episode, episode) || other.episode == episode));
 }
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,id,name,airDate,episode);
+
+@override
+String toString() {
+  return 'EpisodeModel(id: $id, name: $name, airDate: $airDate, episode: $episode)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$EpisodeModelCopyWith<$Res> implements $EpisodeModelCopyWith<$Res> {
+  factory _$EpisodeModelCopyWith(_EpisodeModel value, $Res Function(_EpisodeModel) _then) = __$EpisodeModelCopyWithImpl;
+@override @useResult
+$Res call({
+ String id, String name,@JsonKey(name: 'air_date') String airDate, String episode
+});
+
+
+
+
+}
+/// @nodoc
+class __$EpisodeModelCopyWithImpl<$Res>
+    implements _$EpisodeModelCopyWith<$Res> {
+  __$EpisodeModelCopyWithImpl(this._self, this._then);
+
+  final _EpisodeModel _self;
+  final $Res Function(_EpisodeModel) _then;
+
+/// Create a copy of EpisodeModel
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? name = null,Object? airDate = null,Object? episode = null,}) {
+  return _then(_EpisodeModel(
+id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
+as String,name: null == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
+as String,airDate: null == airDate ? _self.airDate : airDate // ignore: cast_nullable_to_non_nullable
+as String,episode: null == episode ? _self.episode : episode // ignore: cast_nullable_to_non_nullable
+as String,
+  ));
+}
+
+
+}
+
+// dart format on

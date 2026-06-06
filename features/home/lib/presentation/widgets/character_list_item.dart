@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:pinch_to_zoom_scrollable/pinch_to_zoom_scrollable.dart';
 
 import '../../domain/entities/character.dart';
+import '../../utils/avatar_url_utils.dart';
 
 class CharacterListItem extends StatelessWidget {
   const CharacterListItem({
@@ -18,7 +19,7 @@ class CharacterListItem extends StatelessWidget {
       child: AspectRatio(
         aspectRatio: 1.4,
         child: CachedNetworkImage(
-          imageUrl: item.image,
+          imageUrl: AvatarUrlUtils.getCustomAvatarUrl(item.image),
           fit: BoxFit.cover,
         ),
       ),

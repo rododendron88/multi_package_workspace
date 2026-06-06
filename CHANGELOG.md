@@ -1,3 +1,9 @@
+## [1.0.2]
+
+* Migrated project to Dart Pub Workspaces (`resolution: workspace`).
+* Moved `melos` configuration to `pubspec.yaml` and upgraded Melos to `^7.8.1`.
+* Updated iOS and macOS project configuration.
+
 ## [1.0.1]
 
 * Added:

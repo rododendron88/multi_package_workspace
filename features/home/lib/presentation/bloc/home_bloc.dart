@@ -6,7 +6,7 @@ import 'package:injectable/injectable.dart';
 part 'home_bloc.freezed.dart';
 
 @freezed
-class HomeEvent with _$HomeEvent {
+sealed class HomeEvent with _$HomeEvent {
   const factory HomeEvent.charactersSelected() = CharactersSelected;
 
   const factory HomeEvent.episodesSelected() = EpisodesSelected;
@@ -15,7 +15,7 @@ class HomeEvent with _$HomeEvent {
 }
 
 @freezed
-class HomeState with _$HomeState {
+sealed class HomeState with _$HomeState {
   const factory HomeState.empty() = EmptyState;
 
   const factory HomeState.characters(String title) = CharactersSelectedState;

@@ -1,23 +1,68 @@
 name: melos_workspace
 description: Melos workspace Flutter project.
-publish_to: 'none'
-version: 1.0.1+2
+publish_to: "none"
+version: 1.0.3+1
 
 environment:
-  sdk: ">=3.0.0 <4.0.0"
+  sdk: ^3.8.0
 
-dependencies:
-  flutter:
-    sdk: flutter
-  yaml: any
-  yaml_edit: ^2.1.0
+workspace:
+  - apps/app
+  - apps/app2
+  - infrastructure/common
+  - infrastructure/core
+  - infrastructure/injectable_generator
+  - features/auth
+  - features/home
 
 dev_dependencies:
-  flutter_test:
-    sdk: flutter
-  flutter_lints: ^1.0.0
-  melos: ^3.4.0
-  build_runner: ^2.4.7
+  melos: ^7.8.1
 
-flutter:
-  uses-material-design: true
+melos:
+  name: multi_package_workspace
+
+  sdkPath: .fvm/flutter_sdk
+
+  scripts:
+    br:
+      run: melos exec -c 1 --depends-on="build_runner" -- dart run build_runner build
+      description: Run build_runner
+    lint:all:
+      run: melos run analyze && melos run format
+      description: Run all static analysis checks
+    format:
+      run: melos exec -c 6 --fail-fast -- dart format .
+      description: Format all packages
+    format:check:
+      run: melos exec -c 6 --fail-fast -- dart format --set-exit-if-changed .
+      description: Check formatting of all packages
+    analyze:
+      run: melos exec -c 3 -- flutter analyze
+      description: Run analyze for Flutter packages in this project
+    test:
+      run: melos run test:selective --no-select
+      description: Run all Flutter tests in this project.
+    test:selective:
+      run: |
+        melos exec -c 6 --fail-fast -- \
+          "flutter test --no-pub --reporter compact --no-test-assets"
+      description: Run `flutter test` for a specific package.
+      packageFilters:
+        dirExists:
+          - test
+        ignore:
+          - "*example*"
+    clean:
+      run: melos exec -c 6 -- flutter clean && melos bootstrap
+      description: Clean Flutter packages in this project and run bootstrap
+    codegen:
+      run: melos exec -c 1 --depends-on="build_runner" -- dart run build_runner build
+      description: Run code generation using build_runner
+    dartfix:
+      run: melos exec -c 1 -- dart fix --dry-run
+      description: Dart fix
+    codegen:selective:
+      run: melos exec -c 1 --depends-on="build_runner" -- dart run build_runner build
+      description: Run code generation using build_runner in a specific package
+      packageFilters:
+        dependsOn: "build_runner"

@@ -1,5 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,668 +9,873 @@ part of 'character_model.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
-
-CharactersRemoteModel _$CharactersRemoteModelFromJson(
-    Map<String, dynamic> json) {
-  return _CharactersRemoteModel.fromJson(json);
-}
 
 /// @nodoc
 mixin _$CharactersRemoteModel {
-  CharacterResultsRemoteModel get characters =>
-      throw _privateConstructorUsedError;
+
+ CharacterResultsRemoteModel get characters;
+/// Create a copy of CharactersRemoteModel
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$CharactersRemoteModelCopyWith<CharactersRemoteModel> get copyWith => _$CharactersRemoteModelCopyWithImpl<CharactersRemoteModel>(this as CharactersRemoteModel, _$identity);
 
   /// Serializes this CharactersRemoteModel to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of CharactersRemoteModel
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $CharactersRemoteModelCopyWith<CharactersRemoteModel> get copyWith =>
-      throw _privateConstructorUsedError;
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is CharactersRemoteModel&&(identical(other.characters, characters) || other.characters == characters));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,characters);
+
+@override
+String toString() {
+  return 'CharactersRemoteModel(characters: $characters)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $CharactersRemoteModelCopyWith<$Res> {
-  factory $CharactersRemoteModelCopyWith(CharactersRemoteModel value,
-          $Res Function(CharactersRemoteModel) then) =
-      _$CharactersRemoteModelCopyWithImpl<$Res, CharactersRemoteModel>;
-  @useResult
-  $Res call({CharacterResultsRemoteModel characters});
+abstract mixin class $CharactersRemoteModelCopyWith<$Res>  {
+  factory $CharactersRemoteModelCopyWith(CharactersRemoteModel value, $Res Function(CharactersRemoteModel) _then) = _$CharactersRemoteModelCopyWithImpl;
+@useResult
+$Res call({
+ CharacterResultsRemoteModel characters
+});
 
-  $CharacterResultsRemoteModelCopyWith<$Res> get characters;
+
+$CharacterResultsRemoteModelCopyWith<$Res> get characters;
+
 }
-
 /// @nodoc
-class _$CharactersRemoteModelCopyWithImpl<$Res,
-        $Val extends CharactersRemoteModel>
+class _$CharactersRemoteModelCopyWithImpl<$Res>
     implements $CharactersRemoteModelCopyWith<$Res> {
-  _$CharactersRemoteModelCopyWithImpl(this._value, this._then);
+  _$CharactersRemoteModelCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final CharactersRemoteModel _self;
+  final $Res Function(CharactersRemoteModel) _then;
 
-  /// Create a copy of CharactersRemoteModel
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? characters = null,
-  }) {
-    return _then(_value.copyWith(
-      characters: null == characters
-          ? _value.characters
-          : characters // ignore: cast_nullable_to_non_nullable
-              as CharacterResultsRemoteModel,
-    ) as $Val);
-  }
-
-  /// Create a copy of CharactersRemoteModel
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @pragma('vm:prefer-inline')
-  $CharacterResultsRemoteModelCopyWith<$Res> get characters {
-    return $CharacterResultsRemoteModelCopyWith<$Res>(_value.characters,
-        (value) {
-      return _then(_value.copyWith(characters: value) as $Val);
-    });
-  }
+/// Create a copy of CharactersRemoteModel
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? characters = null,}) {
+  return _then(_self.copyWith(
+characters: null == characters ? _self.characters : characters // ignore: cast_nullable_to_non_nullable
+as CharacterResultsRemoteModel,
+  ));
+}
+/// Create a copy of CharactersRemoteModel
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$CharacterResultsRemoteModelCopyWith<$Res> get characters {
+  
+  return $CharacterResultsRemoteModelCopyWith<$Res>(_self.characters, (value) {
+    return _then(_self.copyWith(characters: value));
+  });
+}
 }
 
-/// @nodoc
-abstract class _$$CharactersRemoteModelImplCopyWith<$Res>
-    implements $CharactersRemoteModelCopyWith<$Res> {
-  factory _$$CharactersRemoteModelImplCopyWith(
-          _$CharactersRemoteModelImpl value,
-          $Res Function(_$CharactersRemoteModelImpl) then) =
-      __$$CharactersRemoteModelImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({CharacterResultsRemoteModel characters});
 
-  @override
-  $CharacterResultsRemoteModelCopyWith<$Res> get characters;
+/// Adds pattern-matching-related methods to [CharactersRemoteModel].
+extension CharactersRemoteModelPatterns on CharactersRemoteModel {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _CharactersRemoteModel value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _CharactersRemoteModel() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _CharactersRemoteModel value)  $default,){
+final _that = this;
+switch (_that) {
+case _CharactersRemoteModel():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _CharactersRemoteModel value)?  $default,){
+final _that = this;
+switch (_that) {
+case _CharactersRemoteModel() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( CharacterResultsRemoteModel characters)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _CharactersRemoteModel() when $default != null:
+return $default(_that.characters);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( CharacterResultsRemoteModel characters)  $default,) {final _that = this;
+switch (_that) {
+case _CharactersRemoteModel():
+return $default(_that.characters);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( CharacterResultsRemoteModel characters)?  $default,) {final _that = this;
+switch (_that) {
+case _CharactersRemoteModel() when $default != null:
+return $default(_that.characters);case _:
+  return null;
+
+}
 }
 
-/// @nodoc
-class __$$CharactersRemoteModelImplCopyWithImpl<$Res>
-    extends _$CharactersRemoteModelCopyWithImpl<$Res,
-        _$CharactersRemoteModelImpl>
-    implements _$$CharactersRemoteModelImplCopyWith<$Res> {
-  __$$CharactersRemoteModelImplCopyWithImpl(_$CharactersRemoteModelImpl _value,
-      $Res Function(_$CharactersRemoteModelImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of CharactersRemoteModel
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? characters = null,
-  }) {
-    return _then(_$CharactersRemoteModelImpl(
-      characters: null == characters
-          ? _value.characters
-          : characters // ignore: cast_nullable_to_non_nullable
-              as CharacterResultsRemoteModel,
-    ));
-  }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$CharactersRemoteModelImpl implements _CharactersRemoteModel {
-  const _$CharactersRemoteModelImpl({required this.characters});
 
-  factory _$CharactersRemoteModelImpl.fromJson(Map<String, dynamic> json) =>
-      _$$CharactersRemoteModelImplFromJson(json);
+class _CharactersRemoteModel implements CharactersRemoteModel {
+  const _CharactersRemoteModel({required this.characters});
+  factory _CharactersRemoteModel.fromJson(Map<String, dynamic> json) => _$CharactersRemoteModelFromJson(json);
 
-  @override
-  final CharacterResultsRemoteModel characters;
+@override final  CharacterResultsRemoteModel characters;
 
-  @override
-  String toString() {
-    return 'CharactersRemoteModel(characters: $characters)';
-  }
+/// Create a copy of CharactersRemoteModel
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$CharactersRemoteModelCopyWith<_CharactersRemoteModel> get copyWith => __$CharactersRemoteModelCopyWithImpl<_CharactersRemoteModel>(this, _$identity);
 
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$CharactersRemoteModelImpl &&
-            (identical(other.characters, characters) ||
-                other.characters == characters));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(runtimeType, characters);
-
-  /// Create a copy of CharactersRemoteModel
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$CharactersRemoteModelImplCopyWith<_$CharactersRemoteModelImpl>
-      get copyWith => __$$CharactersRemoteModelImplCopyWithImpl<
-          _$CharactersRemoteModelImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$CharactersRemoteModelImplToJson(
-      this,
-    );
-  }
+@override
+Map<String, dynamic> toJson() {
+  return _$CharactersRemoteModelToJson(this, );
 }
 
-abstract class _CharactersRemoteModel implements CharactersRemoteModel {
-  const factory _CharactersRemoteModel(
-          {required final CharacterResultsRemoteModel characters}) =
-      _$CharactersRemoteModelImpl;
-
-  factory _CharactersRemoteModel.fromJson(Map<String, dynamic> json) =
-      _$CharactersRemoteModelImpl.fromJson;
-
-  @override
-  CharacterResultsRemoteModel get characters;
-
-  /// Create a copy of CharactersRemoteModel
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$CharactersRemoteModelImplCopyWith<_$CharactersRemoteModelImpl>
-      get copyWith => throw _privateConstructorUsedError;
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _CharactersRemoteModel&&(identical(other.characters, characters) || other.characters == characters));
 }
 
-CharacterResultsRemoteModel _$CharacterResultsRemoteModelFromJson(
-    Map<String, dynamic> json) {
-  return _CharacterResultsRemoteModel.fromJson(json);
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,characters);
+
+@override
+String toString() {
+  return 'CharactersRemoteModel(characters: $characters)';
 }
+
+
+}
+
+/// @nodoc
+abstract mixin class _$CharactersRemoteModelCopyWith<$Res> implements $CharactersRemoteModelCopyWith<$Res> {
+  factory _$CharactersRemoteModelCopyWith(_CharactersRemoteModel value, $Res Function(_CharactersRemoteModel) _then) = __$CharactersRemoteModelCopyWithImpl;
+@override @useResult
+$Res call({
+ CharacterResultsRemoteModel characters
+});
+
+
+@override $CharacterResultsRemoteModelCopyWith<$Res> get characters;
+
+}
+/// @nodoc
+class __$CharactersRemoteModelCopyWithImpl<$Res>
+    implements _$CharactersRemoteModelCopyWith<$Res> {
+  __$CharactersRemoteModelCopyWithImpl(this._self, this._then);
+
+  final _CharactersRemoteModel _self;
+  final $Res Function(_CharactersRemoteModel) _then;
+
+/// Create a copy of CharactersRemoteModel
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? characters = null,}) {
+  return _then(_CharactersRemoteModel(
+characters: null == characters ? _self.characters : characters // ignore: cast_nullable_to_non_nullable
+as CharacterResultsRemoteModel,
+  ));
+}
+
+/// Create a copy of CharactersRemoteModel
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$CharacterResultsRemoteModelCopyWith<$Res> get characters {
+  
+  return $CharacterResultsRemoteModelCopyWith<$Res>(_self.characters, (value) {
+    return _then(_self.copyWith(characters: value));
+  });
+}
+}
+
 
 /// @nodoc
 mixin _$CharacterResultsRemoteModel {
-  List<CharacterModel> get results => throw _privateConstructorUsedError;
+
+ List<CharacterModel> get results;
+/// Create a copy of CharacterResultsRemoteModel
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$CharacterResultsRemoteModelCopyWith<CharacterResultsRemoteModel> get copyWith => _$CharacterResultsRemoteModelCopyWithImpl<CharacterResultsRemoteModel>(this as CharacterResultsRemoteModel, _$identity);
 
   /// Serializes this CharacterResultsRemoteModel to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of CharacterResultsRemoteModel
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $CharacterResultsRemoteModelCopyWith<CharacterResultsRemoteModel>
-      get copyWith => throw _privateConstructorUsedError;
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is CharacterResultsRemoteModel&&const DeepCollectionEquality().equals(other.results, results));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(results));
+
+@override
+String toString() {
+  return 'CharacterResultsRemoteModel(results: $results)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $CharacterResultsRemoteModelCopyWith<$Res> {
-  factory $CharacterResultsRemoteModelCopyWith(
-          CharacterResultsRemoteModel value,
-          $Res Function(CharacterResultsRemoteModel) then) =
-      _$CharacterResultsRemoteModelCopyWithImpl<$Res,
-          CharacterResultsRemoteModel>;
-  @useResult
-  $Res call({List<CharacterModel> results});
-}
+abstract mixin class $CharacterResultsRemoteModelCopyWith<$Res>  {
+  factory $CharacterResultsRemoteModelCopyWith(CharacterResultsRemoteModel value, $Res Function(CharacterResultsRemoteModel) _then) = _$CharacterResultsRemoteModelCopyWithImpl;
+@useResult
+$Res call({
+ List<CharacterModel> results
+});
 
+
+
+
+}
 /// @nodoc
-class _$CharacterResultsRemoteModelCopyWithImpl<$Res,
-        $Val extends CharacterResultsRemoteModel>
+class _$CharacterResultsRemoteModelCopyWithImpl<$Res>
     implements $CharacterResultsRemoteModelCopyWith<$Res> {
-  _$CharacterResultsRemoteModelCopyWithImpl(this._value, this._then);
+  _$CharacterResultsRemoteModelCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final CharacterResultsRemoteModel _self;
+  final $Res Function(CharacterResultsRemoteModel) _then;
 
-  /// Create a copy of CharacterResultsRemoteModel
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? results = null,
-  }) {
-    return _then(_value.copyWith(
-      results: null == results
-          ? _value.results
-          : results // ignore: cast_nullable_to_non_nullable
-              as List<CharacterModel>,
-    ) as $Val);
-  }
+/// Create a copy of CharacterResultsRemoteModel
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? results = null,}) {
+  return _then(_self.copyWith(
+results: null == results ? _self.results : results // ignore: cast_nullable_to_non_nullable
+as List<CharacterModel>,
+  ));
 }
 
-/// @nodoc
-abstract class _$$CharacterResultsRemoteModelImplCopyWith<$Res>
-    implements $CharacterResultsRemoteModelCopyWith<$Res> {
-  factory _$$CharacterResultsRemoteModelImplCopyWith(
-          _$CharacterResultsRemoteModelImpl value,
-          $Res Function(_$CharacterResultsRemoteModelImpl) then) =
-      __$$CharacterResultsRemoteModelImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({List<CharacterModel> results});
 }
 
-/// @nodoc
-class __$$CharacterResultsRemoteModelImplCopyWithImpl<$Res>
-    extends _$CharacterResultsRemoteModelCopyWithImpl<$Res,
-        _$CharacterResultsRemoteModelImpl>
-    implements _$$CharacterResultsRemoteModelImplCopyWith<$Res> {
-  __$$CharacterResultsRemoteModelImplCopyWithImpl(
-      _$CharacterResultsRemoteModelImpl _value,
-      $Res Function(_$CharacterResultsRemoteModelImpl) _then)
-      : super(_value, _then);
 
-  /// Create a copy of CharacterResultsRemoteModel
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? results = null,
-  }) {
-    return _then(_$CharacterResultsRemoteModelImpl(
-      results: null == results
-          ? _value._results
-          : results // ignore: cast_nullable_to_non_nullable
-              as List<CharacterModel>,
-    ));
-  }
+/// Adds pattern-matching-related methods to [CharacterResultsRemoteModel].
+extension CharacterResultsRemoteModelPatterns on CharacterResultsRemoteModel {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _CharacterResultsRemoteModel value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _CharacterResultsRemoteModel() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _CharacterResultsRemoteModel value)  $default,){
+final _that = this;
+switch (_that) {
+case _CharacterResultsRemoteModel():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _CharacterResultsRemoteModel value)?  $default,){
+final _that = this;
+switch (_that) {
+case _CharacterResultsRemoteModel() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( List<CharacterModel> results)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _CharacterResultsRemoteModel() when $default != null:
+return $default(_that.results);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( List<CharacterModel> results)  $default,) {final _that = this;
+switch (_that) {
+case _CharacterResultsRemoteModel():
+return $default(_that.results);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( List<CharacterModel> results)?  $default,) {final _that = this;
+switch (_that) {
+case _CharacterResultsRemoteModel() when $default != null:
+return $default(_that.results);case _:
+  return null;
+
+}
+}
+
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$CharacterResultsRemoteModelImpl
-    implements _CharacterResultsRemoteModel {
-  const _$CharacterResultsRemoteModelImpl(
-      {required final List<CharacterModel> results})
-      : _results = results;
 
-  factory _$CharacterResultsRemoteModelImpl.fromJson(
-          Map<String, dynamic> json) =>
-      _$$CharacterResultsRemoteModelImplFromJson(json);
+class _CharacterResultsRemoteModel implements CharacterResultsRemoteModel {
+  const _CharacterResultsRemoteModel({required final  List<CharacterModel> results}): _results = results;
+  factory _CharacterResultsRemoteModel.fromJson(Map<String, dynamic> json) => _$CharacterResultsRemoteModelFromJson(json);
 
-  final List<CharacterModel> _results;
-  @override
-  List<CharacterModel> get results {
-    if (_results is EqualUnmodifiableListView) return _results;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_results);
-  }
-
-  @override
-  String toString() {
-    return 'CharacterResultsRemoteModel(results: $results)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$CharacterResultsRemoteModelImpl &&
-            const DeepCollectionEquality().equals(other._results, _results));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(_results));
-
-  /// Create a copy of CharacterResultsRemoteModel
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$CharacterResultsRemoteModelImplCopyWith<_$CharacterResultsRemoteModelImpl>
-      get copyWith => __$$CharacterResultsRemoteModelImplCopyWithImpl<
-          _$CharacterResultsRemoteModelImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$CharacterResultsRemoteModelImplToJson(
-      this,
-    );
-  }
+ final  List<CharacterModel> _results;
+@override List<CharacterModel> get results {
+  if (_results is EqualUnmodifiableListView) return _results;
+  // ignore: implicit_dynamic_type
+  return EqualUnmodifiableListView(_results);
 }
 
-abstract class _CharacterResultsRemoteModel
-    implements CharacterResultsRemoteModel {
-  const factory _CharacterResultsRemoteModel(
-          {required final List<CharacterModel> results}) =
-      _$CharacterResultsRemoteModelImpl;
 
-  factory _CharacterResultsRemoteModel.fromJson(Map<String, dynamic> json) =
-      _$CharacterResultsRemoteModelImpl.fromJson;
+/// Create a copy of CharacterResultsRemoteModel
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$CharacterResultsRemoteModelCopyWith<_CharacterResultsRemoteModel> get copyWith => __$CharacterResultsRemoteModelCopyWithImpl<_CharacterResultsRemoteModel>(this, _$identity);
 
-  @override
-  List<CharacterModel> get results;
-
-  /// Create a copy of CharacterResultsRemoteModel
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$CharacterResultsRemoteModelImplCopyWith<_$CharacterResultsRemoteModelImpl>
-      get copyWith => throw _privateConstructorUsedError;
+@override
+Map<String, dynamic> toJson() {
+  return _$CharacterResultsRemoteModelToJson(this, );
 }
 
-CharacterModel _$CharacterModelFromJson(Map<String, dynamic> json) {
-  return _CharacterModel.fromJson(json);
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _CharacterResultsRemoteModel&&const DeepCollectionEquality().equals(other._results, _results));
 }
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(_results));
+
+@override
+String toString() {
+  return 'CharacterResultsRemoteModel(results: $results)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$CharacterResultsRemoteModelCopyWith<$Res> implements $CharacterResultsRemoteModelCopyWith<$Res> {
+  factory _$CharacterResultsRemoteModelCopyWith(_CharacterResultsRemoteModel value, $Res Function(_CharacterResultsRemoteModel) _then) = __$CharacterResultsRemoteModelCopyWithImpl;
+@override @useResult
+$Res call({
+ List<CharacterModel> results
+});
+
+
+
+
+}
+/// @nodoc
+class __$CharacterResultsRemoteModelCopyWithImpl<$Res>
+    implements _$CharacterResultsRemoteModelCopyWith<$Res> {
+  __$CharacterResultsRemoteModelCopyWithImpl(this._self, this._then);
+
+  final _CharacterResultsRemoteModel _self;
+  final $Res Function(_CharacterResultsRemoteModel) _then;
+
+/// Create a copy of CharacterResultsRemoteModel
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? results = null,}) {
+  return _then(_CharacterResultsRemoteModel(
+results: null == results ? _self._results : results // ignore: cast_nullable_to_non_nullable
+as List<CharacterModel>,
+  ));
+}
+
+
+}
+
 
 /// @nodoc
 mixin _$CharacterModel {
-  String get id => throw _privateConstructorUsedError;
-  String get name => throw _privateConstructorUsedError;
-  @JsonKey(name: 'status')
-  @VitalStatusConverter()
-  VitalStatus get vitalStatus => throw _privateConstructorUsedError;
-  @GenderConverter()
-  Gender get gender => throw _privateConstructorUsedError;
-  String get type => throw _privateConstructorUsedError;
-  String get species => throw _privateConstructorUsedError;
-  String get image => throw _privateConstructorUsedError;
+
+ String get id; String get name;@JsonKey(name: 'status')@VitalStatusConverter() VitalStatus get vitalStatus;@GenderConverter() Gender get gender; String get type; String get species; String get image;
+/// Create a copy of CharacterModel
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$CharacterModelCopyWith<CharacterModel> get copyWith => _$CharacterModelCopyWithImpl<CharacterModel>(this as CharacterModel, _$identity);
 
   /// Serializes this CharacterModel to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of CharacterModel
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $CharacterModelCopyWith<CharacterModel> get copyWith =>
-      throw _privateConstructorUsedError;
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is CharacterModel&&(identical(other.id, id) || other.id == id)&&(identical(other.name, name) || other.name == name)&&(identical(other.vitalStatus, vitalStatus) || other.vitalStatus == vitalStatus)&&(identical(other.gender, gender) || other.gender == gender)&&(identical(other.type, type) || other.type == type)&&(identical(other.species, species) || other.species == species)&&(identical(other.image, image) || other.image == image));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,id,name,vitalStatus,gender,type,species,image);
+
+@override
+String toString() {
+  return 'CharacterModel(id: $id, name: $name, vitalStatus: $vitalStatus, gender: $gender, type: $type, species: $species, image: $image)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $CharacterModelCopyWith<$Res> {
-  factory $CharacterModelCopyWith(
-          CharacterModel value, $Res Function(CharacterModel) then) =
-      _$CharacterModelCopyWithImpl<$Res, CharacterModel>;
-  @useResult
-  $Res call(
-      {String id,
-      String name,
-      @JsonKey(name: 'status') @VitalStatusConverter() VitalStatus vitalStatus,
-      @GenderConverter() Gender gender,
-      String type,
-      String species,
-      String image});
+abstract mixin class $CharacterModelCopyWith<$Res>  {
+  factory $CharacterModelCopyWith(CharacterModel value, $Res Function(CharacterModel) _then) = _$CharacterModelCopyWithImpl;
+@useResult
+$Res call({
+ String id, String name,@JsonKey(name: 'status')@VitalStatusConverter() VitalStatus vitalStatus,@GenderConverter() Gender gender, String type, String species, String image
+});
 
-  $VitalStatusCopyWith<$Res> get vitalStatus;
-  $GenderCopyWith<$Res> get gender;
+
+$VitalStatusCopyWith<$Res> get vitalStatus;$GenderCopyWith<$Res> get gender;
+
 }
-
 /// @nodoc
-class _$CharacterModelCopyWithImpl<$Res, $Val extends CharacterModel>
+class _$CharacterModelCopyWithImpl<$Res>
     implements $CharacterModelCopyWith<$Res> {
-  _$CharacterModelCopyWithImpl(this._value, this._then);
+  _$CharacterModelCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final CharacterModel _self;
+  final $Res Function(CharacterModel) _then;
 
-  /// Create a copy of CharacterModel
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = null,
-    Object? name = null,
-    Object? vitalStatus = null,
-    Object? gender = null,
-    Object? type = null,
-    Object? species = null,
-    Object? image = null,
-  }) {
-    return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      vitalStatus: null == vitalStatus
-          ? _value.vitalStatus
-          : vitalStatus // ignore: cast_nullable_to_non_nullable
-              as VitalStatus,
-      gender: null == gender
-          ? _value.gender
-          : gender // ignore: cast_nullable_to_non_nullable
-              as Gender,
-      type: null == type
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as String,
-      species: null == species
-          ? _value.species
-          : species // ignore: cast_nullable_to_non_nullable
-              as String,
-      image: null == image
-          ? _value.image
-          : image // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
-  }
-
-  /// Create a copy of CharacterModel
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @pragma('vm:prefer-inline')
-  $VitalStatusCopyWith<$Res> get vitalStatus {
-    return $VitalStatusCopyWith<$Res>(_value.vitalStatus, (value) {
-      return _then(_value.copyWith(vitalStatus: value) as $Val);
-    });
-  }
-
-  /// Create a copy of CharacterModel
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @pragma('vm:prefer-inline')
-  $GenderCopyWith<$Res> get gender {
-    return $GenderCopyWith<$Res>(_value.gender, (value) {
-      return _then(_value.copyWith(gender: value) as $Val);
-    });
-  }
+/// Create a copy of CharacterModel
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? name = null,Object? vitalStatus = null,Object? gender = null,Object? type = null,Object? species = null,Object? image = null,}) {
+  return _then(_self.copyWith(
+id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
+as String,name: null == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
+as String,vitalStatus: null == vitalStatus ? _self.vitalStatus : vitalStatus // ignore: cast_nullable_to_non_nullable
+as VitalStatus,gender: null == gender ? _self.gender : gender // ignore: cast_nullable_to_non_nullable
+as Gender,type: null == type ? _self.type : type // ignore: cast_nullable_to_non_nullable
+as String,species: null == species ? _self.species : species // ignore: cast_nullable_to_non_nullable
+as String,image: null == image ? _self.image : image // ignore: cast_nullable_to_non_nullable
+as String,
+  ));
+}
+/// Create a copy of CharacterModel
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$VitalStatusCopyWith<$Res> get vitalStatus {
+  
+  return $VitalStatusCopyWith<$Res>(_self.vitalStatus, (value) {
+    return _then(_self.copyWith(vitalStatus: value));
+  });
+}/// Create a copy of CharacterModel
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$GenderCopyWith<$Res> get gender {
+  
+  return $GenderCopyWith<$Res>(_self.gender, (value) {
+    return _then(_self.copyWith(gender: value));
+  });
+}
 }
 
-/// @nodoc
-abstract class _$$CharacterModelImplCopyWith<$Res>
-    implements $CharacterModelCopyWith<$Res> {
-  factory _$$CharacterModelImplCopyWith(_$CharacterModelImpl value,
-          $Res Function(_$CharacterModelImpl) then) =
-      __$$CharacterModelImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call(
-      {String id,
-      String name,
-      @JsonKey(name: 'status') @VitalStatusConverter() VitalStatus vitalStatus,
-      @GenderConverter() Gender gender,
-      String type,
-      String species,
-      String image});
 
-  @override
-  $VitalStatusCopyWith<$Res> get vitalStatus;
-  @override
-  $GenderCopyWith<$Res> get gender;
+/// Adds pattern-matching-related methods to [CharacterModel].
+extension CharacterModelPatterns on CharacterModel {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _CharacterModel value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _CharacterModel() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _CharacterModel value)  $default,){
+final _that = this;
+switch (_that) {
+case _CharacterModel():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _CharacterModel value)?  $default,){
+final _that = this;
+switch (_that) {
+case _CharacterModel() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String id,  String name, @JsonKey(name: 'status')@VitalStatusConverter()  VitalStatus vitalStatus, @GenderConverter()  Gender gender,  String type,  String species,  String image)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _CharacterModel() when $default != null:
+return $default(_that.id,_that.name,_that.vitalStatus,_that.gender,_that.type,_that.species,_that.image);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String id,  String name, @JsonKey(name: 'status')@VitalStatusConverter()  VitalStatus vitalStatus, @GenderConverter()  Gender gender,  String type,  String species,  String image)  $default,) {final _that = this;
+switch (_that) {
+case _CharacterModel():
+return $default(_that.id,_that.name,_that.vitalStatus,_that.gender,_that.type,_that.species,_that.image);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String id,  String name, @JsonKey(name: 'status')@VitalStatusConverter()  VitalStatus vitalStatus, @GenderConverter()  Gender gender,  String type,  String species,  String image)?  $default,) {final _that = this;
+switch (_that) {
+case _CharacterModel() when $default != null:
+return $default(_that.id,_that.name,_that.vitalStatus,_that.gender,_that.type,_that.species,_that.image);case _:
+  return null;
+
+}
 }
 
-/// @nodoc
-class __$$CharacterModelImplCopyWithImpl<$Res>
-    extends _$CharacterModelCopyWithImpl<$Res, _$CharacterModelImpl>
-    implements _$$CharacterModelImplCopyWith<$Res> {
-  __$$CharacterModelImplCopyWithImpl(
-      _$CharacterModelImpl _value, $Res Function(_$CharacterModelImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of CharacterModel
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = null,
-    Object? name = null,
-    Object? vitalStatus = null,
-    Object? gender = null,
-    Object? type = null,
-    Object? species = null,
-    Object? image = null,
-  }) {
-    return _then(_$CharacterModelImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      vitalStatus: null == vitalStatus
-          ? _value.vitalStatus
-          : vitalStatus // ignore: cast_nullable_to_non_nullable
-              as VitalStatus,
-      gender: null == gender
-          ? _value.gender
-          : gender // ignore: cast_nullable_to_non_nullable
-              as Gender,
-      type: null == type
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as String,
-      species: null == species
-          ? _value.species
-          : species // ignore: cast_nullable_to_non_nullable
-              as String,
-      image: null == image
-          ? _value.image
-          : image // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
-  }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$CharacterModelImpl implements _CharacterModel {
-  const _$CharacterModelImpl(
-      {required this.id,
-      required this.name,
-      @JsonKey(name: 'status')
-      @VitalStatusConverter()
-      required this.vitalStatus,
-      @GenderConverter() required this.gender,
-      required this.type,
-      required this.species,
-      required this.image});
 
-  factory _$CharacterModelImpl.fromJson(Map<String, dynamic> json) =>
-      _$$CharacterModelImplFromJson(json);
+class _CharacterModel implements CharacterModel {
+  const _CharacterModel({required this.id, required this.name, @JsonKey(name: 'status')@VitalStatusConverter() required this.vitalStatus, @GenderConverter() required this.gender, required this.type, required this.species, required this.image});
+  factory _CharacterModel.fromJson(Map<String, dynamic> json) => _$CharacterModelFromJson(json);
 
-  @override
-  final String id;
-  @override
-  final String name;
-  @override
-  @JsonKey(name: 'status')
-  @VitalStatusConverter()
-  final VitalStatus vitalStatus;
-  @override
-  @GenderConverter()
-  final Gender gender;
-  @override
-  final String type;
-  @override
-  final String species;
-  @override
-  final String image;
+@override final  String id;
+@override final  String name;
+@override@JsonKey(name: 'status')@VitalStatusConverter() final  VitalStatus vitalStatus;
+@override@GenderConverter() final  Gender gender;
+@override final  String type;
+@override final  String species;
+@override final  String image;
 
-  @override
-  String toString() {
-    return 'CharacterModel(id: $id, name: $name, vitalStatus: $vitalStatus, gender: $gender, type: $type, species: $species, image: $image)';
-  }
+/// Create a copy of CharacterModel
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$CharacterModelCopyWith<_CharacterModel> get copyWith => __$CharacterModelCopyWithImpl<_CharacterModel>(this, _$identity);
 
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$CharacterModelImpl &&
-            (identical(other.id, id) || other.id == id) &&
-            (identical(other.name, name) || other.name == name) &&
-            (identical(other.vitalStatus, vitalStatus) ||
-                other.vitalStatus == vitalStatus) &&
-            (identical(other.gender, gender) || other.gender == gender) &&
-            (identical(other.type, type) || other.type == type) &&
-            (identical(other.species, species) || other.species == species) &&
-            (identical(other.image, image) || other.image == image));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(
-      runtimeType, id, name, vitalStatus, gender, type, species, image);
-
-  /// Create a copy of CharacterModel
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$CharacterModelImplCopyWith<_$CharacterModelImpl> get copyWith =>
-      __$$CharacterModelImplCopyWithImpl<_$CharacterModelImpl>(
-          this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$CharacterModelImplToJson(
-      this,
-    );
-  }
+@override
+Map<String, dynamic> toJson() {
+  return _$CharacterModelToJson(this, );
 }
 
-abstract class _CharacterModel implements CharacterModel {
-  const factory _CharacterModel(
-      {required final String id,
-      required final String name,
-      @JsonKey(name: 'status')
-      @VitalStatusConverter()
-      required final VitalStatus vitalStatus,
-      @GenderConverter() required final Gender gender,
-      required final String type,
-      required final String species,
-      required final String image}) = _$CharacterModelImpl;
-
-  factory _CharacterModel.fromJson(Map<String, dynamic> json) =
-      _$CharacterModelImpl.fromJson;
-
-  @override
-  String get id;
-  @override
-  String get name;
-  @override
-  @JsonKey(name: 'status')
-  @VitalStatusConverter()
-  VitalStatus get vitalStatus;
-  @override
-  @GenderConverter()
-  Gender get gender;
-  @override
-  String get type;
-  @override
-  String get species;
-  @override
-  String get image;
-
-  /// Create a copy of CharacterModel
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$CharacterModelImplCopyWith<_$CharacterModelImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _CharacterModel&&(identical(other.id, id) || other.id == id)&&(identical(other.name, name) || other.name == name)&&(identical(other.vitalStatus, vitalStatus) || other.vitalStatus == vitalStatus)&&(identical(other.gender, gender) || other.gender == gender)&&(identical(other.type, type) || other.type == type)&&(identical(other.species, species) || other.species == species)&&(identical(other.image, image) || other.image == image));
 }
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,id,name,vitalStatus,gender,type,species,image);
+
+@override
+String toString() {
+  return 'CharacterModel(id: $id, name: $name, vitalStatus: $vitalStatus, gender: $gender, type: $type, species: $species, image: $image)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$CharacterModelCopyWith<$Res> implements $CharacterModelCopyWith<$Res> {
+  factory _$CharacterModelCopyWith(_CharacterModel value, $Res Function(_CharacterModel) _then) = __$CharacterModelCopyWithImpl;
+@override @useResult
+$Res call({
+ String id, String name,@JsonKey(name: 'status')@VitalStatusConverter() VitalStatus vitalStatus,@GenderConverter() Gender gender, String type, String species, String image
+});
+
+
+@override $VitalStatusCopyWith<$Res> get vitalStatus;@override $GenderCopyWith<$Res> get gender;
+
+}
+/// @nodoc
+class __$CharacterModelCopyWithImpl<$Res>
+    implements _$CharacterModelCopyWith<$Res> {
+  __$CharacterModelCopyWithImpl(this._self, this._then);
+
+  final _CharacterModel _self;
+  final $Res Function(_CharacterModel) _then;
+
+/// Create a copy of CharacterModel
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? name = null,Object? vitalStatus = null,Object? gender = null,Object? type = null,Object? species = null,Object? image = null,}) {
+  return _then(_CharacterModel(
+id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
+as String,name: null == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
+as String,vitalStatus: null == vitalStatus ? _self.vitalStatus : vitalStatus // ignore: cast_nullable_to_non_nullable
+as VitalStatus,gender: null == gender ? _self.gender : gender // ignore: cast_nullable_to_non_nullable
+as Gender,type: null == type ? _self.type : type // ignore: cast_nullable_to_non_nullable
+as String,species: null == species ? _self.species : species // ignore: cast_nullable_to_non_nullable
+as String,image: null == image ? _self.image : image // ignore: cast_nullable_to_non_nullable
+as String,
+  ));
+}
+
+/// Create a copy of CharacterModel
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$VitalStatusCopyWith<$Res> get vitalStatus {
+  
+  return $VitalStatusCopyWith<$Res>(_self.vitalStatus, (value) {
+    return _then(_self.copyWith(vitalStatus: value));
+  });
+}/// Create a copy of CharacterModel
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$GenderCopyWith<$Res> get gender {
+  
+  return $GenderCopyWith<$Res>(_self.gender, (value) {
+    return _then(_self.copyWith(gender: value));
+  });
+}
+}
+
+// dart format on

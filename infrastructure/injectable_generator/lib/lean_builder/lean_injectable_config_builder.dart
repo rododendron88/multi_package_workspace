@@ -1,72 +1,91 @@
 import 'dart:convert';
 
-import 'package:analyzer/dart/element/element.dart';
-import 'package:build/build.dart';
 import 'package:code_builder/code_builder.dart';
 import 'package:collection/collection.dart';
 import 'package:dart_style/dart_style.dart';
-import 'package:glob/glob.dart';
 import 'package:injectable/injectable.dart';
 import 'package:injectable_generator/code_builder/allocator.dart';
 import 'package:injectable_generator/code_builder/library_builder.dart';
+import 'package:injectable_generator/lean_builder/resolvers/lean_importable_type_resolver.dart';
 import 'package:injectable_generator/models/dependency_config.dart';
 import 'package:injectable_generator/models/external_module_config.dart';
-import 'package:injectable_generator/resolver_utils.dart';
-import 'package:injectable_generator/resolvers/importable_type_resolver.dart';
-import 'package:recase/recase.dart';
-import 'package:source_gen/source_gen.dart';
+import 'package:lean_builder/builder.dart';
+import 'package:lean_builder/element.dart';
+import 'package:lean_builder/type.dart';
 
-import '../resolvers/utils.dart' show throwIf;
+import 'package:recase/recase.dart';
+
+import '../resolver_utils.dart';
+import 'build_utils.dart';
+
+const _configFilesDirectory = '.dart_tool/lean_build/generated';
 
 const _moduleChecker = TypeChecker.typeNamed(
   MicroPackageModule,
   inPackage: 'injectable',
 );
 
-class InjectableConfigGenerator extends GeneratorForAnnotation<InjectableInit> {
+@LeanGenerator(
+  {'.config.dart', '.module.dart'},
+  key: 'InjectableConfigGenerator',
+  registerTypes: {InjectableInit},
+)
+class InjectableConfigGenerator
+    extends GeneratorForAnnotatedFunction<InjectableInit> {
   @override
-  dynamic generateForAnnotatedElement(
-    Element element,
-    ConstantReader annotation,
+  dynamic generateForFunction(
     BuildStep buildStep,
+    FunctionElement element,
+    ElementAnnotation anno,
   ) async {
+    final annotation = anno.constant as ConstObject;
+
     final generateForDir = annotation
-        .read('generateForDir')
-        .listValue
-        .map((e) => e.toStringValue());
+        .getList('generateForDir')!
+        .literalValue
+        .cast<String>();
 
-    final isMicroPackage = annotation.read('_isMicroPackage').boolValue;
+    final isMicroPackage = annotation.getBool('_isMicroPackage')!.value;
     final usesConstructorCallback = annotation
-        .read('usesConstructorCallback')
-        .boolValue;
+        .getBool('usesConstructorCallback')!
+        .value;
     final throwOnMissingDependencies = annotation
-        .read('throwOnMissingDependencies')
-        .boolValue;
-    final targetFile = element.firstFragment.libraryFragment?.source.uri;
+        .getBool('throwOnMissingDependencies')!
+        .value;
+    final targetFile = element.library.src.uri;
     final preferRelativeImports = annotation
-        .read("preferRelativeImports")
-        .boolValue;
-    final generateForEnvironments = annotation
-        .read('generateForEnvironments')
-        .setValue
-        .map((e) => e.getField('name')?.toStringValue());
+        .getBool("preferRelativeImports")!
+        .value;
+    final generateForEnvironments =
+        annotation
+            .getSet('generateForEnvironments')
+            ?.value
+            .whereType<ConstObject>()
+            .map((e) => e.getString('name')?.value) ??
+        {};
 
-    final generateAccessors = annotation.read("generateAccessors").boolValue;
+    final generateAccessors = annotation.getBool("generateAccessors")!.value;
 
     final allowMultipleRegistrations = annotation
-        .read('allowMultipleRegistrations')
-        .boolValue;
-
-    final dirPattern = generateForDir.length > 1
-        ? '{${generateForDir.join(',')}}'
-        : '${generateForDir.first}';
-
-    final injectableConfigFiles = Glob("$dirPattern/**.injectable.json");
+        .getBool('allowMultipleRegistrations')!
+        .value;
 
     final jsonData = <Map>[];
-    await for (final id in buildStep.findAssets(injectableConfigFiles)) {
-      final json = jsonDecode(await buildStep.readAsString(id));
-      jsonData.addAll([...json]);
+
+    final assets = buildStep.findAssets(
+      PathMatcher.regex(r".injectable.ln.json$", dotAll: false),
+      subDir: _configFilesDirectory,
+    );
+
+    for (final asset in assets) {
+      // the location anchor is the path to the root package
+      final locationAnchor =
+          '$_configFilesDirectory/${buildStep.resolver.fileResolver.rootPackage}/';
+      final location = asset.uri.path.split(locationAnchor).lastOrNull ?? '';
+      if (generateForDir.any((dir) => location.startsWith(dir))) {
+        final json = jsonDecode(asset.readAsStringSync());
+        jsonData.addAll([...json]);
+      }
     }
 
     final deps = <DependencyConfig>[];
@@ -74,20 +93,21 @@ class InjectableConfigGenerator extends GeneratorForAnnotation<InjectableInit> {
       deps.add(DependencyConfig.fromJson(json));
     }
 
-    final initializerName = annotation.read('initializerName').stringValue;
-    final asExtension = annotation.read('asExtension').boolValue;
+    final initializerName = annotation.getString('initializerName')!.value;
+    final asExtension = annotation.getBool('asExtension')!.value;
 
-    final typeResolver = ImportableTypeResolverImpl(
-      await buildStep.resolver.libraries.toList(),
-    );
+    final typeResolver = LeanTypeResolverImpl(buildStep.resolver);
 
-    final ignoredTypes = annotation
-        .read('ignoreUnregisteredTypes')
-        .listValue
-        .map((e) => typeResolver.resolveType(e.toTypeValue()!));
+    final ignoredTypes =
+        annotation
+            .getList('ignoreUnregisteredTypes')
+            ?.value
+            .whereType<ConstType>()
+            .map((e) => typeResolver.resolveType(e.value)) ??
+        [];
 
     final microPackageModulesBefore = _getMicroPackageModules(
-      annotation.peek('externalPackageModulesBefore'),
+      annotation.getList('externalPackageModulesBefore'),
       typeResolver,
     );
 
@@ -95,14 +115,14 @@ class InjectableConfigGenerator extends GeneratorForAnnotation<InjectableInit> {
     if (microPackageModulesBefore.isEmpty) {
       microPackageModulesBefore.addAll(
         _getMicroPackageModulesMapped(
-          annotation.peek('externalPackageModules'),
+          annotation.getList('externalPackageModules'),
           typeResolver,
         ),
       );
     }
 
     final microPackageModulesAfter = _getMicroPackageModules(
-      annotation.peek('externalPackageModulesAfter'),
+      annotation.getList('externalPackageModulesAfter'),
       typeResolver,
     );
 
@@ -110,13 +130,15 @@ class InjectableConfigGenerator extends GeneratorForAnnotation<InjectableInit> {
       microPackageModulesAfter,
     );
 
-    final ignoreTypesInPackages = annotation
-        .read('ignoreUnregisteredTypesInPackages')
-        .listValue
-        .map((e) => e.toStringValue())
-        .where((e) => e != null)
-        .cast<String>()
-        .toList();
+    final ignoreTypesInPackages =
+        annotation
+            .getList('ignoreUnregisteredTypesInPackages')
+            ?.value
+            .whereType<ConstString>()
+            .map((e) => e.value)
+            .cast<String>()
+            .toList() ??
+        [];
 
     // we want to ignore unregistered types in microPackages
     // because the micro module should handle them
@@ -166,7 +188,7 @@ class InjectableConfigGenerator extends GeneratorForAnnotation<InjectableInit> {
       initializerName: initializerName,
       asExtension: asExtension,
       microPackageName: isMicroPackage
-          ? buildStep.inputId.package.pascalCase
+          ? buildStep.asset.packageName?.pascalCase
           : null,
       microPackagesModulesBefore: microPackageModulesBefore,
       microPackagesModulesAfter: microPackageModulesAfter,
@@ -186,23 +208,24 @@ class InjectableConfigGenerator extends GeneratorForAnnotation<InjectableInit> {
     ).format(generatedLib.accept(emitter).toString());
 
     if (isMicroPackage) {
-      final outputId = buildStep.inputId.changeExtension('.module.dart');
       return buildStep.writeAsString(
-        outputId,
-        [defaultFileHeader, output].join('\n'),
+        [
+          defaultFileHeader,
+          output,
+        ].join('\n'),
+        extension: '.module.dart',
       );
     }
     return output;
   }
 
   Set<ExternalModuleConfig> _getMicroPackageModules(
-    ConstantReader? constList,
-    ImportableTypeResolverImpl typeResolver,
+    ConstList? constList,
+    LeanTypeResolverImpl typeResolver,
   ) {
-    return constList?.listValue.map((e) {
-          final reader = ConstantReader(e);
-          final typeValue = reader.read('module').typeValue;
-          final scope = reader.peek('scope')?.stringValue;
+    return constList?.value.whereType<ConstObject>().map((obj) {
+          final typeValue = obj.getTypeRef('module')!.value;
+          final scope = obj.getString('scope')?.value;
           throwIf(
             typeValue.element is! ClassElement ||
                 !TypeChecker.typeNamed(
@@ -220,11 +243,11 @@ class InjectableConfigGenerator extends GeneratorForAnnotation<InjectableInit> {
   }
 
   Set<ExternalModuleConfig> _getMicroPackageModulesMapped(
-    ConstantReader? constList,
-    ImportableTypeResolverImpl typeResolver,
+    ConstList? constList,
+    LeanTypeResolverImpl typeResolver,
   ) {
-    return constList?.listValue.map((e) {
-          final typeValue = e.toTypeValue()!;
+    return constList?.value.whereType<ConstType>().map((e) {
+          final typeValue = e.value;
           throwIf(
             typeValue.element is! ClassElement ||
                 !_moduleChecker.isSuperOf(typeValue.element!),

@@ -8,7 +8,7 @@ part 'episode_model.freezed.dart';
 part 'episode_model.g.dart';
 
 @freezed
-class EpisodesRemoteModel with _$EpisodesRemoteModel {
+abstract class EpisodesRemoteModel with _$EpisodesRemoteModel {
   const factory EpisodesRemoteModel({
     required EpisodeResultsRemoteModel episodes,
   }) = _EpisodesRemoteModel;
@@ -18,7 +18,7 @@ class EpisodesRemoteModel with _$EpisodesRemoteModel {
 }
 
 @freezed
-class EpisodeResultsRemoteModel with _$EpisodeResultsRemoteModel {
+abstract class EpisodeResultsRemoteModel with _$EpisodeResultsRemoteModel {
   const factory EpisodeResultsRemoteModel({
     required List<EpisodeModel> results,
   }) = _EpisodeResultsRemoteModel;
@@ -28,7 +28,7 @@ class EpisodeResultsRemoteModel with _$EpisodeResultsRemoteModel {
 }
 
 @freezed
-class EpisodeModel with _$EpisodeModel {
+abstract class EpisodeModel with _$EpisodeModel {
   const factory EpisodeModel({
     required String id,
     required String name,

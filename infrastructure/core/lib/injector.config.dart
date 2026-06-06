@@ -1,4 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// dart format width=80
 
 // **************************************************************************
 // InjectableConfigGenerator
@@ -8,32 +9,30 @@
 // coverage:ignore-file
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'package:get_it/get_it.dart' as _i1;
-import 'package:injectable/injectable.dart' as _i2;
+import 'package:get_it/get_it.dart' as _i174;
+import 'package:injectable/injectable.dart' as _i526;
 import 'package:internet_connection_checker/internet_connection_checker.dart'
-    as _i3;
+    as _i973;
 
-import 'data/services/network_info.dart' as _i5;
-import 'domain/service/network_info.dart' as _i4;
-import 'injector.dart' as _i6;
+import 'data/services/network_info.dart' as _i10;
+import 'domain/service/network_info.dart' as _i330;
+import 'injector.dart' as _i811;
 
 // initializes the registration of main-scope dependencies inside of GetIt
-_i1.GetIt init(
-  _i1.GetIt getIt, {
+_i174.GetIt init(
+  _i174.GetIt getIt, {
   String? environment,
-  _i2.EnvironmentFilter? environmentFilter,
+  _i526.EnvironmentFilter? environmentFilter,
 }) {
-  final gh = _i2.GetItHelper(
-    getIt,
-    environment,
-    environmentFilter,
-  );
+  final gh = _i526.GetItHelper(getIt, environment, environmentFilter);
   final coreInjectorModule = _$CoreInjectorModule();
-  gh.lazySingleton<_i3.InternetConnectionChecker>(
-      () => coreInjectorModule.connectionChecker);
-  gh.lazySingleton<_i4.NetworkInfo>(
-      () => _i5.NetworkInfoImpl(gh<_i3.InternetConnectionChecker>()));
+  gh.lazySingleton<_i973.InternetConnectionChecker>(
+    () => coreInjectorModule.connectionChecker,
+  );
+  gh.lazySingleton<_i330.NetworkInfo>(
+    () => _i10.NetworkInfoImpl(gh<_i973.InternetConnectionChecker>()),
+  );
   return getIt;
 }
 
-class _$CoreInjectorModule extends _i6.CoreInjectorModule {}
+class _$CoreInjectorModule extends _i811.CoreInjectorModule {}

@@ -20,14 +20,14 @@ class ScopeWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) =>
       GetIt.instance.get<ModulesHolder>().wrapScope(
-            scope: scope,
-            child: _ScopeWidget(
-              key: ValueKey(scope),
-              homeBuilder: homeBuilder,
-              scope: scope,
-              initCustomDependencies: initCustomDependencies,
-            ),
-          );
+        scope: scope,
+        child: _ScopeWidget(
+          key: ValueKey(scope),
+          homeBuilder: homeBuilder,
+          scope: scope,
+          initCustomDependencies: initCustomDependencies,
+        ),
+      );
 }
 
 class _ScopeWidget extends StatefulWidget {
@@ -49,9 +49,14 @@ class _ScopeWidget extends StatefulWidget {
 class _ScopeWidgetState extends State<_ScopeWidget> {
   late final ModulesHolder _holder = GetIt.instance.get<ModulesHolder>();
   late final Future<bool> _loading = () async {
-    await widget.initCustomDependencies?.call();
-    await _holder.injectScope(scope: widget.scope);
-    return true;
+    try {
+      await widget.initCustomDependencies?.call();
+      await _holder.injectScope(scope: widget.scope);
+      return true;
+    } catch (e) {
+      debugPrint('Error preloading scope ${widget.scope}: $e');
+      return false;
+    }
   }();
 
   @override
@@ -64,16 +69,22 @@ class _ScopeWidgetState extends State<_ScopeWidget> {
 
   @override
   Widget build(BuildContext context) => FutureBuilder<void>(
-      future: _loading,
-      builder: (context, snapshot) {
-        if (snapshot.hasData) {
-          return ScopeNavigator(
-            scope: widget.scope,
-            homeBuilder: widget.homeBuilder,
-          );
-        }
-        return const SizedBox();
-      });
+    key: ValueKey('scope_loading_${widget.scope}'),
+    future: _loading,
+    builder: (context, snapshot) {
+      if (snapshot.hasData) {
+        return ScopeNavigator(
+          scope: widget.scope,
+          homeBuilder: widget.homeBuilder,
+        );
+      } else if (snapshot.hasError) {
+        return Scaffold(
+          body: Center(child: Text('Error loading scope ${widget.scope}')),
+        );
+      }
+      return const SizedBox();
+    },
+  );
 
   @override
   void dispose() {
